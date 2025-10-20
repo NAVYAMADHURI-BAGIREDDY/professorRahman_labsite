@@ -1,23 +1,49 @@
-export interface JournalArticle {
-  id: string;              // Unique identifier (UUID or string)
-  title: string;           // Title of the journal article
-  link: string;            // External link (e.g., DOI or full text)
-  authors: string;         // Author list (as a single string or array)
-  conference: string;      // Conference or journal name
-  year: number;            // Publication year
+import { journalArticles } from './journalArticles';
+import { bookChapters } from './bookchapter';
+import { patents } from './patent';
+
+// Base type to unify all publication types
+export type Category = 'journal' | 'book' | 'patent';
+
+export interface UnifiedPublication {
+  id: string;
+  title: string;
+  authors?: string;
+  author?: string;
+  link?: string;
+  conference?: string;
+  bookTitle?: string;
+  applicationNumber?: string;
+  year: number;
+  category: Category;
 }
-export interface Patent {
-  id: string;               // Unique identifier
-  title: string;            // Title of the patent
-  link: string;             // External link to the patent (e.g., Google Patents or USPTO)
-  author: string;           // Inventors (you can also rename this to 'inventors' for clarity)
-  applicationNumber: string;
-  year : number // Patent application number
-}
-export interface BookChapter {
-  id: string;              // Unique identifier (UUID or string)    
-    title: string;           // Title of the book chapter
-    authors: string;         // Author list (as a single string or array)
-    bookTitle: string;      // Title of the book
-    year: number;            // Publication year
-}
+
+// Combine all datasets into one array
+export const publications: UnifiedPublication[] = [
+  ...journalArticles.map((j) => ({
+    id: j.id,
+    title: j.title,
+    authors: j.authors,
+    link: j.link,
+    conference: j.conference,
+    year: j.year,
+    category: 'journal' as const,
+  })),
+  ...bookChapters.map((b) => ({
+    id: b.id,
+    title: b.title,
+    authors: b.authors,
+    bookTitle: b.bookTitle,
+    year: b.year,
+    category: 'book' as const,
+  })),
+  ...patents.map((p) => ({
+    id: p.id,
+    title: p.title,
+    author: p.author,
+    link: p.link,
+    applicationNumber: p.applicationNumber,
+    year: p.year,
+    category: 'patent' as const,
+  })),
+];

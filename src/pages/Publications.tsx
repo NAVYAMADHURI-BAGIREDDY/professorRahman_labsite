@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/common/AnimatedSection';
-import { publications, Publication } from '../data/publicationsData';
-
-type Category = 'publication' | 'journal' | 'patent' | 'book';
+import { publications, UnifiedPublication, Category } from '../data/publications';
 
 const Publications = () => {
-  const [category, setCategory] = useState<Category>('publication');
+  const [category, setCategory] = useState<Category>('journal');
 
-  // Filter publications based on category
+  // Filter by selected category
   const filteredPublications = publications.filter(
-    (pub) => category === 'publication' || pub.category === category
+    (pub) => pub.category === category
   );
 
   // Group publications by year
@@ -18,7 +16,7 @@ const Publications = () => {
     if (!acc[pub.year]) acc[pub.year] = [];
     acc[pub.year].push(pub);
     return acc;
-  }, {} as Record<number, Publication[]>);
+  }, {} as Record<number, UnifiedPublication[]>);
 
   const years = Object.keys(publicationsByYear)
     .map(Number)
@@ -51,11 +49,10 @@ const Publications = () => {
       {/* Publications Section */}
       <section className="bg-white mt-10">
         <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
-          
-          {/* Filters */}
+
+          {/* Filter Buttons */}
           <div className="flex flex-wrap gap-2 mb-10">
             {[
-              { value: 'publication', label: 'Publications' },
               { value: 'journal', label: 'Journal Articles' },
               { value: 'book', label: 'Book Chapters' },
               { value: 'patent', label: 'Patents' },
@@ -83,37 +80,31 @@ const Publications = () => {
                 </h2>
 
                 <div className="space-y-6">
-                  {publicationsByYear[year].map((publication) => (
+                  {publicationsByYear[year].map((pub) => (
                     <div
-                      key={publication.id}
-                      className="bg-gray-50 rounded-lg p-4 sm:p-6 hover:shadow-md flex flex-col md:flex-row gap-4 items-start transition"
+                      key={pub.id}
+                      className="bg-gray-50 rounded-lg p-4 sm:p-6 hover:shadow-md transition"
                     >
-                      {/* Image */}
-                      <img
-                        src={publication.image || '/default-publication-image.png'}
-                        alt={publication.title}
-                        className="w-24 sm:w-32 h-24 sm:h-32 object-cover rounded-md flex-shrink-0"
-                      />
-
-                      {/* Details */}
-                      <div className="flex-1">
-                        <h3 className="text-lg sm:text-xl font-medium mb-1">
+                      <h3 className="text-lg sm:text-xl font-medium mb-1 text-primary-700">
+                        {pub.link ? (
                           <a
-                            href={`https://doi.org/${publication.doi}`}
+                            href={pub.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-primary-600 hover:text-primary-800"
+                            className="hover:underline"
                           >
-                            {publication.title}
+                            {pub.title}
                           </a>
-                        </h3>
-                        <p className="text-gray-700 text-sm sm:text-base mb-2">
-                          {publication.authors}
-                        </p>
-                        <p className="text-gray-600 text-sm sm:text-base">
-                          <span className="font-medium">{publication.journal}</span>, {publication.year}
-                        </p>
-                      </div>
+                        ) : (
+                          pub.title
+                        )}
+                      </h3>
+                      <p className="text-gray-700 text-sm sm:text-base mb-1">
+                        {pub.authors || pub.author}
+                      </p>
+                      <p className="text-gray-600 text-sm sm:text-base">
+                        {pub.conference || pub.bookTitle || pub.applicationNumber}
+                      </p>
                     </div>
                   ))}
                 </div>

@@ -8,7 +8,7 @@ export interface BookChapter {
 export const bookChapters: BookChapter[] = [
   {
     id: 'BC-001',
-    title: '‘Green’ Resins from Plant Sources and Strengthening Mechanisms',
+    title: 'Green Resins from Plant Sources and Strengthening Mechanisms',
     authors: 'Rahman, M. M.; Netravali, A. N.',
     bookTitle: 'Advanced Green Composites',
     year: 2015
