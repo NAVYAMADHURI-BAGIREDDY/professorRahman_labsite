@@ -1,4 +1,4 @@
-import maksud from '../../images/People_page/Maksud Rahman portrait.jpg';
+ import maksud from '../../images/People_page/Maksud Rahman portrait.jpg';
 import saadi from '../../images/People_page/saadi.jpg';
 import shajed from '../../images/People_page/shajed.jpg';
 import toffal from '../../images/People_page/Toffal.png';
