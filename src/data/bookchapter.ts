@@ -4,6 +4,7 @@ export interface BookChapter {
     authors: string;         // Author list (as a single string or array)
     bookTitle: string;      // Title of the book
     year: number;            // Publication year
+    image?:string;
 }
 export const bookChapters: BookChapter[] = [
   {

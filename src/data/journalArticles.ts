@@ -1,3 +1,5 @@
+
+import pub75 from '../../images/Publications/01.gif';
 export interface JournalArticle {
   id: string;              // Unique identifier (UUID or string)
   title: string;           // Title of the journal article
@@ -5,15 +7,18 @@ export interface JournalArticle {
   authors: string;         // Author list (as a single string or array)
   conference: string;      // Conference or journal name
   year: number;            // Publication year
+  image?:string;
 }
 export const journalArticles: JournalArticle[] = [
   {
-    id: 'JA-001',
+    id: '75',
     title: 'Processing Dynamics of Carbon Nanotube–Epoxy Nanocomposites during 3D Printing',
     link: 'https://doi.org/10.1016/j.xcrp.2023.101617',
     authors: 'Khater, A.; Saadi, M. A. S. R.; Bhattacharyya, S.; ...; Rahman, M. M.',
     conference: 'Cell Reports Physical Science',
-    year: 2023
+    year: 2023,
+    image: pub75,
+
   },
   {
     id: 'JA-002',

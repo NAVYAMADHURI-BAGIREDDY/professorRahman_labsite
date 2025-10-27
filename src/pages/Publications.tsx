@@ -6,7 +6,7 @@ import { publications, UnifiedPublication, Category } from '../data/publications
 const Publications = () => {
   const [category, setCategory] = useState<Category>('journal');
 
-  // Filter by selected category
+  // Filter publications by selected category
   const filteredPublications = publications.filter(
     (pub) => pub.category === category
   );
@@ -80,34 +80,52 @@ const Publications = () => {
                 </h2>
 
                 <div className="space-y-6">
-                  {publicationsByYear[year].map((pub) => (
-                    <div
-                      key={pub.id}
-                      className="bg-gray-50 rounded-lg p-4 sm:p-6 hover:shadow-md transition"
-                    >
-                      <h3 className="text-lg sm:text-xl font-medium mb-1 text-primary-700">
-                        {pub.link ? (
-                          <a
-                            href={pub.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                          >
-                            {pub.title}
-                          </a>
-                        ) : (
-                          pub.title
+                  {publicationsByYear[year].map((pub) => {
+                    console.log(pub.title, pub.image); // ✅ This will log in DevTools, not show on the page
+                    return (
+                      <div
+                        key={pub.id}
+                        className="bg-gray-50 rounded-lg p-4 sm:p-6 hover:shadow-md transition flex flex-col md:flex-row justify-between gap-4"
+                      >
+                        {/* Text Section */}
+                        <div className="flex-1">
+                          <h3 className="text-lg sm:text-xl font-medium mb-1 text-primary-700">
+                            {pub.link ? (
+                              <a
+                                href={pub.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:underline"
+                              >
+                                {pub.title}
+                              </a>
+                            ) : (
+                              pub.title
+                            )}
+                          </h3>
+                          <p className="text-gray-700 text-sm sm:text-base mb-1">
+                            {pub.authors || pub.author}
+                          </p>
+                          <p className="text-gray-600 text-sm sm:text-base">
+                            {pub.conference || pub.bookTitle || pub.applicationNumber}
+                          </p>
+                        </div>
+
+                        {/* Image Section */}
+                        {pub.image && (
+                          <div className="flex-shrink-0 self-center md:self-start">
+                            <img
+                              src={pub.image}
+                              alt={pub.title}
+                              className="w-40 h-28 object-cover rounded-md shadow-sm"
+                            />
+                          </div>
                         )}
-                      </h3>
-                      <p className="text-gray-700 text-sm sm:text-base mb-1">
-                        {pub.authors || pub.author}
-                      </p>
-                      <p className="text-gray-600 text-sm sm:text-base">
-                        {pub.conference || pub.bookTitle || pub.applicationNumber}
-                      </p>
-                    </div>
-                  ))}
+                      </div>
+                    );
+                  })}
                 </div>
+
               </AnimatedSection>
             ))}
           </div>
