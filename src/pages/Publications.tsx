@@ -117,9 +117,10 @@ const Publications = () => {
                             <img
                               src={pub.image}
                               alt={pub.title}
-                              className="w-40 h-28 object-cover rounded-md shadow-sm"
+                              className="w-40 h-28 object-contain rounded-md shadow-sm bg-gray-100 p-1"
                             />
                           </div>
+
                         )}
                       </div>
                     );
