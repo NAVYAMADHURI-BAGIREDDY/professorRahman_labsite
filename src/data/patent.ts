@@ -5,6 +5,7 @@ export interface Patent {
   author: string;           // Inventors (you can also rename this to 'inventors' for clarity)
   applicationNumber: string;
   year : number // Patent application number
+  image?: string
 }
 export const patents: Patent[] = [
   {

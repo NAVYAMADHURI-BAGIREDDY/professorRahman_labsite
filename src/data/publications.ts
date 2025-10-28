@@ -16,6 +16,7 @@ export interface UnifiedPublication {
   applicationNumber?: string;
   year: number;
   category: Category;
+  image?:string;
 }
 
 // Combine all datasets into one array
@@ -28,6 +29,7 @@ export const publications: UnifiedPublication[] = [
     conference: j.conference,
     year: j.year,
     category: 'journal' as const,
+    image : j.image,
   })),
   ...bookChapters.map((b) => ({
     id: b.id,
@@ -36,6 +38,7 @@ export const publications: UnifiedPublication[] = [
     bookTitle: b.bookTitle,
     year: b.year,
     category: 'book' as const,
+    image:b.image
   })),
   ...patents.map((p) => ({
     id: p.id,
@@ -45,5 +48,6 @@ export const publications: UnifiedPublication[] = [
     applicationNumber: p.applicationNumber,
     year: p.year,
     category: 'patent' as const,
+    image:p.image
   })),
 ];
