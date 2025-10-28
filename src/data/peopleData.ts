@@ -6,6 +6,7 @@ import mia from '../../images/People_page/Mia.png';
 import fahad from '../../images/People_page/Fahad.png';
 import reena from '../../images/People_page/reena.jpg';
 import rifat from '../../images/People_page/rifat.jpeg';
+import mahjabin from '../../images/People_page/mahjabin.png';
 
 
 export interface Person {
@@ -62,7 +63,7 @@ export const people: Person[] = [
     education: [
       'Ph.D. candidate in Mechanical Engineering at the University of Houston',
       'M.Sc. (2022) in Mechanical Engineering from Bangladesh University of Engineering and Technology',
-      'M.Sc. (2022) in Mechanical Engineering from Bangladesh University of Engineering and Technology'
+      'B.Sc. (2022) in Mechanical Engineering from Bangladesh University of Engineering and Technology'
     ],
     linkedin: 'https://www.linkedin.com/in/mohammad-hossain-822659132/',
     googlescholar:'https://scholar.google.com/citations?user=RJ9mJk0AAAAJ&hl=en',
@@ -94,7 +95,7 @@ export const people: Person[] = [
     googlescholar: 'https://scholar.google.com/citations?user=JNd4HhMAAAAJ&hl=en&oi=ao'
   },
   {
-    id: 'Reena',
+    id: 'Mia',
     name: 'Mia Rodriguez ',
     title: 'Undergraduate Researcher',
     image: mia,
@@ -128,5 +129,17 @@ export const people: Person[] = [
     linkedin: 'https://www.linkedin.com/in/panchalreena/',
     googlescholar:'https://scholar.google.com/citations?user=spl64WQAAAAJ&hl=en&oi=ao',
   },
-
+  {
+    id: '<Mahjabin>',
+    name: 'Mahjabin Rahman',
+    title: 'Visiting Research Scientist',
+    image: mahjabin,
+    bio: 'Mahjabin Rahman earned her M.Sc. in Industrial Engineering from the University of Pittsburgh before joining the University of Houston as a volunteer researcher in Mechanical Engineering. During her time at Pitt as a Circular Economy Fellow, she explored end-of-life (EOL) photovoltaic (PV) solar panels, focusing on how optimized recycling systems, material recovery, and supply-chain efficiency can reduce environmental impact and resource waste. Building on this foundation, she continues to apply her sustainability-driven approach through her current work on developing nanocomposite films to extend the shelf life of fruits and vegetables, by integrating materials engineering with circular economy principles to reduce food waste and promote sustainable consumption.',
+    education: [
+      'MSc in industrial Engineering from University of Pittsburgh',
+      'BSc in Industrial and Production Engineering from Bangladesh University of Engineering and Technology (BUET)'
+    ],
+    linkedin: 'https://www.linkedin.com/in/mahjabin-rahman-663306116/',
+    googlescholar:'https://scholar.google.com/citations?user=jOhgz7AAAAAJ&hl=en&oi=ao',
+  },
 ];
