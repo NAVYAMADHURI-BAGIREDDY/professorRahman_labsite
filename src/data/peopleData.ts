@@ -84,7 +84,7 @@ export const people: Person[] = [
   },
   {
     id: 'Fahad',
-    name: 'Mir Mohammad Fahad',
+    name: 'Mir Muhammad Fahad',
     title: 'PhD student',
     image: fahad,
     bio: 'Fahad is a Ph.D. student in the Mechanical and Aerospace Engineering Department at the University of Houston, where he works under Dr. Maksud Rahman to develop protein-based nanocomposite films that extend the shelf life of fruits (think of it as body armor for avocados—but edible). His journey with polymer materials began during his BSc in Textile Engineering at the Bangladesh University of Textiles and deepened through an MS in Advanced Materials Engineering for Information and Electronics from Kyung Hee University in South Korea. His research bridges textile chemistry, polymer science, biomedical sensors, and even cryopreservation—because why not try saving both people and produce .Hobby/Other interests: Late-night walks, cooking, swimming, flight simulator games, and overanalyzing the physics of sci-fi movies.',
