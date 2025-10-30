@@ -106,22 +106,23 @@ const Publications = () => {
                           <p className="text-gray-700 text-sm sm:text-base mb-1">
                             {pub.authors || pub.author}
                           </p>
-                          <p className="text-gray-600 text-sm sm:text-base">
-                            {pub.conference || pub.bookTitle || pub.applicationNumber}
-                          </p>
+                          <p className="text-sm sm:text-base">
+                            <span className="font-bold text-black text-base sm:text-lg">
+                              {pub.conference || pub.bookTitle || pub.applicationNumber}
+                              </span>
+                              </p>
                         </div>
 
                         {/* Image Section */}
                         {pub.image && (
-                          <div className="flex-shrink-0 self-center md:self-start">
-                            <img
-                              src={pub.image}
-                              alt={pub.title}
-                              className="w-40 h-28 object-contain rounded-md shadow-sm bg-gray-100 p-1"
+                          <div className="flex-shrink-0 self-center md:self-start w-36 h-48 overflow-hidden rounded-md shadow-sm">
+                            <img 
+                            src={pub.image}
+                            alt={pub.title} 
+                            className="w-full h-full object-cover"
                             />
-                          </div>
-
-                        )}
+                            </div>
+                          )}
                       </div>
                     );
                   })}

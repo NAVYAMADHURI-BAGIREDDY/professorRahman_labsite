@@ -1,8 +1,8 @@
-import pub1 from '../../images/Publications/01.gif';
-import pub2 from '../../images/Publications/02.gif';
+import pub1 from '../../images/Publications/01.jpg';
+import pub2 from '../../images/Publications/02.jpg';
 import pub3 from '../../images/Publications/03.gif';
 import pub4 from '../../images/Publications/04.gif';
-import pub5 from '../../images/Publications/05.gif';
+import pub5 from '../../images/Publications/05.jpg';
 import pub6 from '../../images/Publications/06.jpg';
 import pub7 from '../../images/Publications/07.jpg';
 import pub8 from '../../images/Publications/08.gif';
@@ -10,24 +10,24 @@ import pub9 from '../../images/Publications/09.jpg';
 import pub10 from '../../images/Publications/10.jpg';
 import pub11 from '../../images/Publications/11.jpg';
 import pub12 from '../../images/Publications/12.jpg';
-import pub13 from '../../images/Publications/13.gif';
-import pub14 from '../../images/Publications/14.gif';
-import pub15 from '../../images/Publications/15.gif';
-import pub16 from '../../images/Publications/16.gif';
-import pub17 from '../../images/Publications/17.gif';
+import pub13 from '../../images/Publications/13.jpg';
+import pub14 from '../../images/Publications/14.png';
+import pub15 from '../../images/Publications/15.png';
+import pub16 from '../../images/Publications/16.jpg';
+import pub17 from '../../images/Publications/17.jpg';
 import pub18 from '../../images/Publications/18.jpg';
 import pub19 from '../../images/Publications/19.jpg';
-import pub20 from '../../images/Publications/20.gif';
-import pub21 from '../../images/Publications/21.gif';
-import pub22 from '../../images/Publications/22.gif';
-import pub23 from '../../images/Publications/23.gif';
-import pub24 from '../../images/Publications/24.gif';
-import pub25 from '../../images/Publications/25.gif';
+import pub20 from '../../images/Publications/20.jpg';
+import pub21 from '../../images/Publications/21.jpg';
+import pub22 from '../../images/Publications/22.jpg';
+import pub23 from '../../images/Publications/23.jpg';
+import pub24 from '../../images/Publications/24.jpg';
+import pub25 from '../../images/Publications/25.jpg';
 import pub26 from '../../images/Publications/26.gif';
 import pub27 from '../../images/Publications/27.jpg';
 import pub28 from '../../images/Publications/28.jpg';
 import pub29 from '../../images/Publications/29.jpg';
-import pub30 from '../../images/Publications/30.jpeg';
+import pub30 from '../../images/Publications/30.jpg';
 import pub31 from '../../images/Publications/31.jpg';
 import pub32 from '../../images/Publications/32.jpg';
 import pub33 from '../../images/Publications/33.jpg';
@@ -40,26 +40,26 @@ import pub39 from '../../images/Publications/39.jpg';
 import pub40 from '../../images/Publications/40.jpg';
 import pub41 from '../../images/Publications/41.jpg';
 import pub42 from '../../images/Publications/42.jpg';
-import pub43 from '../../images/Publications/43.gif';
+import pub43 from '../../images/Publications/43.jpg';
 import pub44 from '../../images/Publications/44.jpg';
-import pub45 from '../../images/Publications/45.gif';
+import pub45 from '../../images/Publications/45.jpg';
 import pub46 from '../../images/Publications/46.jpg';
-import pub47 from '../../images/Publications/47.gif';
+import pub47 from '../../images/Publications/47.jpg';
 import pub48 from '../../images/Publications/48.jpg';
-import pub49 from '../../images/Publications/49.gif';
-import pub50 from '../../images/Publications/50.webp';
+import pub49 from '../../images/Publications/49.jpg';
+import pub50 from '../../images/Publications/50.jpg';
 import pub51 from '../../images/Publications/51.jpg';
-import pub52 from '../../images/Publications/52.gif';
+import pub52 from '../../images/Publications/52.jpg';
 import pub53 from '../../images/Publications/53.jpg';
 import pub54 from '../../images/Publications/54.jpg';
 import pub55 from '../../images/Publications/55.jpg';
 import pub56 from '../../images/Publications/56.jpg';
 import pub57 from '../../images/Publications/57.jpg';
-import pub58 from '../../images/Publications/58.gif';
-import pub59 from '../../images/Publications/59.gif';
+import pub58 from '../../images/Publications/58.jpg';
+import pub59 from '../../images/Publications/59.png';
 import pub60 from '../../images/Publications/60.jpg';
 import pub61 from '../../images/Publications/61.jpg';
-import pub62 from '../../images/Publications/62.gif';
+import pub62 from '../../images/Publications/62.jpg';
 import pub63 from '../../images/Publications/63.gif';
 import pub64 from '../../images/Publications/64.jpg';
 import pub65 from '../../images/Publications/65.jpg';
@@ -67,12 +67,12 @@ import pub66 from '../../images/Publications/66.jpg';
 import pub67 from '../../images/Publications/67.jpg';
 import pub68 from '../../images/Publications/68.jpg';
 import pub69 from '../../images/Publications/69.jpg';
-import pub70 from '../../images/Publications/70.png';
+import pub70 from '../../images/Publications/70.jpg';
 import pub71 from '../../images/Publications/71.webp';
 import pub72 from '../../images/Publications/72.jpeg';
 import pub73 from '../../images/Publications/73.png';
-import pub74 from '../../images/Publications/74.jpeg';
-import pub75 from '../../images/Publications/75.webp';
+import pub74 from '../../images/Publications/74.jpg';
+import pub75 from '../../images/Publications/75.png';
 
 export interface JournalArticle {
   id: string;              // Unique identifier (UUID or string)
@@ -99,7 +99,7 @@ export const journalArticles: JournalArticle[] = [
     title: '74. Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
     link: 'https://doi.org/10.1038/s41467-025-60242-1',
     authors: 'Saadi, M.A.S.R.; Cui, Y.; Bhakta, S.P.; Hassan, Sakib; Harikrishnan, V.; Siqueira,  I.R.; Pasquali, M.; Bennett, M.; Ajayan, P.M.; Rahman, M.R.*',
-    conference: 'Nature communications',
+    conference: 'nature communications',
     year: 2025,
     image: pub74
   },
@@ -108,7 +108,7 @@ export const journalArticles: JournalArticle[] = [
     title: '73. Macroscale ceramic origami structures with hyper-elastic coating',
     link: 'https://doi.org/10.1007/s42114-025-01284-3',
     authors: 'Thakur, M.S.H.; Nath, M.D.; Paulino, G.H.; Ajayan, P.M.; Rahman, M.M.*',
-    conference: 'Adv Compos Hybrid Mater',
+    conference: 'Advanced Composites and Hybrid Materials',
     year: 2025,
     image: pub73
   },
@@ -133,7 +133,7 @@ export const journalArticles: JournalArticle[] = [
   {
     id: 'pub70',
     title: '70. A General Simulation based Study on Printability of Inks in Direct Ink Writing',
-    link: 'https://www.nature.com/srep/',
+    link: 'https://www.nature.com/articles/s41598-024-74058-4',
     authors: 'Sourov, M.A.; Emu, S.I.; Thakur, M.S.H.; Morshed, A., Rahman, M.M*',
     conference: 'Scientific Reports',
     year: 2025,
@@ -207,7 +207,7 @@ export const journalArticles: JournalArticle[] = [
     title: '62. Process optimization, techno-economic analysis, and environmental impact assessment of producing soy protein isolate-cellulose nanocrystal coating solution for increasing fruit’s shelf-life',
     link: 'https://doi.org/10.1016/j.indcrop.2024.118213',
     authors: 'Naveenkumar, R.; Prakash, N.; Rahman, M.M.; Troy, R',
-    conference: 'Industrial Crops and Products,',
+    conference: 'Industrial Crops and Products',
     year: 2024,
     image: pub62
   },
@@ -241,7 +241,7 @@ export const journalArticles: JournalArticle[] = [
   {
     id: 'pub58',
     title: '58. Processing Dynamics of Carbon Nanotube–Epoxy Nanocomposites during 3D Printing',
-    link: 'https://www.cell.com/cell-reports-physical-science/pdf/S2666-3864(23)00430-7.pdf',
+    link: 'https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(23)00430-7',
     authors: 'Khater, A.; Saadi, M. A. S. R.; Bhattacharyya, S.; Kutana, A.; Tripathi, M.; Kamble, M.; Song, S.; Lou, M.; Barnes, M.; Meyer, M.; Harikrishnan, V.; Dalton, A. B.; Koratkar, N.; Tiwary, C. S.; Boul, P. J.; Yakobson, B.; Zhu, H.; Ajayan, P. M.; Rahman, M. M.*',
     conference: 'Cell Reports Physical Science',
     year: 2023,
@@ -250,7 +250,7 @@ export const journalArticles: JournalArticle[] = [
   {
     id: 'pub57',
     title: '57. Functional Wood for Carbon Dioxide Capture',
-    link: 'https://www.cell.com/cell-reports-physical-science/pdf/S2666-3864(23)00028-0.pdf',
+    link: 'https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(23)00028-0',
     authors: 'Roy, S.; Philip, F.A.; Oliveira, E.F.; Singh, G.; Joseph, S.; Yadav, R.M.; Adumbumkulath, A.; Hassan, S.; Khater, A.; Vinu, A.; Shimizu, G.; Ajayan, P.M.; Kibria, M.G.; Rahman, M. M.*',
     conference: 'Cell Reports Physical Science',
     year: 2023,
@@ -369,7 +369,7 @@ export const journalArticles: JournalArticle[] = [
     title: '44. Graphene Confers Ultralow Friction on Nanogear Cogs',
     link: 'https://doi.org/10.1002/smll.202104487',
     authors: 'A. Mescola, G. Paolicelli, S. P. Ogilvie, R. Guarino, J. G. McHugh, A. Rota, E. Iacob, E. Gnecco, S. Valeri, N. M. Pugno, V. Gadhamshetty, M. M. Rahman, P. Ajayan, A. B. Dalton, M. Tripathi',
-    conference: 'Small',
+    conference: 'small',
     year: 2021,
     image: pub44
   },
