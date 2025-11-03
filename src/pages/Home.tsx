@@ -154,10 +154,19 @@ const Home = () => {
                       })}
                     </span>
                     <h3 className="text-xl font-semibold mb-3">
-              <a href="https://uh.edu/news-events/stories/2025/april/04232025-rhaman-origami-inspired-ceramics" target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-400">
-                {news.title}
-              </a>
-                   </h3>
+                      {news.Link ? (
+                        <a
+                        href={news.Link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-blue-400"
+                        >
+                          {news.title}
+                          </a>
+                          ) : (
+                            news.title
+                            )}
+                            </h3>
 
                     <div className="sm:w-64 w-full sm:flex-shrink-0">
                           <img
