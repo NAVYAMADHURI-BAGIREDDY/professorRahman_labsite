@@ -5,8 +5,8 @@ import SectionHeading from '../components/common/SectionHeading';
 import AnimatedSection from '../components/common/AnimatedSection';
 import introBg from '../../images/bacterial_cellulose.png'; // adjust path based on your structure
 
-
 import { newsItems } from '../data/newsData';
+import { publications } from '../data/publications'; 
 import imageData from '../../images/green-energy.jpg';
 import { FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
@@ -15,6 +15,20 @@ const Home = () => {
   const recentNews = [...newsItems]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
+
+  // Highlighted publications
+  const HIGHLIGHTED_PUB_IDS: string[] = [
+  'pub65','pub49','pub24','pub23','pub18','pub11'
+  ];
+
+  type Pub = typeof publications[number];
+  const meta = (p: Pub) => p.conference ?? p.bookTitle ?? p.applicationNumber ?? '';
+
+  const byId = new Map(publications.map(p => [p.id, p]));
+  const highlightedPubs: Pub[] =
+    HIGHLIGHTED_PUB_IDS.length
+      ? (HIGHLIGHTED_PUB_IDS.map(id => byId.get(id)).filter(Boolean).slice(0, 6) as Pub[])
+      : [...publications].sort((a, b) => b.year - a.year).slice(0, 6);
 
   return (
     <div>
@@ -42,7 +56,7 @@ const Home = () => {
               </h1>
             </div>
             <div>
-            <p className='font-semibold font-raleway text-2xl sm:text-2xl md:text-2xl lg:text-3xl tracking-widest'>
+              <p className='font-semibold font-raleway text-2xl sm:text-2xl md:text-2xl lg:text-3xl tracking-widest'>
                 of Circular Materials and Manufacturing
               </p>
             </div>
@@ -86,56 +100,51 @@ const Home = () => {
             >
               <FaLinkedin className="w-5 h-5" />
             </a>
-            
           </motion.div>
         </div>
       </section>
 
       {/* Introduction Section */}
-                
       <section
-  className="relative w-full bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: `url(${introBg})` }}
->
-  {/* Full overlay */}
-  <div className="absolute inset-0 bg-white/80 z-0"></div>
+        className="relative w-full bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${introBg})` }}
+      >
+        {/* Full overlay */}
+        <div className="absolute inset-0 bg-white/80 z-0"></div>
 
-  {/* Content container */}
-  <div className="relative z-10 py-12 sm:py-16 lg:py-20">
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-10 max-w-3xl mx-auto">
-        <h2 className="font-raleway text-3xl md:text-4xl font-medium text-blue-400">
-          Exploring Nature. Engineering the Future.
-        </h2>
-      </div>
+        {/* Content container */}
+        <div className="relative z-10 py-12 sm:py-16 lg:py-20">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 max-w-3xl mx-auto">
+              <h2 className="font-raleway text-3xl md:text-4xl font-medium text-blue-400">
+                Exploring Nature. Engineering the Future.
+              </h2>
+            </div>
 
-      <div className="text-center max-w-5xl mx-auto">
-        <AnimatedSection delay={0.2}>
-          <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
-          At the Maksud Innovation Lab, we pursue curiosity-driven research at the intersection of materials science, advanced manufacturing, and circularity to promote a greener and more resilient future. 
-          </p>
-          <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
-          Our mission is to develop sustainable and scalable solutions to address global challenges in structural systems, food safety and security, and environmental technologies. We focus on the design and manufacturing of multifunctional circular materials that integrate principles of frugality, functionality, and circular economy. 
-          </p>
-          <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
-          From architected wood to fresh produce preservation to recyclable structural composites, our research explores structure–property–performance relationships across a wide range of circular material systems, spanning the nano to macro scales. Through this work, we aim to translate fundamental scientific insights into impactful, real-world innovations that promote a more sustainable planet.
-          </p>
+            <div className="text-center max-w-5xl mx-auto">
+              <AnimatedSection delay={0.2}>
+                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
+                  At the Maksud Innovation Lab, we pursue curiosity-driven research at the intersection of materials science, advanced manufacturing, and circularity to promote a greener and more resilient future. 
+                </p>
+                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
+                  Our mission is to develop sustainable and scalable solutions to address global challenges in structural systems, food safety and security, and environmental technologies. We focus on the design and manufacturing of multifunctional circular materials that integrate principles of frugality, functionality, and circular economy. 
+                </p>
+                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
+                  From architected wood to fresh produce preservation to recyclable structural composites, our research explores structure–property–performance relationships across a wide range of circular material systems, spanning the nano to macro scales. Through this work, we aim to translate fundamental scientific insights into impactful, real-world innovations that promote a more sustainable planet.
+                </p>
 
-          <Link
-            to="/people"
-            className="text-blue-400 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
-          >
-            Meet Our Team
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </AnimatedSection>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
+                <Link
+                  to="/people"
+                  className="text-blue-400 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+                >
+                  Meet Our Team
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </AnimatedSection>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* News Section */}
       <section className="bg-white pt-8 pb-16">
@@ -156,28 +165,25 @@ const Home = () => {
                     <h3 className="text-xl font-semibold mb-3">
                       {news.Link ? (
                         <a
-                        href={news.Link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-blue-400"
+                          href={news.Link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline text-blue-400"
                         >
                           {news.title}
-                          </a>
-                          ) : (
-                            news.title
-                            )}
-                            </h3>
+                        </a>
+                      ) : (
+                        news.title
+                      )}
+                    </h3>
 
                     <div className="sw-full mt-4">
-                          <img
-                            src={news.image}
-                            alt={news.title}
-                            className="w-full h-48 sm:h-56 object-cover rounded-md"
-
-                          />
-                        </div>
-
-                    
+                      <img
+                        src={news.image}
+                        alt={news.title}
+                        className="w-full h-48 sm:h-56 object-cover rounded-md"
+                      />
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -196,13 +202,70 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Highlighted Publications */}
+      <section className="bg-white pt-4 pb-16">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading title="Highlighted Publications" centered />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            {highlightedPubs.map((pub, idx) => (
+              <AnimatedSection key={pub.id} delay={0.08 * idx}>
+                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-full p-6 transition-transform transform hover:scale-105">
+                  {pub.image && (
+                    <img
+                      src={pub.image}
+                      alt={pub.title}
+                      className="w-full h-auto max-h-48 object-contain rounded-md mb-4 bg-white p-2"
+                    />
+                  )}
+
+                  <h3 className="text-lg font-semibold mb-2">
+                    {pub.link ? (
+                      <a
+                        href={pub.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-blue-400"
+                      >
+                        {pub.title.replace(/^\d+\.\s*/, '')}
+                      </a>
+                    ) : (
+                      pub.title.replace(/^\d+\.\s*/, '')
+                    )}
+                  </h3>
+
+                  {(pub.authors ?? pub.author) && (
+                    <p className="text-sm text-gray-700 mb-1">
+                      {pub.authors ?? pub.author}
+                    </p>
+                  )}
+
+                  <p className="text-sm text-gray-500">
+                    {meta(pub)}{pub.year ? (meta(pub) ? `, ${pub.year}` : `${pub.year}`) : ''}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to="/publications"
+              className="text-blue-400 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+            >
+              View All Publications
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-16 bg-primary-700 text-white">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-medium mb-6">Interested in Our Research?</h2>
             <p className="font-raleway text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Anyone interested in making science and our mother nature their way of life is welcome to contact us. We value creativity, integrity, passion, and persistence in everyone we work with, and we are always open to collaborating with like-minded individuals.
+              Anyone interested in making science and our mother nature their way of life is welcome to contact us. We value creativity, integrity, passion, and persistence in everyone we work with, and we are always open to collaborating with like-minded individuals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
