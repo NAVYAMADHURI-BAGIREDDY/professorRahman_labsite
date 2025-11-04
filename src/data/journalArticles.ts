@@ -34,7 +34,7 @@ import pub33 from '../../images/Publications/33.jpg';
 import pub34 from '../../images/Publications/34.png';
 import pub35 from '../../images/Publications/35.gif';
 import pub36 from '../../images/Publications/36.jpg';
-import pub37 from '../../images/Publications/37.jpg';
+import pub37 from '../../images/Publications/37.png';
 import pub38 from '../../images/Publications/38.jpg';
 import pub39 from '../../images/Publications/39.jpg';
 import pub40 from '../../images/Publications/40.jpg';
@@ -99,7 +99,7 @@ export const journalArticles: JournalArticle[] = [
     title: '74. Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
     link: 'https://doi.org/10.1038/s41467-025-60242-1',
     authors: 'Saadi, M.A.S.R.; Cui, Y.; Bhakta, S.P.; Hassan, Sakib; Harikrishnan, V.; Siqueira,  I.R.; Pasquali, M.; Bennett, M.; Ajayan, P.M.; Rahman, M.R.*',
-    conference: 'nature communications',
+    conference: 'Nature Communications',
     year: 2025,
     image: pub74
   },
@@ -369,7 +369,7 @@ export const journalArticles: JournalArticle[] = [
     title: '44. Graphene Confers Ultralow Friction on Nanogear Cogs',
     link: 'https://doi.org/10.1002/smll.202104487',
     authors: 'A. Mescola, G. Paolicelli, S. P. Ogilvie, R. Guarino, J. G. McHugh, A. Rota, E. Iacob, E. Gnecco, S. Valeri, N. M. Pugno, V. Gadhamshetty, M. M. Rahman, P. Ajayan, A. B. Dalton, M. Tripathi',
-    conference: 'small',
+    conference: 'Small',
     year: 2021,
     image: pub44
   },
@@ -430,7 +430,7 @@ export const journalArticles: JournalArticle[] = [
   {
     id: 'pub37',
     title: '37. Fiber Reinforced Monolithic Supercapacitor with Interdigitated Interfaces',
-    link: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201900056',
+    link: 'https://pubs.rsc.org/en/content/articlelanding/2021/ta/d1ta00424g/unauth',
     authors: 'Yuan, F.; Salpekar, D.; Baburaj, A.; Hasan, S.; Putirath, A. B.; Saadi, M.A.S.R.; Robles, F.C.; Robetzazi, H.; Roy, S.; Sun, D.; Kotov, N.A.; Rahman, M. M.*; Ajayan, P. M.',
     conference: 'Journal of Materials Chemistry A',
     year: 2021,

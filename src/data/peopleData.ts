@@ -57,11 +57,10 @@ export const people: Person[] = [
   {
     id: 'Tofazzal',
     name: 'Md Tofazzal Hossain',
-    title: 'Doctoral Student',
+    title: 'PhD Student',
     image: toffal,
     bio: 'Md Tofazzal Hossain is a Ph.D. candidate in Mechanical Engineering at the University of Houston, supervised by Dr. Maksud Rahman. He concurrently serves as an assistant professor in Mechanical Engineering at Ahsanullah University of Science and Technology, Bangladesh. Hossain earned his M.Sc. (2022) and B.Sc. (2017) in Mechanical Engineering from Bangladesh University of Engineering and Technology, investigating, respectively, finite-element models of the human left ventricle for post-AMI heart-failure prognosis and CFD-based design of naturally ventilated residential buildings. He is currently working on the advanced manufacturing of biopolymer-based composites with goal of sustainability and circular economy. Committed to sustainability, he views machine learning as a transformative driver for next-generation manufacturing and materials science.',
     education: [
-      'Ph.D. candidate in Mechanical Engineering at the University of Houston',
       'M.Sc. (2022) in Mechanical Engineering from Bangladesh University of Engineering and Technology',
       'B.Sc. (2022) in Mechanical Engineering from Bangladesh University of Engineering and Technology'
     ],
@@ -72,7 +71,7 @@ export const people: Person[] = [
   {
     id: 'Saadi',
     name: 'M.A.S.R. Saadi',
-    title: 'PhD. Student',
+    title: 'PhD Student',
     image: saadi,
     bio: 'M.A.S.R. Saadi completed his BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET), during which he studied the effect of multi-scale reinforcement particle size on mechanical and thermal properties of polymer composites. During his MS in Mechanical and Aerospace Engineering at the George Washington University, his work focused on nanomechanics and electronic structure of organic photovoltaics and 2D materials. He is currently pursuing a PhD degree in Materials Science and NanoEngineering at Rice University, where he is working on the development of sustainable bionanocomposites for multifunctional application with particular focus on energy, environment and food nexus. His developed bionanocomposites typically comprise of hierarchically assembled high performance 1D and 2D nanosystems in carbohydrate and protein-based matrices.Hobby/Other interests: Singing different forms of Metal, Rock and Bengali Folk music, Table-tennis, Soccer, FIFA',
     education: [
@@ -95,17 +94,6 @@ export const people: Person[] = [
     googlescholar: 'https://scholar.google.com/citations?user=JNd4HhMAAAAJ&hl=en&oi=ao'
   },
   {
-    id: 'Mia',
-    name: 'Mia Rodriguez ',
-    title: 'Undergraduate Researcher',
-    image: mia,
-    bio: 'Mia Rodriguez is a junior mechanical engineering major at the University of Houston interested in the intersection of engineering and the natural world, with a growing focus on bio-inspired design and conservation. Mia has a strong foundation in CAD, MATLAB, and Arduino systems and is eager to contribute her skills to the team..',
-    education: [
-      'Current B.S. in Mechanical Engineering, University of Houston'
-    ],
- 
-  },
-  {
     id: 'Rifat',
     name: 'Md Rifat Hossain ',
     title: 'Visiting Research Scientist ',
@@ -115,19 +103,6 @@ export const people: Person[] = [
       'Master of Science in Mechanical Engineering from Rensselaer Polytechnic Institute'
     ],
     linkedin: 'https://www.linkedin.com/in/md-rifat-hossain-kawshik/@uh.edu'
-  },
-  {
-    id: 'Reena',
-    name: 'Reena',
-    title: 'Visiting Research Scientist',
-    image: reena,
-    bio: 'Reena A. Panchal is a volunteer researcher in Mechanical Engineering at the University of Houston, where she leverages additive manufacturing techniques to develop innovative battery architectures and enhance energy storage efficiency, including work with conductive wood. With a PhD in Mechanical Engineering from Rensselaer Polytechnic Institute, her research expertise lies in advanced battery systems, including anode-free batteries and high-energy-density sodium battery systems. Prior to her PhD, she earned her M.Tech from Panjab Universitys Centre for Nanoscience and Nanotechnology in 2017 and worked as a project associate at the Indian Institute of Science Education and Research, Pune, from 2018 to 2020.',
-    education: [
-      'PhD in Mechanical Engineering from Rensselaer Polytechnic Institute',
-      'M.Tech from Panjab Universitys Centre for Nanoscience and Nanotechnology in 2017'
-    ],
-    linkedin: 'https://www.linkedin.com/in/panchalreena/',
-    googlescholar:'https://scholar.google.com/citations?user=spl64WQAAAAJ&hl=en&oi=ao',
   },
   {
     id: '<Mahjabin>',
@@ -142,4 +117,15 @@ export const people: Person[] = [
     linkedin: 'https://www.linkedin.com/in/mahjabin-rahman-663306116/',
     googlescholar:'https://scholar.google.com/citations?user=jOhgz7AAAAAJ&hl=en&oi=ao',
   },
+  {
+    id: 'Mia',
+    name: 'Mia Rodriguez ',
+    title: 'Undergraduate Researcher',
+    image: mia,
+    bio: 'Mia Rodriguez is a junior mechanical engineering major at the University of Houston interested in the intersection of engineering and the natural world, with a growing focus on bio-inspired design and conservation. Mia has a strong foundation in CAD, MATLAB, and Arduino systems and is eager to contribute her skills to the team..',
+    education: [
+      'Current B.S. in Mechanical Engineering, University of Houston'
+    ],
+ 
+  }
 ];

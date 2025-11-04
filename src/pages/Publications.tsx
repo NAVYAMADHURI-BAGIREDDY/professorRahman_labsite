@@ -80,52 +80,53 @@ const Publications = () => {
                 </h2>
 
                 <div className="space-y-6">
-                  {publicationsByYear[year].map((pub) => {
-                    console.log(pub.title, pub.image); // ✅ This will log in DevTools, not show on the page
-                    return (
-                      <div
-                        key={pub.id}
-                        className="bg-gray-50 rounded-lg p-4 sm:p-6 hover:shadow-md transition flex flex-col md:flex-row justify-between gap-4"
-                      >
-                        {/* Text Section */}
-                        <div className="flex-1">
-                          <h3 className="text-lg sm:text-xl font-medium mb-1 text-primary-700">
-                            {pub.link ? (
-                              <a
-                                href={pub.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:underline"
-                              >
-                                {pub.title}
-                              </a>
-                            ) : (
-                              pub.title
-                            )}
-                          </h3>
-                          <p className="text-gray-700 text-sm sm:text-base mb-1">
-                            {pub.authors || pub.author}
-                          </p>
-                          <p className="text-sm sm:text-base">
-                            <span className="font-bold text-black text-base sm:text-lg">
-                              {pub.conference || pub.bookTitle || pub.applicationNumber}
-                              </span>
-                              </p>
-                        </div>
-
-                        {/* Image Section */}
-                        {pub.image && (
-                          <div className="flex-shrink-0 self-center md:self-start w-36 h-48 overflow-hidden rounded-md shadow-sm">
-                            <img 
+                  {publicationsByYear[year].map((pub) => (
+                    <div
+                      key={pub.id}
+                      className="bg-gray-50 rounded-lg p-4 sm:p-6 hover:shadow-md transition flex flex-col md:flex-row items-start gap-4"
+                    >
+                      {/* Image on Left */}
+                      {pub.image && (
+                        <div className="flex-shrink-0 w-36 h-48 overflow-hidden rounded-md shadow-sm">
+                          <img 
                             src={pub.image}
                             alt={pub.title} 
                             className="w-full h-full object-cover"
-                            />
-                            </div>
+                          />
+                        </div>
+                      )}
+
+                      {/* Text on Right */}
+                      <div className="flex-1">
+                        <h3 className="text-lg sm:text-xl font-medium mb-1 text-primary-700">
+                          {pub.link ? (
+                            <a
+                              href={pub.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline"
+                            >
+                              {pub.title}
+                            </a>
+                          ) : (
+                            pub.title
                           )}
+                        </h3>
+
+                        {(pub.authors || pub.author) && (
+                          <p className="text-gray-700 text-sm sm:text-base mb-1">
+                            {pub.authors || pub.author}
+                          </p>
+                        )}
+
+                        <p className="text-sm sm:text-base text-gray-600">
+                          <span className="font-bold text-black text-lg sm:text-xl">
+                            {pub.conference || pub.bookTitle || pub.applicationNumber}
+                          </span>
+                        </p>
                       </div>
-                    );
-                  })}
+                    </div>
+                  ))}
                 </div>
 
               </AnimatedSection>

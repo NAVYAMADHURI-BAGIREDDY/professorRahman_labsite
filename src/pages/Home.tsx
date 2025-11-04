@@ -11,6 +11,25 @@ import imageData from '../../images/green-energy.jpg';
 import { FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 
+import hp1 from "../../images/home_pub/hp1.png";
+import hp2 from "../../images/home_pub/hp2.png";
+import hp3 from "../../images/home_pub/hp3.png";
+import hp4 from "../../images/home_pub/hp4.png";
+import hp5 from "../../images/home_pub/hp5.png";
+import hp6 from "../../images/home_pub/hp6.png";
+
+
+// Override images for highlighted publications in Home
+const homePubImages: Record<string, string> = {
+  "pub74": hp1,
+  "pub68": hp2,
+  "pub53": hp3,
+  "pub49": hp4,
+  "pub36": hp5,
+  "pub26": hp6,
+};
+
+
 const Home = () => {
   const recentNews = [...newsItems]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -18,7 +37,7 @@ const Home = () => {
 
   // Highlighted publications
   const HIGHLIGHTED_PUB_IDS: string[] = [
-  'pub74','pub68','pub67','pub65','pub53','pub49','pub36','pub26'
+  'pub68','pub74','pub53','pub49','pub36','pub26'
   ];
 
   type Pub = typeof publications[number];
@@ -27,8 +46,8 @@ const Home = () => {
   const byId = new Map(publications.map(p => [p.id, p]));
   const highlightedPubs: Pub[] =
     HIGHLIGHTED_PUB_IDS.length
-      ? (HIGHLIGHTED_PUB_IDS.map(id => byId.get(id)).filter(Boolean).slice(0, 8) as Pub[])
-      : [...publications].sort((a, b) => b.year - a.year).slice(0, 8);
+      ? (HIGHLIGHTED_PUB_IDS.map(id => byId.get(id)).filter(Boolean).slice(0, 6) as Pub[])
+      : [...publications].sort((a, b) => b.year - a.year).slice(0, 6);
 
   return (
     <div>
@@ -116,7 +135,7 @@ const Home = () => {
         <div className="relative z-10 py-12 sm:py-16 lg:py-20">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 max-w-3xl mx-auto">
-              <h2 className="font-raleway text-3xl md:text-4xl font-medium text-blue-400">
+              <h2 className="font-raleway text-3xl md:text-4xl font-medium text-blue-600">
                 Exploring Nature. Engineering the Future.
               </h2>
             </div>
@@ -135,7 +154,7 @@ const Home = () => {
 
                 <Link
                   to="/people"
-                  className="text-blue-400 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+                  className="text-blue-500 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
                 >
                   Meet Our Team
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -168,7 +187,7 @@ const Home = () => {
                           href={news.Link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:underline text-blue-400"
+                          className="hover:underline text-blue-500"
                         >
                           {news.title}
                         </a>
@@ -193,7 +212,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/news"
-              className=" text-blue-400 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+              className=" text-blue-500 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
             >
               View All News
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -212,45 +231,45 @@ const Home = () => {
                 <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-full p-6 transition-transform transform hover:scale-105">
                   {pub.image && (
                     <img
-                      src={pub.image}
+                      src={homePubImages[pub.id] || pub.image}
                       alt={pub.title}
                       className="w-full h-auto max-h-48 object-contain rounded-md mb-4 bg-white p-2"
                     />
                   )}
 
-                  <h3 className="text-lg font-semibold mb-2">
-                    {pub.link ? (
-                      <a
+                  {/* Journal */}
+                  <p className="text-2xl text-blue-500 font-semibold mb-1 text-center">
+                    {meta(pub)}
+                    </p>
+                    {/* Title */}
+                    <h3 className="text-lg font-semibold mb-2 text-center">
+                      {pub.link ? (
+                        <a
                         href={pub.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:underline text-blue-400"
-                      >
-                        {pub.title.replace(/^\d+\.\s*/, '')}
-                      </a>
-                    ) : (
-                      pub.title.replace(/^\d+\.\s*/, '')
-                    )}
-                  </h3>
-
-                  {(pub.authors ?? pub.author) && (
-                    <p className="text-sm text-gray-700 mb-1">
-                      {pub.authors ?? pub.author}
-                    </p>
-                  )}
-
-                  <p className="text-sm text-gray-500">
-                    {meta(pub)}{pub.year ? (meta(pub) ? `, ${pub.year}` : `${pub.year}`) : ''}
-                  </p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-
+                        className="hover:underline text-black-800"
+                        >
+                          {pub.title.replace(/^\d+\.\s*/, '')}
+                          </a>
+                          ) : (
+                            pub.title.replace(/^\d+\.\s*/, '')
+                            )}
+                            </h3>
+                            {/* Authors */}
+                            {(pub.authors ?? pub.author) && (
+                              <p className="text-sm text-gray-700 text-center">
+                                {pub.authors ?? pub.author}
+                                </p>
+                              )}
+                              </div>
+                              </AnimatedSection>
+                            ))}
+                            </div>
           <div className="mt-12 text-center">
             <Link
               to="/publications"
-              className="text-blue-400 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+              className="text-blue-500 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
             >
               View All Publications
               <ArrowRight className="ml-2 h-5 w-5" />

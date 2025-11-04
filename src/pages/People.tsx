@@ -4,6 +4,7 @@ import { Mail, Link as LinkIcon, X } from 'lucide-react';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { people, Person } from '../data/peopleData';
 import { SiGooglescholar, SiLinkedin } from 'react-icons/si';
+import teamBanner from '../../images/team.png';
 
 
 
@@ -32,7 +33,7 @@ const People = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img
-            src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src={teamBanner}
             alt="Team members collaborating"
             className="w-full h-full object-cover"
           />
