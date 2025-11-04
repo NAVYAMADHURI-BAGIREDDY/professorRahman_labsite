@@ -18,7 +18,7 @@ const Home = () => {
 
   // Highlighted publications
   const HIGHLIGHTED_PUB_IDS: string[] = [
-  'pub65','pub49','pub24','pub23','pub18','pub11'
+  'pub74','pub68','pub67','pub65','pub53','pub49','pub36','pub26'
   ];
 
   type Pub = typeof publications[number];
@@ -27,8 +27,8 @@ const Home = () => {
   const byId = new Map(publications.map(p => [p.id, p]));
   const highlightedPubs: Pub[] =
     HIGHLIGHTED_PUB_IDS.length
-      ? (HIGHLIGHTED_PUB_IDS.map(id => byId.get(id)).filter(Boolean).slice(0, 6) as Pub[])
-      : [...publications].sort((a, b) => b.year - a.year).slice(0, 6);
+      ? (HIGHLIGHTED_PUB_IDS.map(id => byId.get(id)).filter(Boolean).slice(0, 8) as Pub[])
+      : [...publications].sort((a, b) => b.year - a.year).slice(0, 8);
 
   return (
     <div>
