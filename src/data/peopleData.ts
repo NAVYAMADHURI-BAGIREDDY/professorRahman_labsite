@@ -1,10 +1,9 @@
- import maksud from '../../images/People_page/Maksud Rahman portrait.jpg';
+import maksud from '../../images/People_page/Maksud Rahman portrait.jpg';
 import saadi from '../../images/People_page/saadi.jpg';
 import shajed from '../../images/People_page/shajed.jpg';
 import toffal from '../../images/People_page/Toffal.png';
 import mia from '../../images/People_page/Mia.png';
 import fahad from '../../images/People_page/Fahad.png';
-import reena from '../../images/People_page/reena.jpg';
 import rifat from '../../images/People_page/rifat.jpeg';
 import mahjabin from '../../images/People_page/mahjabin.png';
 

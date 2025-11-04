@@ -3,6 +3,8 @@ import { Mail, MapPin, Phone, Globe } from 'lucide-react';
 import SectionHeading from '../components/common/SectionHeading';
 import AnimatedSection from '../components/common/AnimatedSection';
 
+import contactBanner from "../../images/contact.png";
+
 const Contact = () => {
   return (
     <div>
@@ -11,7 +13,7 @@ const Contact = () => {
   <div className="absolute inset-0 z-0">
     <div className="absolute inset-0 bg-black/60 z-10" />
     <img
-      src="https://images.pexels.com/photos/2451616/pexels-photo-2451616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      src={contactBanner}
       alt="Contact us"
       className="w-full h-full object-cover"
     />

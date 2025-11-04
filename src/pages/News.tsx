@@ -4,6 +4,8 @@ import SectionHeading from '../components/common/SectionHeading';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { newsItems, NewsItem } from '../data/newsData';
 
+import newsBanner from '../../images/news_section/news.png';
+
 type Category = 'all' | 'publication' | 'award' | 'conference' | 'general';
 
 /** Parse YYYY-MM-DD as *local* midnight (prevents UTC shifting one day back). */
@@ -33,7 +35,7 @@ const News = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img
-            src="https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src={newsBanner}
             alt="News and updates"
             className="w-full h-full object-cover"
           />

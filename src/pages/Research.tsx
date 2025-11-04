@@ -1,161 +1,94 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import AnimatedSection from '../components/common/AnimatedSection';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
 import { researchAreas } from '../data/researchData';
+import researchBanner from "../../images/researchBanner.png";
+
 
 const Research = () => {
-  const { areaId, domainId } = useParams<{ areaId?: string; domainId?: string }>();
-  const navigate = useNavigate();
-
-  const selectedArea = researchAreas.find((a) => a.id === areaId);
-  const selectedDomain = selectedArea?.domains.find((d) => d.id === domainId);
-
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative h-[160px] bg-gray-900 mt-16">
+      {/* Hero Banner */}
+      <section className="relative h-[160px] bg-gray-900 mt-[64px]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img
-            src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Team members collaborating"
+            src={researchBanner}
+            alt="Research"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="relative z-20 text-white max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+
+        <div className="relative z-20 text-white max-w-screen-xl mx-auto px-6 pt-16">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-4xl font-raleway md:text-5xl leading-tight mb-4"
+            className="text-3xl md:text-5xl font-raleway font-bold"
           >
-            Research Themes
+            Research
           </motion.h1>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 py-12 mb-24">
+      {/* Research Cards */}
+      <section className="bg-white py-12">
+        <div className="max-w-screen-xl mx-auto px-4 space-y-10 sm:space-y-12">
 
-        {/* 1. Research Areas Grid */}
-        {!areaId && (
-          <div className="grid gap-8 mt-12 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]">
-            {researchAreas.map((area) => (
-              <Link
-                to={`/research/${area.id}`}
-                key={area.id}
-                className="relative group cursor-pointer rounded-lg overflow-hidden shadow-md hover:shadow-xl transition"
-              >
+          {researchAreas.map((area, index) => (
+            <AnimatedSection key={area.id} delay={index * 0.08}>
+              <div className="relative h-72 sm:h-80 lg:h-[380px] rounded-xl overflow-hidden shadow-md group">
+
                 {/* Background Image */}
                 <img
                   src={area.image}
                   alt={area.title}
-                  className="w-full aspect-video object-cover object-center"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 z-10 flex flex-col justify-center items-center text-white px-4 text-center transition duration-300 group-hover:bg-black/60">
-                  {/* Title */}
-                  <h1 className="text-2xl font-bold mb-10">{area.title}</h1>
+                {/* Dark gradient for readability */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-black/60"></div>
 
-                  {/* Description on hover */}
-                  <p className="text-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-pre-line text-left pl-4">
-                    {area.description || 'No description available.'}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        )}
+                <div className="absolute inset-0 flex">
 
-        {/* 2. Domains Grid */}
-        {areaId && !domainId && selectedArea && (
-          <div>
-            <button
-              className="mb-4 px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-              onClick={() => navigate('/research')}
-            >
-              ← Back to Research Areas
-            </button>
-            <h2 className="text-3xl mb-6 text-center">{selectedArea.title}</h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 px-14 py-3">
-              {selectedArea.domains.map((domain) => (
-                <Link
-                  key={domain.id}
-                  to={`/research/${areaId}/${domain.id}`}
-                  className="relative cursor-pointer rounded-lg overflow-hidden shadow-md hover:shadow-xl transition"
-                >
-                  <img
-                    src={domain.image}
-                    alt={domain.title}
-                    className="w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <h3 className="text-white text-xl font-sans text-center px-2">
-                      {domain.title}
-                    </h3>
+                  {/* Left Title Box */}
+                  <div className="w-[40%] sm:w-[35%] flex items-end p-4 sm:p-6">
+                    <div className="bg-white/90 backdrop-blur-md rounded-lg px-3 py-2 sm:px-5 sm:py-4 shadow-lg">
+                      <h3 className="text-base sm:text-xl md:text-2xl font-bold font-raleway text-gray-900 leading-tight">
+                        {area.title}
+                      </h3>
+                    </div>
                   </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
 
-        {/* 3. Projects under Domain */}
-        {areaId && domainId && selectedDomain && (
-          <div>
-            <button
-              className="mb-4 px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-              onClick={() => navigate(`/research/${areaId}`)}
-            >
-              ← Back to Domains
-            </button>
+                  {/* Right Description */}
+                  <div className="ml-auto w-[60%] sm:w-[65%] flex items-end p-4 sm:p-6">
+                    <div className="bg-black/60 rounded-lg p-3 sm:p-4 md:p-5 text-white max-w-lg">
+                      <p className="text-sm sm:text-base leading-relaxed">
+                        {area.description}
+                      </p>
 
-            <h2 className="text-3xl font-bold mb-6 text-center">
-              {selectedDomain.title} Projects
-            </h2>
-
-            {/* Domain Description */}
-            <div className="flex items-center justify-center min-h-[200px] px-4">
-              <p className="text-lg mb-8 whitespace-pre-line text-left pl-4">
-                {selectedDomain.description}
-              </p>
-            </div>
-
-            {/* Projects */}
-            <div className="space-y-6">
-              {selectedDomain.projects.map((project) => (
-                <div
-                  key={project.id}
-                  className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition w-full max-w-full"
-                >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full sm:w-64 h-auto object-cover flex-shrink-0"
-                  />
-                  <div className="p-6 flex flex-col justify-center flex-grow">
-                    <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-gray-700 whitespace-pre-line">{project.description}</p>
+                      {area.href && (
+                        <div className="mt-3 text-right">
+                          <Link
+                            to={area.href}
+                            className="inline-flex items-center text-blue-300 hover:text-white transition"
+                          >
+                            Explore <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
-        {/* Error messages */}
-        {areaId && !selectedArea && (
-          <div className="text-center mt-10 text-red-600 font-semibold">
-            Research area not found.
-          </div>
-        )}
-        {domainId && !selectedDomain && (
-          <div className="text-center mt-10 text-red-600 font-semibold">
-            Domain not found.
-          </div>
-        )}
-      </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          ))}
+
+        </div>
+      </section>
     </div>
   );
 };
