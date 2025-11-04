@@ -3,10 +3,10 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SectionHeading from '../components/common/SectionHeading';
 import AnimatedSection from '../components/common/AnimatedSection';
-import introBg from '../../images/bacterial_cellulose.png'; // adjust path based on your structure
+import introBg from '../../images/bacterial_cellulose.png';
 
 import { newsItems } from '../data/newsData';
-import { publications } from '../data/publications'; 
+import { publications } from '../data/publications';
 import imageData from '../../images/green-energy.jpg';
 import { FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
@@ -18,7 +18,6 @@ import hp4 from "../../images/home_pub/hp4.png";
 import hp5 from "../../images/home_pub/hp5.png";
 import hp6 from "../../images/home_pub/hp6.png";
 
-
 // Override images for highlighted publications in Home
 const homePubImages: Record<string, string> = {
   "pub74": hp1,
@@ -29,15 +28,14 @@ const homePubImages: Record<string, string> = {
   "pub26": hp6,
 };
 
-
 const Home = () => {
   const recentNews = [...newsItems]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
   // Highlighted publications
-  const HIGHLIGHTED_PUB_IDS: string[] = [
-  'pub68','pub74','pub53','pub49','pub36','pub26'
+  const highlighted_pub_id: string[] = [
+    'pub68', 'pub74', 'pub53', 'pub49', 'pub36', 'pub26'
   ];
 
   type Pub = typeof publications[number];
@@ -45,8 +43,8 @@ const Home = () => {
 
   const byId = new Map(publications.map(p => [p.id, p]));
   const highlightedPubs: Pub[] =
-    HIGHLIGHTED_PUB_IDS.length
-      ? (HIGHLIGHTED_PUB_IDS.map(id => byId.get(id)).filter(Boolean).slice(0, 6) as Pub[])
+    highlighted_pub_id.length
+      ? (highlighted_pub_id.map(id => byId.get(id)).filter(Boolean).slice(0, 6) as Pub[])
       : [...publications].sort((a, b) => b.year - a.year).slice(0, 6);
 
   return (
@@ -143,10 +141,10 @@ const Home = () => {
             <div className="text-center max-w-5xl mx-auto">
               <AnimatedSection delay={0.2}>
                 <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
-                  At the Maksud Innovation Lab, we pursue curiosity-driven research at the intersection of materials science, advanced manufacturing, and circularity to promote a greener and more resilient future. 
+                  At the Maksud Innovation Lab, we pursue curiosity-driven research at the intersection of materials science, advanced manufacturing, and circularity to promote a greener and more resilient future.
                 </p>
                 <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
-                  Our mission is to develop sustainable and scalable solutions to address global challenges in structural systems, food safety and security, and environmental technologies. We focus on the design and manufacturing of multifunctional circular materials that integrate principles of frugality, functionality, and circular economy. 
+                  Our mission is to develop sustainable and scalable solutions to address global challenges in structural systems, food safety and security, and environmental technologies. We focus on the design and manufacturing of multifunctional circular materials that integrate principles of frugality, functionality, and circular economy.
                 </p>
                 <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
                   From architected wood to fresh produce preservation to recyclable structural composites, our research explores structure–property–performance relationships across a wide range of circular material systems, spanning the nano to macro scales. Through this work, we aim to translate fundamental scientific insights into impactful, real-world innovations that promote a more sustainable planet.
@@ -173,15 +171,15 @@ const Home = () => {
             {recentNews.map((news, index) => (
               <AnimatedSection key={news.id} delay={0.1 * index}>
                 <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-full transition-transform transform hover:scale-105">
-                  <div className="p-6">
-                    <span className="text-sm text-gray-500 mb-2 block">
+                  <div className="p-5">
+                    <span className="text-sm text-gray-500 mb-3 block">
                       {new Date(news.date).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
                       })}
                     </span>
-                    <h3 className="text-xl font-semibold mb-3">
+                    <h3 className="text-2xl font-semibold mb-3">
                       {news.Link ? (
                         <a
                           href={news.Link}
@@ -200,7 +198,7 @@ const Home = () => {
                       <img
                         src={news.image}
                         alt={news.title}
-                        className="w-full h-48 sm:h-56 object-cover rounded-md"
+                        className="w-full h-46 sm:h-44 object-cover rounded-md"
                       />
                     </div>
                   </div>
@@ -225,47 +223,71 @@ const Home = () => {
       <section className="bg-white pt-4 pb-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading title="Highlighted Publications" centered />
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {highlightedPubs.map((pub, idx) => (
-              <AnimatedSection key={pub.id} delay={0.08 * idx}>
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-full p-6 transition-transform transform hover:scale-105">
+
+          <div className="relative overflow-hidden">
+            <motion.div
+              className="flex gap-6 md:gap-8 w-max"
+              animate={{ x: ['0%', '-50%'] }}
+              transition={{ duration: 50, repeat: Infinity, ease: 'linear' }} // slower scroll
+            >
+              {[...highlightedPubs, ...highlightedPubs].map((pub, idx) => (
+                <div
+                  key={`${pub.id}-${idx}`}
+                  className="bg-gray-50 rounded-lg overflow-hidden shadow-sm p-6 transition-transform transform hover:scale-105
+                             w-[280px] sm:w-[300px] h-[360px] flex flex-col"
+                >
                   {pub.image && (
-                    <img
-                      src={homePubImages[pub.id] || pub.image}
-                      alt={pub.title}
-                      className="w-full h-auto max-h-48 object-contain rounded-md mb-4 bg-white p-2"
-                    />
+                    <div className="w-full h-32 mb-3 bg-white rounded-md p-2 flex items-center justify-center">
+                      <img
+                        src={homePubImages[pub.id] || pub.image}
+                        alt={pub.title}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
                   )}
 
-                  {/* Journal */}
-                  <p className="text-2xl text-blue-500 font-semibold mb-1 text-center">
-                    {meta(pub)}
+                  <div className="flex-1 flex flex-col gap-2">
+                    {/* Journal */}
+                    <p className="text-2xl text-blue-500 font-semibold mb-1 text-center line-clamp-1">
+                      {meta(pub)}
                     </p>
+
                     {/* Title */}
-                    <h3 className="text-lg font-semibold mb-2 text-center">
+                    <h3 className="text-lg font-semibold mb-2 text-center line-clamp-2">
                       {pub.link ? (
                         <a
-                        href={pub.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-black-800"
+                          href={pub.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline text-black-800"
                         >
                           {pub.title.replace(/^\d+\.\s*/, '')}
-                          </a>
-                          ) : (
-                            pub.title.replace(/^\d+\.\s*/, '')
-                            )}
-                            </h3>
-                            {/* Authors */}
-                            {(pub.authors ?? pub.author) && (
-                              <p className="text-sm text-gray-700 text-center">
-                                {pub.authors ?? pub.author}
-                                </p>
-                              )}
-                              </div>
-                              </AnimatedSection>
-                            ))}
-                            </div>
+                        </a>
+                      ) : (
+                        pub.title.replace(/^\d+\.\s*/, '')
+                      )}
+                    </h3>
+
+                    {/* Authors */}
+                    {(pub.authors ?? pub.author) && (() => {
+                      const authorString = pub.authors ?? pub.author;
+                      const firstAuthor = authorString.split(',')[0];
+                      return (
+                        <p className="text-sm text-gray-700 text-center italic line-clamp-1">
+                          {firstAuthor} et al.
+                        </p>
+                      );
+                    })()}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Edge fades */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent" />
+          </div>
+
           <div className="mt-12 text-center">
             <Link
               to="/publications"
