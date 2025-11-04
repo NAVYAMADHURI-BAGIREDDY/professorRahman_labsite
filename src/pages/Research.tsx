@@ -49,7 +49,7 @@ const Research = () => {
                 <img
                   src={area.image}
                   alt={area.title}
-                  className="w-full h-100 object-cover"
+                  className="w-full aspect-video object-cover object-center"
                 />
 
                 {/* Overlay */}

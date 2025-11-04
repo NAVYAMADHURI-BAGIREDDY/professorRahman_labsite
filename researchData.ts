@@ -21,16 +21,19 @@ export interface ResearchArea {
   title: string;
   description: string;
   image: string;
-  keywords?: string[];
+  keywords: string[];
   domains: Domain[];
 }
 
 export const researchAreas: ResearchArea[] = [
   {
-    id: 'materials',
-    title: 'Circular Materials',
-    description: 'Intricate hierarchical structures found in nature reveal how exceptional mechanical and functional performance can be achieved with minimal material diversity. These distinguished properties stem not just from the material composition but, more importantly, from the topology and spatial arrangement of their building blocks. At our lab, we draw inspiration from these natural design principles to engineer advanced lightweight structures with tailored multiscale geometries. Leveraging the capabilities of additive manufacturing, we aim to translate these design paradigms at the macroscale into damage-tolerant and energy-efficient architectures.', 
-    image: research1,
+    id: 'materials-mechanics',
+    title: 'Materials & Mechanics',
+    description: `Structural Bio-based Polymers, Fibers, and Composites
+    Functional Biomaterials for Food and Energy Sustainability
+    Structural Nanocomposites and Laminated Composites`,
+      // Intricate hierarchical structures found in nature reveal how exceptional mechanical and functional performance can be achieved with minimal material diversity. These distinguished properties stem not just from the material composition but, more importantly, from the topology and spatial arrangement of their building blocks. At our lab, we draw inspiration from these natural design principles to engineer advanced lightweight structures with tailored multiscale geometries. Leveraging the capabilities of additive manufacturing, we aim to translate these design paradigms at the macroscale into damage-tolerant and energy-efficient architectures.
+      image: research1,
     keywords: ['Composites', 'Smart Materials', 'Multifunctional Design'],
     domains: [
      
@@ -117,13 +120,16 @@ export const researchAreas: ResearchArea[] = [
 
     ],
   },
-
   {
-    id: 'manufacturing',
-    title: 'Sustainable Manufacturing',
-    description: 'Intricate hierarchical structures found in nature reveal how exceptional mechanical and functional performance can be achieved with minimal material diversity. These distinguished properties stem not just from the material composition but, more importantly, from the topology and spatial arrangement of their building blocks. At our lab, we draw inspiration from these natural design principles to engineer advanced lightweight structures with tailored multiscale geometries. Leveraging the capabilities of additive manufacturing, we aim to translate these design paradigms at the macroscale into damage-tolerant and energy-efficient architectures.',
+    id: 'manufacturing-design',
+    title: 'Manufacturing & Design',
+    description: `Additive Manufacturing of Materials
+    Biomanufacturing of Cellulose and Living Composites
+    Bio-inspired Design
+    Metamaterials Design`,
+      //Intricate hierarchical structures found in nature reveal how exceptional mechanical and functional performance can be achieved with minimal material diversity. These distinguished properties stem not just from the material composition but, more importantly, from the topology and spatial arrangement of their building blocks. At our lab, we draw inspiration from these natural design principles to engineer advanced lightweight structures with tailored multiscale geometries. Leveraging the capabilities of additive manufacturing, we aim to translate these design paradigms at the macroscale into damage-tolerant and energy-efficient architectures.',
     image: research2,
-    keywords: [],
+    keywords: ['3D Printing', 'Digital Fabrication', 'Rapid Prototyping'],
     domains: [
      
   {
@@ -209,5 +215,7 @@ export const researchAreas: ResearchArea[] = [
 
     ],
   }
-     
+      
+    
+  
 ];

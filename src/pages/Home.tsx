@@ -168,11 +168,11 @@ const Home = () => {
                             )}
                             </h3>
 
-                    <div className="sm:w-64 w-full sm:flex-shrink-0">
+                    <div className="sw-full mt-4">
                           <img
                             src={news.image}
                             alt={news.title}
-                            className="w-full h-auto object-cover rounded-md"
+                            className="w-full h-48 sm:h-56 object-cover rounded-md"
 
                           />
                         </div>
