@@ -28,10 +28,15 @@ const Header = () => {
     >
       <div className="max-w-screen-xl mx-auto px-6 sm:px-6  lg:px-8 flex justify-between items-center">
         <Link
-          to="/"
-          className="text-2xl  sm:text-4xl font-raleway font-bold text-black hover:text-blue-500 transition-colors"
+        to="/"
+        className="flex flex-col leading-tight hover:text-blue-500 transition-colors"
         >
-          Maksud Innovation Lab
+          <span className="text-3xl sm:text-5xl font-raleway font-extrabold text-black">
+            Maksud
+            </span>
+            <span className="text-base sm:text-lg font-raleway font-semibold text-gray-700 tracking-wide">
+              Innovation Lab
+            </span>
         </Link>
 
         {/* Desktop Navigation */}

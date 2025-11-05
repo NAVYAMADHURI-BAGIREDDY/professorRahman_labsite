@@ -19,10 +19,10 @@ export const researchAreas: ResearchArea[] = [
     description:
     "Developing circular and multifunctional materials for structural, environmental, and food-security applications. We engineer bio-based and architected systems with tunable properties across nano-to-macro scales.",
     focus: [
-      "Bio-based materials & edible coatings",
-      "Recyclable & upcycled composites",
-      "Nanostructured & architected materials",
-      "Sustainable materials for food & environment"
+      "BIOTIC NANOFIBERS",
+      "MULTIFUNCTIONAL BIONANOCOMPOSITES",
+      "RECYCLABLE NANOCOMPOSITES",
+      "CARBON-BASED FIBERS & COMPOSITES"
     ],
     href: "/research/materials"
   },
@@ -31,26 +31,24 @@ export const researchAreas: ResearchArea[] = [
     title: "Manufacturing for Circularity",
     image: research2,
     description:
-    "Scaling sustainable materials through frugal and advanced manufacturing routes — including DIW 3D printing, scalable bio-polymer fabrication, and circular composite processing — with minimal waste and energy use.",
+    "Intricate hierarchical structures found in nature reveal how exceptional mechanical and functional performance can be achieved with minimal material diversity. These distinguished properties stem not just from the material composition but, more importantly, from the topology and spatial arrangement of their building blocks. At our lab, we draw inspiration from these natural design principles to engineer advanced lightweight structures with tailored multiscale geometries. Leveraging the capabilities of additive manufacturing, we aim to translate these design paradigms at the macroscale into damage-tolerant and energy-efficient architectures.",
     focus: [
-      "DIW 3D printing & bio-fabrication",
-      "Zero-waste processing routes",
-      "Circular composite manufacturing",
-      "Process energy & emissions optimization"
+      "ADDITIVE MANUFACTURING OF BIOTIC MATERIALS",
+      "ADDITIVE MANUFACTURING OF RECYCLABLE MATERIALS",
+      "BIO-INSPIRED DAMAGE-TOLERANT DESIGN",
+      "BIOMANUFACTURING OF LIVING COMPOSITES"
     ],
     href: "/research/manufacturing"
   },
   {
     id: "design",
-    title: "Design for Circularity",
+    title: "Design & Applications for Circularity",
     image: research3,
     description:
     "Creating bio-inspired and architected material systems that achieve exceptional strength, toughness, and lightweight efficiency through multiscale structural design and topology optimization — advancing durable, repairable, and high-performance circular materials.",
     focus: [
-      "Bio-inspired engineering",
-      "Topology optimization",
-      "Lightweight & durable structures",
-      "Repairable & modular systems"
+      "BIOMATERIALS FOR FOOD SAFETY AND SECURITY",
+      "GREEN ELECTRONICS AND ENERGY MATERIALS"
     ],
     href: "/research/design"
   },
