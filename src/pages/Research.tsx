@@ -67,7 +67,7 @@ const Research = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
                     {/* Research Focus Header + List */}
-                    <div className="absolute left-3 right-3 bottom-3 z-20">
+                    <div className="absolute left-3 right-3 top-3 z-20">
                       <h4 className="text-white text-medium sm:text-medium font-semibold uppercase mb-3 leading-tight">
                         Research Focus
                       </h4>

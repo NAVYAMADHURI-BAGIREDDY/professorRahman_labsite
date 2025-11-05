@@ -31,7 +31,7 @@ const Header = () => {
         to="/"
         className="flex flex-col leading-tight hover:text-blue-500 transition-colors"
         >
-          <span className="text-3xl sm:text-5xl font-raleway font-extrabold text-black">
+          <span className="text-3xl sm:text-4xl font-raleway font-extrabold text-black">
             Maksud
             </span>
             <span className="text-base sm:text-lg font-raleway font-semibold text-gray-700 tracking-wide">
@@ -41,7 +41,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 lg:space-x-8">
-          {['HOME', 'TEAM', 'RESEARCH', 'PUBLICATIONS', 'NEWS', 'CONTACT'].map((item) => (
+          {['Home', 'Team', 'Research', 'Publications', 'News', 'Contact'].map((item) => (
             <NavLink
               key={item}
               to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
