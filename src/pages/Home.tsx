@@ -135,26 +135,26 @@ const Home = () => {
         <div className="relative z-10 py-12 sm:py-16 lg:py-20">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 max-w-3xl mx-auto">
-              <h2 className="font-raleway text-3xl md:text-4xl font-medium text-blue-600">
+              <h2 className="font-raleway text-3xl md:text-4xl font-medium text-cyan-600">
                 Exploring Nature. Engineering the Future.
               </h2>
             </div>
 
             <div className="text-center max-w-5xl mx-auto">
               <AnimatedSection delay={0.2}>
-                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
+                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed font-semibold">
                   At the Maksud Innovation Lab, we pursue curiosity-driven research at the intersection of materials science, advanced manufacturing, and circularity to promote a greener and more resilient future. 
                 </p>
-                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
+                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed font-semibold">
                   Our mission is to develop sustainable and scalable solutions to address global challenges in structural systems, food safety and security, and environmental technologies. We focus on the design and manufacturing of multifunctional circular materials that integrate principles of frugality, functionality, and circular economy. 
                 </p>
-                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed">
+                <p className="text-black text-base sm:text-lg mb-4 leading-relaxed font-semibold">
                   From architected wood to fresh produce preservation to recyclable structural composites, our research explores structure–property–performance relationships across a wide range of circular material systems, spanning the nano to macro scales. Through this work, we aim to translate fundamental scientific insights into impactful, real-world innovations that promote a more sustainable planet.
                 </p>
 
                 <Link
                   to="/people"
-                  className="text-blue-500 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+                  className="text-cyan-600 hover:text-primary-400 font-semibold text-2xl flex items-center justify-center transition-colors"
                 >
                   Meet Our Team
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -187,7 +187,7 @@ const Home = () => {
                           href={news.Link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:underline text-blue-500"
+                          className="hover:underline text-cyan-600"
                         >
                           {news.title}
                         </a>
@@ -211,7 +211,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/news"
-              className=" text-blue-500 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+              className=" text-cyan-600 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
             >
               View All News
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -232,12 +232,12 @@ const Home = () => {
                     <img
                       src={homePubImages[pub.id] || pub.image}
                       alt={pub.title}
-                      className="w-full h-auto max-h-48 object-contain rounded-md mb-4 bg-white p-2"
+                      className="w-full h-auto max-h-40 object-contain rounded-md mb-4 bg-white p-2"
                     />
                   )}
 
                   {/* Journal */}
-                  <p className="text-2xl text-blue-500 font-semibold mb-1 text-center">
+                  <p className="text-2xl text-cyan-600 font-semibold mb-1 text-center">
                     {meta(pub)}
                     </p>
                     {/* Title */}
@@ -272,7 +272,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/publications"
-              className="text-blue-500 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+              className="text-cyan-600 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
             >
               View All Publications
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -282,17 +282,17 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-primary-700 text-white">
+      <section className="py-16 bg-cyan-600 text-white">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-medium mb-6">Interested in Our Research?</h2>
-            <p className="font-raleway text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="font-raleway text-base sm:text-xl md:text-xl text-black-200 mb-8 max-w-3xl mx-auto">
               Anyone interested in making science and our mother nature their way of life is welcome to contact us. We value creativity, integrity, passion, and persistence in everyone we work with, and we are always open to collaborating with like-minded individuals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-3 bg-white text-primary-900 hover:bg-gray-100 rounded-md font-medium transition-colors"
+                className="px-8 py-3 bg-white text-primary-900 hover:bg-gray-100 rounded-md font-semibold transition-colors"
               >
                 Contact Us
               </Link>
