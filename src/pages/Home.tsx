@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -18,7 +19,6 @@ import hp4 from "../../images/home_pub/hp4.png";
 import hp5 from "../../images/home_pub/hp5.png";
 import hp6 from "../../images/home_pub/hp6.png";
 
-
 // Override images for highlighted publications in Home
 const homePubImages: Record<string, string> = {
   "pub74": hp1,
@@ -29,15 +29,27 @@ const homePubImages: Record<string, string> = {
   "pub26": hp6,
 };
 
-
 const Home = () => {
-  const recentNews = [...newsItems]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3);
+  // NEWS (window of 3)
+  const [startIdx, setStartIdx] = useState(0);
 
-  // Highlighted publications
+  const topFiveNews = [...newsItems]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 5);
+
+  const total = topFiveNews.length;
+  const windowSize = 3;
+
+  const nextNews = () => {
+    if (startIdx < total - windowSize) setStartIdx(startIdx + 1);
+  };
+  const prevNews = () => {
+    if (startIdx > 0) setStartIdx(startIdx - 1);
+  };
+
+  // Highlighted Publications
   const highlighted_pub_id: string[] = [
-  'pub68','pub74','pub53','pub49','pub36','pub26'
+    'pub68','pub74','pub53','pub49','pub36','pub26'
   ];
 
   type Pub = typeof publications[number];
@@ -168,50 +180,96 @@ const Home = () => {
       {/* News Section */}
       <section className="bg-white pt-8 pb-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Latest News" centered />
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {recentNews.map((news, index) => (
-              <AnimatedSection key={news.id} delay={0.1 * index}>
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-full transition-transform transform hover:scale-105">
-                  <div className="p-6">
-                    <span className="text-sm text-gray-500 mb-2 block">
-                      {new Date(news.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
-                    </span>
-                    <h3 className="text-xl font-semibold mb-3">
-                      {news.Link ? (
-                        <a
-                          href={news.Link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:underline text-cyan-600"
-                        >
-                          {news.title}
-                        </a>
-                      ) : (
-                        news.title
-                      )}
-                    </h3>
-                    <div className="w-full mt-4">
-                      <img
-                        src={news.image}
-                        alt={news.title}
-                        className="w-full h-46 sm:h-44 object-cover rounded-md"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
+          <div className="relative">
+            <div className="flex justify-center">
+              <SectionHeading title="Latest News" centered />
+            </div>
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 flex gap-3">
+              <button
+                onClick={prevNews}
+                disabled={startIdx === 0}
+                className={`inline-flex items-center font-medium ${
+                  startIdx === 0
+                    ? "text-gray-300 cursor-default"
+                    : "text-cyan-600 hover:text-cyan-700"
+                }`}
+                aria-label="Previous news"
+              >
+                Prev
+              </button>
+              <button
+                onClick={nextNews}
+                disabled={startIdx >= total - windowSize}
+                className={`inline-flex items-center font-medium ${
+                  startIdx >= total - windowSize
+                    ? "text-gray-300 cursor-default"
+                    : "text-cyan-600 hover:text-cyan-700"
+                }`}
+                aria-label="Next news"
+              >
+                Next
+              </button>
+            </div>
           </div>
 
-          <div className="mt-12 text-center">
+          {/* Viewport */}
+          <div className="mt-6 overflow-hidden">
+            {/* Track */}
+            <div
+              className="flex -mx-3 transition-transform duration-500 ease-linear"
+              style={{
+                transform: `translateX(-${(startIdx * 100) / 3}%)`,
+              }}
+            >
+              {/* Slides: each 1/3 width of viewport */}
+              {topFiveNews.map((news) => (
+                <div key={news.id} className="basis-1/3 shrink-0 px-3">
+                  {/* Card: slightly taller to avoid title cropping */}
+                  <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[20rem] md:h-[21rem] flex flex-col">
+                    <div className="p-5 flex-1 flex flex-col justify-between">
+                      {/* Date + Title block */}
+                      <div>
+                        <span className="text-xs text-gray-500 mb-2 block">
+                          {new Date(news.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                            })}
+                            </span>
+
+                            <h3 className="text-base md:text-xl font-semibold leading-snug mb-2 min-h-[2.75rem]">
+                              {news.Link ? (
+                                <a
+                                href={news.Link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:underline text-cyan-600"
+                                >
+                                  {news.title}
+                                  </a>
+                                  ) : (
+                                    news.title
+                                    )}
+                                    </h3>
+                                    </div>
+                                    {/* Image */}
+                                    <img
+                                    src={news.image}
+                                    alt={news.title}
+                                 className="w-full h-36 md:h-40 object-cover rounded-md"
+                              />
+                         </div>
+                    </div>
+                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* View All */}
+          <div className="mt-10 text-center">
             <Link
               to="/news"
-              className=" text-cyan-600 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+              className="text-cyan-600 hover:text-primary-400 font-medium text-2xl inline-flex items-center transition-colors"
             >
               View All News
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -239,36 +297,36 @@ const Home = () => {
                   {/* Journal */}
                   <p className="text-2xl text-cyan-600 font-semibold mb-1 text-center">
                     {meta(pub)}
-                    </p>
-                    {/* Title */}
-                    <h3 className="text-lg font-semibold mb-2 text-center">
-                      {pub.link ? (
-                        <a
+                  </p>
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold mb-2 text-center">
+                    {pub.link ? (
+                      <a
                         href={pub.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:underline text-black-800"
-                        >
-                          {pub.title.replace(/^\d+\.\s*/, '')}
-                          </a>
-                          ) : (
-                            pub.title.replace(/^\d+\.\s*/, '')
-                            )}
-                            </h3>
-                            {/* Authors */}
-                            {(pub.authors ?? pub.author) && (() => {
-                              const authorString = pub.authors ?? pub.author;
-                              const firstAuthor = authorString.split(',')[0]; 
-                              return (
-                              <p className="text-sm text-gray-700 text-center italic">
-                                {firstAuthor} et al.
-                                </p>
-                                );
-                                })()}
-                              </div>
-                              </AnimatedSection>
-                            ))}
-                            </div>
+                      >
+                        {pub.title.replace(/^\d+\.\s*/, '')}
+                      </a>
+                    ) : (
+                      pub.title.replace(/^\d+\.\s*/, '')
+                    )}
+                  </h3>
+                  {/* Authors */}
+                  {(pub.authors ?? pub.author) && (() => {
+                    const authorString = pub.authors ?? pub.author;
+                    const firstAuthor = authorString.split(',')[0]; 
+                    return (
+                      <p className="text-sm text-gray-700 text-center italic">
+                        {firstAuthor} et al.
+                      </p>
+                    );
+                  })()}
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
           <div className="mt-12 text-center">
             <Link
               to="/publications"

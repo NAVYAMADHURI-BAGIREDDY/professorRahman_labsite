@@ -100,7 +100,7 @@ const Publications = () => {
 
                       {/* Text on Right */}
                       <div className="flex-1">
-                        <h3 className="text-lg sm:text-xl font-medium mb-1 text-primary-700">
+                        <h3 className="text-lg sm:text-xl font-medium mb-1 text-cyan-600">
                           {pub.link ? (
                             <a
                               href={pub.link}

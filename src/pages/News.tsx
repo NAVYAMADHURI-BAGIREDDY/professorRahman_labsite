@@ -60,22 +60,22 @@ const News = () => {
       </section>
 
       {/* News Section */}
-      <section className="bg-white pt-10 pb-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-white pt-6 pb-16">
+        <div className="max-w-screen-xl mx-auto px-3 sm:px-4 lg:px-6">
           {/* News Timeline */}
           <div className="space-y-12">
             {filteredNews.map((item, index) => {
               const d = asLocalDate(item.date);
               return (
                 <AnimatedSection key={item.id} delay={0.1 * Math.min(index, 5)}>
-                  <div className="relative pl-6 md:pl-0">
+                  <div className="relative pl-5 md:pl-0">
                     {/* Vertical Line Connector */}
-                    <div className="hidden md:block absolute left-[7.5rem] top-0 bottom-0 w-0.5 bg-gray-200"></div>
-
+                    <div className="hidden md:block absolute left-[7.5rem] top-0 bottom-0 w-0.5 bg-gray-200">
+                    </div>
                     <div className="md:grid md:grid-cols-[150px_1fr] gap-8">
                       {/* Date - Desktop */}
-                      <div className="hidden md:block relative">
-                        <div className="sticky top-32 text-right pr-8">
+                      <div className="hidden md:block relative mt-4">
+                        <div className="text-right pr-8">
                           <span className="text-xl font-medium text-gray-900">
                             {d
                               ? d.toLocaleDateString('en-US', {
@@ -87,7 +87,6 @@ const News = () => {
                           <span className="block text-gray-600 text-lg">
                             {d ? d.getFullYear() : ''}
                           </span>
-                          <div className="absolute right-0 top-2 w-4 h-4 rounded-full bg-primary-600 translate-x-2" />
                         </div>
                       </div>
 
@@ -104,16 +103,16 @@ const News = () => {
 
                       {/* News Content */}
                       <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div className="flex flex-col sm:flex-row p-6 gap-4">
+                        <div className="flex flex-col sm:flex-row p-4 gap-3">
                           {/* Text Content */}
                           <div className="flex-1">
-                            <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-primary-700">
+                            <h3 className="text-xl sm:text-xl font-semibold mb-2 text-cyan-600">
                               {item.Link ? (
                                 <a
                                   href={item.Link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="hover:underline hover:text-primary-900"
+                                  className="hover:underline hover:text-cyan-600"
                                 >
                                   {item.title}
                                 </a>
@@ -133,7 +132,7 @@ const News = () => {
                               <img
                                 src={item.image}
                                 alt={item.title}
-                                className="w-full h-56 object-cover rounded-md"
+                                className="w-full h-44 object-cover rounded-md"
                               />
                             </div>
                           )}
