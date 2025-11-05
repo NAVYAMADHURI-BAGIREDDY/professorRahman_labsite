@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 import { researchAreas } from '../data/researchData';
 import researchBanner from "../../images/researchBanner.png";
 
+// helper to create a URL-friendly topic
+const toSlug = (s: string) =>
+  s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 const Research = () => {
   return (
@@ -28,7 +30,7 @@ const Research = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-5xl font-raleway font-bold"
           >
-            Research
+            Research Areas
           </motion.h1>
         </div>
       </section>
@@ -48,7 +50,7 @@ const Research = () => {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
-                {/* Dark gradient for readability */}
+                {/* Dark gradient */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-black/60"></div>
 
                 <div className="absolute inset-0 flex">
@@ -62,21 +64,32 @@ const Research = () => {
                     </div>
                   </div>
 
-                  {/* Right Description */}
-                  <div className="ml-auto w-[60%] sm:w-[65%] flex items-end p-4 sm:p-6">
-                    <div className="bg-black/60 rounded-lg p-3 sm:p-4 md:p-5 text-white max-w-lg">
-                      <p className="text-sm sm:text-base leading-relaxed">
+                  {/* Right: Description + Focus links */}
+                  <div className="ml-auto w-[60%] sm:w-[65%] flex items-end p-5 sm:p-7">
+                    <div className="bg-black/60 rounded-lg p-4 sm:p-5 md:p-6 text-white max-w-2xl w-full">
+
+                      {/* Description */}
+                      <p className="text-base sm:text-lg leading-relaxed font-semibold mb-4">
                         {area.description}
                       </p>
 
-                      {area.href && (
-                        <div className="mt-3 text-right">
-                          <Link
-                            to={area.href}
-                            className="inline-flex items-center text-blue-300 hover:text-white transition"
-                          >
-                            Explore <ArrowRight className="ml-2 h-4 w-4" />
-                          </Link>
+                      {/* Research focus card */}
+                      {area.focus && area.focus.length > 0 && (
+                        <div className="mt-4 bg-white/10 rounded-lg p-3 border border-white/20">
+                          <h4 className="text-sm uppercase opacity-80 mb-2 tracking-wide">
+                            Research Focus
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {area.focus.map((name, i) => (
+                              <Link
+                                key={i}
+                                to={`${area.href}?topic=${encodeURIComponent(toSlug(name))}`}
+                                className="bg-white/20 hover:bg-white/30 text-white text-sm px-2 py-1 rounded-md transition whitespace-nowrap"
+                              >
+                                {name}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
