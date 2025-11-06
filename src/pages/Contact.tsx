@@ -31,7 +31,6 @@ const Contact = () => {
       {/* Contact Information */}
       <section className="py-12 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Stretch both columns to same height */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
             
             {/* Rahman Lab Info */}
@@ -42,48 +41,61 @@ const Contact = () => {
                 </h4>
                 
                 <div className="space-y-6 mt-4">
+                  {/* Address */}
                   <div className="flex items-start">
                     <MapPin className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" />
                     <div className="ml-4 text-sm sm:text-base">
                       <h4 className="text-lg font-medium mb-1">Address</h4>
-                      <p className="text-gray-700 leading-relaxed">
-                        University of Houston <br />
-                        Cullen College of Engineering <br />
-                        Department of Mechanical and Aerospace Engineering <br />
-                        Engineering Building 1, Room N213 <br />
-                        4226 Martin Luther King Boulevard <br />
-                        Houston, TX 77204-4006
-                      </p>
+                      <a
+                        href={
+                          "https://www.google.com/maps/search/?api=1&query=" +
+                          encodeURIComponent(
+                            "Engineering Building 1, Room N213, 4226 Martin Luther King Boulevard, Houston, TX 77204-4006"
+                          )
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-700 leading-relaxed hover:text-primary-600 transition-colors inline-block"
+                        title="Open in Google Maps"
+                      >
+                        <p>
+                          University of Houston <br />
+                          Cullen College of Engineering <br />
+                          Department of Mechanical and Aerospace Engineering <br />
+                          Engineering Building 1, Room N213 <br />
+                          4226 Martin Luther King Boulevard <br />
+                          Houston, TX 77204-4006
+                        </p>
+                      </a>
                     </div>
                   </div>
 
+                  {/* Email */}
                   <div className="flex items-start">
                     <Mail className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" />
                     <div className="ml-4 text-sm sm:text-base">
                       <h4 className="text-lg font-medium mb-1">Email</h4>
-                      <p className="text-gray-700">
-                        <a
-                          href="mailto:maksud@uh.edu"
-                          className="hover:text-primary-600 transition-colors"
-                        >
-                          maksud@uh.edu
-                        </a>
-                      </p>
+                      <a
+                        href="mailto:maksud@uh.edu"
+                        className="text-gray-700 hover:text-primary-600 transition-colors"
+                        title="Send Email"
+                      >
+                        maksud@uh.edu
+                      </a>
                     </div>
                   </div>
 
+                  {/* Phone */}
                   <div className="flex items-start">
                     <Phone className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" />
                     <div className="ml-4 text-sm sm:text-base">
                       <h4 className="text-lg font-medium mb-1">Phone</h4>
-                      <p className="text-gray-700">
-                        <a
-                          href="tel:+17137434500"
-                          className="hover:text-primary-600 transition-colors"
-                        >
-                          (713)-743-4500
-                        </a>
-                      </p>
+                      <a
+                        href="tel:+17137434500"
+                        className="text-gray-700 hover:text-primary-600 transition-colors"
+                      >
+                        (713)-743-4500
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -94,8 +106,7 @@ const Contact = () => {
             <AnimatedSection delay={0.2}>
               <div className="bg-gray-50 rounded-lg p-6 sm:p-8 h-full flex flex-col">
                 <div className="mt-4">
-                  {/* Fixed, predictable height so it doesn't over-stretch */}
-                  <div className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-md">
+                  <div id="uh-map" className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-md">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7507.268344293069!2d-95.34396182415117!3d29.722856175087074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640be59ddbfffff%3A0xf65ddb544650f173!2sEngineering%20Building%201-Cullen%20College%20of%20Engineering!5e1!3m2!1sen!2sus!4v1749091331104!5m2!1sen!2sus"
                       allowFullScreen

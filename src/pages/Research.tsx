@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { researchAreas } from '../data/researchData';
 
-import pubBanner from '../../images/pub.png';
+import pubBanner from '../../images/research.png';
 
 // helper for focus link formatting
 const focusHref = (baseHref: string | undefined, focus: string) => {

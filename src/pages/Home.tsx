@@ -12,6 +12,9 @@ import imageData from '../../images/green-energy.jpg';
 import { FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 
+import labLogo from '../../images/logo.png'; // adjust path
+
+
 import hp1 from "../../images/home_pub/hp1.png";
 import hp2 from "../../images/home_pub/hp2.png";
 import hp3 from "../../images/home_pub/hp3.png";
@@ -28,6 +31,22 @@ const homePubImages: Record<string, string> = {
   "pub36": hp5,
   "pub26": hp6,
 };
+
+/* Funding Logos */
+   import nsf from '../../images/fund_logos/nsf.png';
+   import usda from '../../images/fund_logos/usda.png';
+   import lmc from '../../images/fund_logos/lmc.png';
+   import alberta from '../../images/fund_logos/alberta.png';   
+   import flow from '../../images/fund_logos/flow.png';
+
+type Sponsor = { name: string; logo?: string };
+const partners: Sponsor[] = [
+  { name: 'National Science Foundation', logo: nsf },
+  { name: 'U.S. Department of Agriculture', logo: usda },
+  { name: 'Lockheed Martin Corporation', logo: lmc },
+  { name: 'Alberta Innovates – Technology Futures', logo: alberta },
+  { name: 'Flowserve US, Inc', logo: flow },
+];
 
 const Home = () => {
   // NEWS (window of 3)
@@ -177,100 +196,96 @@ const Home = () => {
         </div>
       </section>
 
+      {/* News Section */}
+      <section className="bg-white pt-4 pb-16 relative">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center mb-6">
+            <SectionHeading title="Latest News" centered />
+          </div>
 
-      
-{/* News Section */}
-<section className="bg-white pt-8 pb-16 relative">
-  <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex justify-center mb-8">
-      <SectionHeading title="Latest News" centered />
-    </div>
+          {/* Arrows */}
+          <button
+            onClick={prevNews}
+            disabled={startIdx === 0}
+            aria-label="Previous news"
+            className={`absolute left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
+              startIdx === 0 ? 'opacity-40 cursor-not-allowed' : ''
+            }`}
+          >
+            <ArrowRight className="rotate-180 w-6 h-6" />
+          </button>
 
-    {/* Arrows */}
-    <button
-      onClick={prevNews}
-      disabled={startIdx === 0}
-      aria-label="Previous news"
-      className={`absolute left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
-        startIdx === 0 ? 'opacity-40 cursor-not-allowed' : ''
-      }`}
-    >
-      <ArrowRight className="rotate-180 w-6 h-6" />
-    </button>
+          <button
+            onClick={nextNews}
+            disabled={startIdx >= total - windowSize}
+            aria-label="Next news"
+            className={`absolute right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
+              startIdx >= total - windowSize ? 'opacity-40 cursor-not-allowed' : ''
+            }`}
+          >
+            <ArrowRight className="w-6 h-6" />
+          </button>
 
-    <button
-      onClick={nextNews}
-      disabled={startIdx >= total - windowSize}
-      aria-label="Next news"
-      className={`absolute right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
-        startIdx >= total - windowSize ? 'opacity-40 cursor-not-allowed' : ''
-      }`}
-    >
-      <ArrowRight className="w-6 h-6" />
-    </button>
-
-    {/* Viewport */}
-    <div className="mt-6 overflow-hidden relative">
-      {/* Track */}
-      <div
-        className="flex -mx-3 transition-transform duration-500 ease-linear"
-        style={{
-          transform: `translateX(-${(startIdx * 100) / 3}%)`,
-        }}
-      >
-        {topFiveNews.map((news) => (
-          <div key={news.id} className="basis-1/3 shrink-0 px-3">
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[20rem] md:h-[21rem] flex flex-col">
-              <div className="p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <span className="text-xs text-gray-500 mb-2 block">
-                    {new Date(news.date).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </span>
-                  <h3 className="text-base md:text-xl font-semibold leading-snug mb-2 min-h-[2.75rem]">
-                    {news.Link ? (
-                      <a
-                        href={news.Link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-cyan-600"
-                      >
-                        {news.title}
-                      </a>
-                    ) : (
-                      news.title
-                    )}
-                  </h3>
+          {/* Viewport */}
+          <div className="mt-0 overflow-hidden relative">
+            {/* Track */}
+            <div
+              className="flex -mx-3 transition-transform duration-500 ease-linear"
+              style={{
+                transform: `translateX(-${(startIdx * 100) / 3}%)`,
+              }}
+            >
+              {topFiveNews.map((news) => (
+                <div key={news.id} className="basis-1/3 shrink-0 px-3">
+                  <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[20rem] md:h-[21rem] flex flex-col">
+                    <div className="p-5 flex-1 flex flex-col justify-between">
+                      <div>
+                        <span className="text-xs text-gray-500 mb-2 block">
+                          {new Date(news.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </span>
+                        <h3 className="text-base md:text-xl font-semibold leading-snug mb-2 min-h-[2.75rem]">
+                          {news.Link ? (
+                            <a
+                              href={news.Link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline text-cyan-600"
+                            >
+                              {news.title}
+                            </a>
+                          ) : (
+                            news.title
+                          )}
+                        </h3>
+                      </div>
+                      <img
+                        src={news.image}
+                        alt={news.title}
+                        className="w-full h-36 md:h-40 object-cover rounded-md"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <img
-                  src={news.image}
-                  alt={news.title}
-                  className="w-full h-36 md:h-40 object-cover rounded-md"
-                />
-              </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
 
-    {/* View All */}
-    <div className="mt-10 text-center">
-      <Link
-        to="/news"
-        className="text-cyan-600 hover:text-primary-400 font-medium text-2xl inline-flex items-center transition-colors"
-      >
-        View All News
-        <ArrowRight className="ml-2 h-5 w-5" />
-      </Link>
-    </div>
-  </div>
-</section>
-
-
+          {/* View All */}
+          <div className="mt-10 text-center">
+            <Link
+              to="/news"
+              className="text-cyan-600 hover:text-primary-400 font-medium text-2xl inline-flex items-center transition-colors"
+            >
+              View All News
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Highlighted Publications */}
       <section className="bg-white pt-4 pb-16">
@@ -332,6 +347,35 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      {/* Funding */}
+      <section className="bg-white pt-4 pb-16">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading title="Our Sponsors" centered />
+          {/* single deck behind all names */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gray-50 rounded-xl shadow-sm"></div>
+            <div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 items-center py-6">
+              {partners.map((p, idx) => (
+              <AnimatedSection key={p.name} delay={0.05 * idx}>
+              <div className="flex flex-col items-center">
+              {p.logo && (
+                   <img
+                   src={p.logo}
+                   alt={p.name}
+                   className="h-12 md:h-14 object-contain mb-2"
+                  />
+                )}
+                <p className="text-lg text-cyan-600 text-center font-bold">
+                  {p.name}
+                </p>
+               </div>
+                  </AnimatedSection>
+               ))}
+            </div>
+          </div>
+         </div>
+       </section>
 
       {/* Call to Action */}
       <section className="py-16 bg-cyan-600 text-white">
