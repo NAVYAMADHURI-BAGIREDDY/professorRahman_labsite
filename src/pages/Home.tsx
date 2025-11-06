@@ -177,106 +177,100 @@ const Home = () => {
         </div>
       </section>
 
-      {/* News Section */}
-      <section className="bg-white pt-8 pb-16">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative">
-            <div className="flex justify-center">
-              <SectionHeading title="Latest News" centered />
-            </div>
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 flex gap-3">
-              <button
-                onClick={prevNews}
-                disabled={startIdx === 0}
-                className={`inline-flex items-center font-medium ${
-                  startIdx === 0
-                    ? "text-gray-300 cursor-default"
-                    : "text-cyan-600 hover:text-cyan-700"
-                }`}
-                aria-label="Previous news"
-              >
-                Prev
-              </button>
-              <button
-                onClick={nextNews}
-                disabled={startIdx >= total - windowSize}
-                className={`inline-flex items-center font-medium ${
-                  startIdx >= total - windowSize
-                    ? "text-gray-300 cursor-default"
-                    : "text-cyan-600 hover:text-cyan-700"
-                }`}
-                aria-label="Next news"
-              >
-                Next
-              </button>
-            </div>
-          </div>
 
-          {/* Viewport */}
-          <div className="mt-6 overflow-hidden">
-            {/* Track */}
-            <div
-              className="flex -mx-3 transition-transform duration-500 ease-linear"
-              style={{
-                transform: `translateX(-${(startIdx * 100) / 3}%)`,
-              }}
-            >
-              {/* Slides: each 1/3 width of viewport */}
-              {topFiveNews.map((news) => (
-                <div key={news.id} className="basis-1/3 shrink-0 px-3">
-                  {/* Card: slightly taller to avoid title cropping */}
-                  <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[20rem] md:h-[21rem] flex flex-col">
-                    <div className="p-5 flex-1 flex flex-col justify-between">
-                      {/* Date + Title block */}
-                      <div>
-                        <span className="text-xs text-gray-500 mb-2 block">
-                          {new Date(news.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                            })}
-                            </span>
+      
+{/* News Section */}
+<section className="bg-white pt-8 pb-16 relative">
+  <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-center mb-8">
+      <SectionHeading title="Latest News" centered />
+    </div>
 
-                            <h3 className="text-base md:text-xl font-semibold leading-snug mb-2 min-h-[2.75rem]">
-                              {news.Link ? (
-                                <a
-                                href={news.Link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:underline text-cyan-600"
-                                >
-                                  {news.title}
-                                  </a>
-                                  ) : (
-                                    news.title
-                                    )}
-                                    </h3>
-                                    </div>
-                                    {/* Image */}
-                                    <img
-                                    src={news.image}
-                                    alt={news.title}
-                                 className="w-full h-36 md:h-40 object-cover rounded-md"
-                              />
-                         </div>
-                    </div>
-                 </div>
-              ))}
+    {/* Arrows */}
+    <button
+      onClick={prevNews}
+      disabled={startIdx === 0}
+      aria-label="Previous news"
+      className={`absolute left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
+        startIdx === 0 ? 'opacity-40 cursor-not-allowed' : ''
+      }`}
+    >
+      <ArrowRight className="rotate-180 w-6 h-6" />
+    </button>
+
+    <button
+      onClick={nextNews}
+      disabled={startIdx >= total - windowSize}
+      aria-label="Next news"
+      className={`absolute right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
+        startIdx >= total - windowSize ? 'opacity-40 cursor-not-allowed' : ''
+      }`}
+    >
+      <ArrowRight className="w-6 h-6" />
+    </button>
+
+    {/* Viewport */}
+    <div className="mt-6 overflow-hidden relative">
+      {/* Track */}
+      <div
+        className="flex -mx-3 transition-transform duration-500 ease-linear"
+        style={{
+          transform: `translateX(-${(startIdx * 100) / 3}%)`,
+        }}
+      >
+        {topFiveNews.map((news) => (
+          <div key={news.id} className="basis-1/3 shrink-0 px-3">
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[20rem] md:h-[21rem] flex flex-col">
+              <div className="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs text-gray-500 mb-2 block">
+                    {new Date(news.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </span>
+                  <h3 className="text-base md:text-xl font-semibold leading-snug mb-2 min-h-[2.75rem]">
+                    {news.Link ? (
+                      <a
+                        href={news.Link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-cyan-600"
+                      >
+                        {news.title}
+                      </a>
+                    ) : (
+                      news.title
+                    )}
+                  </h3>
+                </div>
+                <img
+                  src={news.image}
+                  alt={news.title}
+                  className="w-full h-36 md:h-40 object-cover rounded-md"
+                />
+              </div>
             </div>
           </div>
+        ))}
+      </div>
+    </div>
 
-          {/* View All */}
-          <div className="mt-10 text-center">
-            <Link
-              to="/news"
-              className="text-cyan-600 hover:text-primary-400 font-medium text-2xl inline-flex items-center transition-colors"
-            >
-              View All News
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
+    {/* View All */}
+    <div className="mt-10 text-center">
+      <Link
+        to="/news"
+        className="text-cyan-600 hover:text-primary-400 font-medium text-2xl inline-flex items-center transition-colors"
+      >
+        View All News
+        <ArrowRight className="ml-2 h-5 w-5" />
+      </Link>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Highlighted Publications */}
       <section className="bg-white pt-4 pb-16">

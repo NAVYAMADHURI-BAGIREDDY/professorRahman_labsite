@@ -1,28 +1,20 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; 
 import AnimatedSection from '../components/common/AnimatedSection';
 import { publications, UnifiedPublication, Category } from '../data/publications';
-
 import pubBanner from '../../images/pub.png';
 
 const Publications = () => {
   const [category, setCategory] = useState<Category>('journal');
 
-  // Filter publications by selected category
-  const filteredPublications = publications.filter(
-    (pub) => pub.category === category
-  );
-
-  // Group publications by year
+  const filteredPublications = publications.filter((pub) => pub.category === category);
   const publicationsByYear = filteredPublications.reduce((acc, pub) => {
     if (!acc[pub.year]) acc[pub.year] = [];
     acc[pub.year].push(pub);
     return acc;
   }, {} as Record<number, UnifiedPublication[]>);
 
-  const years = Object.keys(publicationsByYear)
-    .map(Number)
-    .sort((a, b) => b - a);
+  const years = Object.keys(publicationsByYear).map(Number).sort((a, b) => b - a);
 
   return (
     <div>
@@ -51,7 +43,6 @@ const Publications = () => {
       {/* Publications Section */}
       <section className="bg-white mt-10">
         <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
-
           {/* Filter Buttons */}
           <div className="flex flex-wrap gap-2 mb-10">
             {[
@@ -62,7 +53,7 @@ const Publications = () => {
               <button
                 key={item.value}
                 onClick={() => setCategory(item.value as Category)}
-                className={`px-4 py-2 rounded-md text-sm sm:text-base transition ${
+                className={`px-4 py-2 rounded-md text-sm sm:text-base ${
                   category === item.value
                     ? 'bg-primary-600 text-white'
                     : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
@@ -87,18 +78,16 @@ const Publications = () => {
                       key={pub.id}
                       className="bg-gray-50 rounded-lg p-4 sm:p-6 hover:shadow-md transition flex flex-col md:flex-row items-start gap-4"
                     >
-                      {/* Image on Left */}
                       {pub.image && (
                         <div className="flex-shrink-0 w-36 h-48 overflow-hidden rounded-md shadow-sm">
-                          <img 
+                          <img
                             src={pub.image}
-                            alt={pub.title} 
+                            alt={pub.title}
                             className="w-full h-full object-cover"
                           />
                         </div>
                       )}
 
-                      {/* Text on Right */}
                       <div className="flex-1">
                         <h3 className="text-lg sm:text-xl font-medium mb-1 text-cyan-600">
                           {pub.link ? (

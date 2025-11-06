@@ -26,10 +26,10 @@ const People = () => {
     setSelectedPerson(null);
   };
 
-  return (
+  return (  
     <div>
       {/* Hero Section */}
-      <section className="relative h-[160px] bg-gray-900 mt-16 ">
+      <section className="relative h-[160px] bg-gray-900 mt-16">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img
@@ -43,20 +43,13 @@ const People = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-5xl font-raleway leading-tight mb-4"
+            className="text-3xl md:text-5xl font-raleway mb-4"
           >
             Our Team
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed"
-          >
-          </motion.p>
         </div>
       </section>
-
+    
       {/* People Section */}
       <section className="bg-white py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">

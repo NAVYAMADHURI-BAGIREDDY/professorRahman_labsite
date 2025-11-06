@@ -72,7 +72,7 @@ const Research = () => {
                         Research Focus
                       </h4>
 
-                      <ul className="space-y-[2px] text-medium md:text-base text-white font-semibold leading-snug">
+                      <ul className="space-y-[2px] text-medium md:text-base text-white font-semibold leading-relaxed">
                         {focus.map((f) => {
                           const to = focusHref(href, f);
                           return (
