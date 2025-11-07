@@ -1,4 +1,4 @@
-import research1 from '../../images/research4.jpg';
+import research1 from '../../images/research1.png';
 import research2 from '../../images/research5.png';
 import research3 from '../../images/research6.jpg';
 
@@ -32,7 +32,7 @@ export interface ResearchArea {
 export const researchAreas: ResearchArea[] = [
   {
     id: 'materials',
-    title: 'MATERIALS FOR CIRCULARITY',
+    title: 'Materials for Circularity',
     image: research1,
     description:
       'We develop circular and multifunctional materials for structural, environmental, and food-security applications—engineering bio-based and architected systems with tunable properties from nano to macro scales.',
@@ -117,7 +117,7 @@ export const researchAreas: ResearchArea[] = [
 
   {
     id: 'manufacturing',
-    title: 'MANUFACTURING FOR CIRCULARITY',
+    title: 'Manufacturing for Circularity',
     image: research2,
     description:
       'Intricate hierarchical structures found in nature reveal how exceptional mechanical and functional performance can be achieved with minimal material diversity. These distinguished properties stem not just from the material composition but, more importantly, from the topology and spatial arrangement of their building blocks. At our lab, we draw inspiration from these natural design principles to engineer advanced lightweight structures with tailored multiscale geometries. Leveraging the capabilities of additive manufacturing, we aim to translate these design paradigms at the macroscale into damage-tolerant and energy-efficient architectures.',
@@ -202,7 +202,7 @@ export const researchAreas: ResearchArea[] = [
   },
   {
     id: 'design',
-    title: 'DESIGN & APPLICATIONS FOR CIRCULARITY',
+    title: 'Design and Applications for Circularity',
     image: research3,
     description:
       'Bio-inspired, architected systems that achieve strength, toughness, and lightweight efficiency via multiscale design and topology optimization.',

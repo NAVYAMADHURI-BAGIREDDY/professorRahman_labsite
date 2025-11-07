@@ -54,12 +54,12 @@ const Research = () => {
                     <img
                       src={image}
                       alt={title}
-                      className="absolute inset-0 w-full h-full object-cover object-center blur-[1px] scale-115"
+                      className="absolute inset-0 w-full h-full object-cover object-center blur-[4px] scale-110 brightness-55"
                       loading="lazy"
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/25 backdrop-blur-[1px]" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
                     {/* Research Focus Overlay */}
                     <div className="absolute left-3 right-3 top-3 z-20">
                       <h4 className="text-white text-medium sm:text-medium font-bold uppercase mb-3 leading-tight">

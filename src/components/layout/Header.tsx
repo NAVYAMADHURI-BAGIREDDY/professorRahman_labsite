@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion'; // 👈 for fade-in animation
+import { motion } from 'framer-motion'; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,10 +24,10 @@ const Header = () => {
             transition={{ duration: 0.8 }}
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-black">
+            <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-cyan-700">
               Maksud
             </span>
-            <span className="text-sm sm:text-base font-raleway font-semibold text-gray-700 tracking-wide">
+            <span className="text-sm sm:text-base font-raleway font-semibold text-cyan-600 tracking-wide">
               Innovation Lab
             </span>
           </div>
@@ -40,8 +40,8 @@ const Header = () => {
               key={item}
               to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
               className={({ isActive }) =>
-                `lg:text-xl sm:text-2xl font-raleway font-semibold ${
-                  isActive ? 'text-black' : 'text-black'
+                `lg:text-xl sm:text-2xl font-raleway font-bold ${
+                  isActive ? 'text-cyan-700' : 'text-cyan-700'
                 }`
               }
             >
