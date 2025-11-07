@@ -1,8 +1,17 @@
 import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { researchAreas } from '../data/researchData';
 import pubBanner from '../../images/research.png';
+
+function slugify(s: string) {
+  return s
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
 
 const Research = () => {
   const areas = useMemo(() => researchAreas, []);
@@ -45,7 +54,7 @@ const Research = () => {
                     <img
                       src={image}
                       alt={title}
-                      className="absolute inset-0 w-full h-full object-cover object-center blur-[1px] scale-105"
+                      className="absolute inset-0 w-full h-full object-cover object-center blur-[1px] scale-115"
                       loading="lazy"
                     />
                     {/* Overlay */}
@@ -53,19 +62,17 @@ const Research = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                     {/* Research Focus Overlay */}
                     <div className="absolute left-3 right-3 top-3 z-20">
-                      <h4 className="text-white text-medium sm:text-medium font-semibold uppercase mb-3 leading-tight">
+                      <h4 className="text-white text-medium sm:text-medium font-bold uppercase mb-3 leading-tight">
                         Research Focus
                       </h4>
-                      <ul className="space-y-[2px] text-medium md:text-base text-white font-semibold leading-relaxed">
+                      <ul className="space-y-[2px] text-lg text-white font-bold leading-relaxed">
                         {focus.map((f) => {
-                          const to = `/projectDetail?areaId=${encodeURIComponent(
-                            id
-                          )}&focus=${encodeURIComponent(f)}`;
+                          const to = `/projectDetail/${encodeURIComponent(id)}/${slugify(f)}`;
                           return (
                             <li key={f}>
-                              <a href={to} className="underline hover:text-cyan-600">
+                              <Link to={to} className="underline hover:text-cyan-600">
                                 {f}
-                              </a>
+                              </Link>
                             </li>
                           );
                         })}

@@ -1,4 +1,3 @@
-// src/App.tsx
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
@@ -7,7 +6,7 @@ import Publications from './pages/Publications';
 import People from './pages/People';
 import News from './pages/News';
 import Contact from './pages/Contact';
-import ResearchDetail from './pages/ResearchDetail';
+// import ResearchDetail from './pages/ResearchDetail';
 import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
@@ -16,12 +15,18 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
-        {/* you can keep these absolute paths if you want; they work */}
+
+        {/* existing research routes */}
         <Route path="/research" element={<Research />} />
         <Route path="/research/:areaId" element={<Research />} />
         <Route path="/research/:areaId/:domainId" element={<Research />} />
+
+        {/* project detail routes */}
         <Route path="/project/:id" element={<ProjectDetail />} />
         <Route path="/projectDetail" element={<ProjectDetail />} />
+        <Route path="/projectDetail/:areaId/:focus" element={<ProjectDetail />} />
+
+        {/* other pages */}
         <Route path="publications" element={<Publications />} />
         <Route path="team" element={<People />} />
         <Route path="news" element={<News />} />

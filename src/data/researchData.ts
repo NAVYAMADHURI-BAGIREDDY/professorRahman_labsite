@@ -1,6 +1,6 @@
 import research1 from '../../images/research4.jpg';
 import research2 from '../../images/research5.png';
-import research3 from '../../images/research6.png';
+import research3 from '../../images/research6.jpg';
 
 export interface Project {
   title: string;
