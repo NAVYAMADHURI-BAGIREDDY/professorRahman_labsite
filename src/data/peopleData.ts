@@ -2,24 +2,26 @@
 import saadi from '../../images/People_page/saadi.jpg';
 import shajed from '../../images/People_page/shajed.jpg';
 import toffal from '../../images/People_page/Toffal.png';
-import mia from '../../images/People_page/Mia.png';
 import fahad from '../../images/People_page/Fahad.png';
 import rifat from '../../images/People_page/rifat.jpeg';
 import mahjabin from '../../images/People_page/mahjabin.png';
+import mia from '../../images/People_page/Mia.png';
+
+import ali from '../../images/People_page/ali.png';
 
 
 export interface Person {
   id: string;
   name: string;
-  title: string;
-  image: string;
-  bio: string;
-  education: string[];
+  title?: string;
+  image?: string;
+  bio?: string;
+  education?: string[];
   email?: string;
   website?: string;
   linkedin?:string;
   googlescholar?:string;
-  category?: 'faculty' | 'postdoc' | 'phd' | 'masters' | 'undergrad' | 'alumni';
+  category?: 'faculty' | 'current' | 'alumni';
 }
 
 export const people: Person[] = [
@@ -51,7 +53,7 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/mdshajedulhoquethakur/',
     googlescholar:'https://scholar.google.com/citations?user=2PN5lQ8AAAAJ&hl=en&oi=ao',
-    category: 'postdoc'
+    category: 'current'
   },
   {
     id: 'Tofazzal',
@@ -65,7 +67,7 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/mohammad-hossain-822659132/',
     googlescholar:'https://scholar.google.com/citations?user=RJ9mJk0AAAAJ&hl=en',
-    category: 'phd'
+    category: 'current'
   },
   {
     id: 'Saadi',
@@ -78,7 +80,8 @@ export const people: Person[] = [
       'BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET)'
     ],
     linkedin: 'https://www.linkedin.com/in/m-a-s-r-saadi-b15a691a9/@uh.edu',
-    googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao'
+    googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao',
+    category: 'current'
   },
   {
     id: 'Fahad',
@@ -90,7 +93,8 @@ export const people: Person[] = [
       'PhD student in the Department of Mechanical and Aerospace Engineering at University of Houston'
     ],
     linkedin: 'https://www.linkedin.com/in/mmfahad7430/@uh.edu',
-    googlescholar: 'https://scholar.google.com/citations?user=JNd4HhMAAAAJ&hl=en&oi=ao'
+    googlescholar: 'https://scholar.google.com/citations?user=JNd4HhMAAAAJ&hl=en&oi=ao',
+    category: 'current'
   },
   {
     id: 'Rifat',
@@ -101,7 +105,8 @@ export const people: Person[] = [
     education: [
       'Master of Science in Mechanical Engineering from Rensselaer Polytechnic Institute'
     ],
-    linkedin: 'https://www.linkedin.com/in/md-rifat-hossain-kawshik/@uh.edu'
+    linkedin: 'https://www.linkedin.com/in/md-rifat-hossain-kawshik/@uh.edu',
+    category: 'current'
   },
   {
     id: '<Mahjabin>',
@@ -115,16 +120,27 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/mahjabin-rahman-663306116/',
     googlescholar:'https://scholar.google.com/citations?user=jOhgz7AAAAAJ&hl=en&oi=ao',
+    category: 'current'
   },
   {
     id: 'Mia',
     name: 'Mia Rodriguez ',
     title: 'Undergraduate Researcher',
     image: mia,
-    bio: 'Mia Rodriguez is a junior mechanical engineering major at the University of Houston interested in the intersection of engineering and the natural world, with a growing focus on bio-inspired design and conservation. Mia has a strong foundation in CAD, MATLAB, and Arduino systems and is eager to contribute her skills to the team..',
+    bio: 'Mia Rodriguez is a junior mechanical engineering major at the University of Houston interested in the intersection of engineering and the natural world, with a growing focus on bio-inspired design and conservation. Mia has a strong foundation in CAD, MATLAB, and Arduino systems and is eager to contribute her skills to the team.',
     education: [
       'Current B.S. in Mechanical Engineering, University of Houston'
     ],
- 
+    category: 'current'
+  },
+  {
+    id: 'Ali',
+    name: 'Ali Z. Khater',
+    title: 'The Aerospace Corporation',
+    image: ali,
+    bio: '',
+    education: [
+    ],
+    category: 'alumni'
   }
 ];
