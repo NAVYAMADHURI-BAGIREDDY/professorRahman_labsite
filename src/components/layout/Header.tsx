@@ -1,20 +1,25 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Works with Vite. If deploy under a subpath, set `base` in vite.config.*,
+  // e.g., export default defineConfig({ base: '/lab/' })
+  const base = (import.meta as any).env?.BASE_URL || '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const logoSrc = `${normalizedBase}images/logomic.png`;
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md py-3">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Brand (Logo + Text) */}
         <Link to="/" className="flex items-center gap-3 sm:gap-4">
-          {/* Logo */}
           <motion.img
-            src="/images/logomic.png"
+            src={logoSrc}
             alt="Maksud Innovation Lab logo"
             className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain"
             loading="eager"
@@ -22,6 +27,10 @@ const Header = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            onError={(e) => {
+              // fallback if BASE_URL is misconfigured at runtime
+              (e.currentTarget as HTMLImageElement).src = '/images/logomic.png';
+            }}
           />
           <div className="flex flex-col leading-tight">
             <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-cyan-700">
@@ -70,9 +79,7 @@ const Header = () => {
                 key={item}
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                 className={({ isActive }) =>
-                  `text-base font-medium ${
-                    isActive ? 'text-green-800' : 'text-gray-800'
-                  }`
+                  `text-base font-medium ${isActive ? 'text-green-800' : 'text-gray-800'}`
                 }
                 onClick={() => setIsMenuOpen(false)}
               >
