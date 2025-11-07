@@ -119,9 +119,6 @@ const People = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl md:text-4xl font-raleway font-bold text-cyan-600 mb-4">
-                Team Members
-              </h2>
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                 We work at the intersection of advanced materials, additive
                 manufacturing, and sustainability—designing circular solutions and
@@ -146,7 +143,7 @@ const People = () => {
           {director && (
             <div>
               <h2 className="text-2xl md:text-3xl font-raleway font-semibold text-gray-900 mb-8">
-                Director
+                Lab Director
               </h2>
               <div className="flex justify-center md:justify-start">
                 <AnimatedSection delay={0.05}>
