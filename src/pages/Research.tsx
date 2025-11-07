@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { researchAreas } from '../data/researchData';
-import pubBanner from '../../images/research.png';
+import pubBanner from '../../images/research.jpg';
 
 const Research = () => {
   const areas = useMemo(() => researchAreas, []);
