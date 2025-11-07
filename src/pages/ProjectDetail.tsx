@@ -71,7 +71,7 @@ const ProjectDetail = () => {
                     <AnimatedSection key={d.id}>
                       <div
                         id={anchorId}
-                        className="bg-gray-50 rounded-lg p-4 sm:p-6 border border-gray-100"
+                        className="scroll-mt-24 md:scroll-mt-28 bg-gray-50 rounded-lg p-4 sm:p-6 border border-gray-100"
                       >
                         <div className="flex flex-col md:flex-row items-start gap-4">
                           {/* Left */}

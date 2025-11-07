@@ -12,9 +12,6 @@ import imageData from '../../images/green-energy.jpg';
 import { FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 
-import labLogo from '../../images/logo.png'; // adjust path
-
-
 import hp1 from "../../images/home_pub/hp1.png";
 import hp2 from "../../images/home_pub/hp2.png";
 import hp3 from "../../images/home_pub/hp3.png";

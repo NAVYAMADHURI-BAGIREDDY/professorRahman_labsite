@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion'; // 👈 for fade-in animation
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,13 +10,27 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md py-3">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-6 lg:px-8 flex justify-between items-center">
-        <Link to="/" className="flex flex-col leading-tight">
-          <span className="text-3xl sm:text-4xl font-raleway font-extrabold text-black">
-            Maksud
-          </span>
-          <span className="text-base sm:text-lg font-raleway font-semibold text-gray-700 tracking-wide">
-            Innovation Lab
-          </span>
+        {/* Brand (Logo + Text) */}
+        <Link to="/" className="flex items-center gap-3 sm:gap-4">
+          {/* Logo */}
+          <motion.img
+            src="/images/logomic.png"
+            alt="Maksud Innovation Lab logo"
+            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain"
+            loading="eager"
+            decoding="async"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          />
+          <div className="flex flex-col leading-tight">
+            <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-black">
+              Maksud
+            </span>
+            <span className="text-sm sm:text-base font-raleway font-semibold text-gray-700 tracking-wide">
+              Innovation Lab
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -49,7 +64,6 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md z-40">
-          {/* removed animate-fade-in */}
           <nav className="flex flex-col space-y-4 px-4 py-4">
             {['Home', 'Team', 'Research', 'Publications', 'News', 'Contact'].map((item) => (
               <NavLink
