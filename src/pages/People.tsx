@@ -148,7 +148,7 @@ const People = () => {
               <h2 className="text-2xl md:text-3xl font-raleway font-semibold text-gray-900 mb-8">
                 Director
               </h2>
-              <div className="flex justify-start">
+              <div className="flex justify-center md:justify-start">
                 <AnimatedSection delay={0.05}>
                   {/* fixed width = image width -> keeps block left, centers text under image */}
                   <div

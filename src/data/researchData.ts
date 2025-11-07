@@ -35,10 +35,9 @@ export const researchAreas: ResearchArea[] = [
     title: 'Materials for Circularity',
     image: research1,
     description:
-      'We develop circular and multifunctional materials for structural, environmental, and food-security applications—engineering bio-based and architected systems with tunable properties from nano to macro scales.',
+      'Our lab develops circular materials by uniting bio-based design, recyclability, and carbon valorization in advanced composites. We create nanofibers and nanocomposites from renewable polymers to replace conventional plastics, and design recyclable, high-performance thermoplastics enhanced with nanomaterial and supramolecular modifiers for improved durability and processability. In parallel, we upcycle waste and renewable carbon into strong, sustainable carbon-based fibers and composites. Together, these efforts establish a unified framework for renewable, recyclable, and resilient materials that drive next-generation circular manufacturing.',
     focus: [
-      'Biotic Nanofibers',
-      'Multifunctional Bionanocomposites',
+      'Biotic Nanofibers and Nanocomposites',
       'Recyclable Nanocomposites',
       'Carbon-Based Fibers & Composites'
     ],
@@ -205,7 +204,7 @@ export const researchAreas: ResearchArea[] = [
     title: 'Design and Applications for Circularity',
     image: research3,
     description:
-      'Bio-inspired, architected systems that achieve strength, toughness, and lightweight efficiency via multiscale design and topology optimization.',
+      'Our lab advances circular materials design across the food–energy–water nexus. We transform food waste into high-performance, biodegradable materials and develop smart, bio-based seed coatings that enhance germination, nutrient delivery, and resilience under stress. In parallel, our Green Electronics and Energy Materials project creates bionanocomposites as biodegradable alternatives for flexible electronics, reducing e-waste and fossil dependence. Together, these initiatives build a circular, regenerative materials platform that strengthens environmental and economic resilience.',
     focus: [
       'Biomaterials for Food Safety and Security',
       'Green Electronics and Energy Materials'
