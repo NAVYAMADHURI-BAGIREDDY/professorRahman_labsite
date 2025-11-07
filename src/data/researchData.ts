@@ -51,7 +51,7 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/256263/pexels-photo-256263.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/materials/biotic-nanofibers',
         description:
-          'We design green structural composites using natural polymers (proteins, cellulose, other carbohydrates) and nanomaterials to replace petroleum-based plastics. We are developing bio-derived fibers (e.g., cellulose) with tailored functionality and high specific properties as alternatives to glass and carbon fibers.',
+          'Slanting towards environmental and economic concerns, our lab is dedicated to developing green composites for multifunctional applications, ranging from automotive and economic packaging to sports and textile applications. Aiming to replace synthetic polymers or plastics, our research will optimize the properties of natural polymers, such as proteins, cellulose, and other carbohydrates, as well as nanomaterials (e.g., nanocellulose, calcium carbonate, hydroxyapatite), to develop fully bio-based, high-performance structures. We are also advancing the development of next-generation fibers derived from renewable sources such as cellulose, algae, and mycelium, with exceptional properties and added functionalities that can replace glass and carbon fibers.',
         projects: [
           {
             title:
@@ -85,7 +85,7 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/256263/pexels-photo-256263.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/materials/recyclable-nanocomposites',
         description:
-          'We study the processability of thermoplastics and vitrimers and the synergistic effects of 1D/2D nanomaterials, natural rubber, and supramolecular modifiers (e.g., polyrotaxane) on rheology and thermo-mechanical behavior. We relate processing—extrusion, injection, RTM, compression—to properties and recyclability.',
+          'We aim to understand the processibility of thermoplastic polymers and vitrimers. Thermoplastic and vitrimer composites, even though recyclable, have several manufacturing limitations, e.g., high processing temperature and high viscosity of the polymer above melting temperature that makes impregnation of the reinforcement challenging. We are interested to understand the synergistic effect of nanomaterials (1D/2D) of various dimensions in thermoplastics along with natural rubber and supramolecules such as poly-rotaxane that could influence the mechanical behavior. Our focus is to understand the effect of these modifiers on the rheology, curing, viscosity, and thermomechanical behavior of base polymers during the processing via injection molding, extrusion, resin transfer, compression molding based manufacturing and ultimately how these variables affect the material properties.',
         projects: [
           {
             title:
@@ -102,7 +102,7 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/5217880/pexels-photo-5217880.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/materials/carbon-based-fibers',
         description:
-          'We integrate sustainability into composites by using waste-derived carbon (e.g., asphaltene-based carbon fibers/graphene) and environmentally conscious CNTs (e.g., methane-derived) spun into macroscopic fibers. We engineer interfaces to boost toughness and interlaminar strength in recyclable polymer matrices.',
+          'Our lab is committed to integrating sustainability into composite manufacturing by developing waste-derived carbon fibers and nanomaterials as functional reinforcements in recyclable polymer matrices. One of our recent achievements includes the successful development of carbon fiber and graphene from asphaltene—a byproduct of the petroleum industry. We are now advancing efforts to incorporate these asphaltene-derived materials into polymer systems, aligning with the broader goal of utilizing carbon to drive decarbonization. In parallel, we are exploring the use of carbon-based reinforcements synthesized through environmentally conscious processes. For instance, we are particularly interested in carbon nanotubes (CNTs) synthesized from methane or light hydrocarbons that can be spun into macroscopic fibers and used to fabricate high-performance nanocomposites. We are developing both polymer composites reinforced with high-volume CNT fibers with enhanced toughness and interfacial strength, thereby improving resistance to delamination and extending material durability.',
         projects: [
           {
             title:
@@ -136,7 +136,7 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/256263/pexels-photo-256263.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/manufacturing/additive-bio-materials',
         description:
-          'We design architected bio-based materials by tailoring composition, geometry, and interfaces. Custom printheads and adaptive multi-material printing enable graded structures for structural and functional applications.',
+          'Architectural benefits have not been acquired in many bio-based materials. Also, the development of architected bio-based materials that improve sustainability and can be scaled up for everyday use is a significant challenge. Our research group focuses on developing bio-based architected structures with specific properties via additive manufacturing (AM) techniques by tailoring the composition, structures, and properties. We also explore integrating different bio-based materials at various scales to achieve the required functionality of the structures. To enable these complex architectures, we are developing customizable printheads and adaptive printing methods capable of printing multi-material and graded structures. This approach allows us to fabricate next-generation architected sustainable materials that meet the demands of various applications, from structural systems to functional devices.',
         projects: [
           {
             title:
@@ -154,7 +154,7 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/manufacturing/recyclable-materials',
         description:
-          'We design architected recyclable nanocomposites for unconventional mechanical responses by programming interfaces and mesoscale geometry directly in the print path.',
+          'We design and development architected recyclable nanocomposite materials using additive manufacturing (AM) techniques. By tailoring the composition, structure, and interfaces within these composites, we aim to unlock novel mechanical and functional properties that go beyond conventional material systems. Looking ahead, we plan to expand our work to a wider range of polymers and fiber reinforcements, exploring how interface engineering can be used to program structural and functional behaviors directly into the printed composites. Our ultimate goal is to develop lightweight, high-performance composite structures with unconventional mechanical responses, paving the way for their application in aerospace and next-generation structural systems.',
         projects: [
           {
             title:
@@ -171,7 +171,7 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/5074100/pexels-photo-5074100.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/manufacturing/bio-inspired-design',
         description:
-          'Taking cues from hierarchical biological composites, we co-arrange hard and soft phases across length scales to concurrently maximize strength and toughness, especially in brittle systems like ceramics.',
+          'The quest for the simultaneous full-scale attainment of strength and toughness in structural materials has traditionally been a trade-off. Despite many efforts, such synthetic composite has not yet been possible due to the lack of intelligent material design and manufacturing. Nature, on the other hand, overcomes such limitations by developing damage-tolerant composite materials through multiple length-scale internalized designs where the optimized composition of the hard phase (providing high strength) is packaged with soft organic phases (providing high toughness) in a complex architecture. Taking inspiration from nature’s complex designs, our research focuses on maximizing the combination of strength and toughness in brittle materials like ceramics using bio-based soft polymers by arranging different constituent blocks (hard and soft materials) in specific combinations and using intricate geometric designs at various length scales.',
         projects: [
           {
             title:
@@ -188,7 +188,7 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/1170978/pexels-photo-1170978.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/manufacturing/living-composites',
         description:
-          'We embed microorganisms (e.g., cellulose-producing bacteria) within polymer matrices to enable in-situ growth of cellulose-based nanocomposites with self-healing, stimuli-responsive behavior, and long-term stability.',
+          'Drawing inspiration from the natural world has led to the development of living materials, where living organisms are incorporated into material systems to generate structurally complex materials in situ, which would be otherwise extremely difficult to achieve by physical and chemical means. Our lab aims at developing such materials, investigating their stimuli responsivity, longevity, biocompatibility, and self-healing properties, and finally, evaluating their use in a myriad of applications. We aim to develop cellulose-based living nanocomposites that leverage the power of microorganisms, such as cellulose-producing bacteria, as self-healing and self-strengthening agents within three-dimensional polymeric matrices. By embedding microbes directly into the material system, we enable the in-situ growth of cellulose-based nanocomposites with enhanced structural and functional performance. Our work focuses on tuning stimuli-responsiveness, biocompatibility, longevity, and energy efficiency, pushing the boundaries of sustainable, adaptive material design through living systems.',
         projects: [
           {
             title:
@@ -219,7 +219,7 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/1170978/pexels-photo-1170978.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/design/food-safety-biomaterials',
         description:
-          'We develop sustainable, multifunctional materials to reduce food waste and enhance shelf life—repurposing food waste streams, creating bio-based seed coatings for stress mitigation and germination, and exploring AM for personalized nutrition.',
+          'Global hunger and food waste remain pressing challenges, with over 800 million people affected by undernourishment and nearly one-third of all food produced lost annually due to spoilage. At our lab, we are committed to developing sustainable, multi-functional materials that enhance food security, safety, and shelf life while minimizing environmental impact. Our work focuses on creating cost-effective, eco-friendly solutions by repurposing food waste into high-performance materials. In addition, we are developing bio-based seed-coating that support plant establishment by integrating biodegradability, encapsulation, seed preservation, germination enhancement, and delivery of micronutrients to mitigate environmental stress. Moving beyond conventional coatings, we are also exploring the potential of additive manufacturing to create novel food structures and materials, opening the door to personalized, data-driven nutrition and the future of food innovation.',
         projects: [
           {
             title:
@@ -236,13 +236,12 @@ export const researchAreas: ResearchArea[] = [
           'https://images.pexels.com/photos/256263/pexels-photo-256263.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/design/green-electronics',
         description:
-          'We engineer high-performance biopolymer-based dielectrics and conductors via nanocomposite design to reduce reliance on fossil-derived polymers and mitigate e-waste.',
+          'The electronics industry faces serious environmental challenges, including fossil resource depletion, hazardous materials, and growing e-waste. Flexible electronics today rely on non-degradable synthetic polymers for dielectric and conductive functions. As a sustainable alternative, we focus on biopolymers derived from plants and microorganisms. However, their limited thermal, electrical, and mechanical properties present performance challenges. To address this, we are designing high-performance, biopolymer-based materials by enhancing their functionality through nanocomposite engineering. Our goal is to create eco-friendly alternatives to synthetic polymers, enabling more sustainable and responsible electronics.',
         projects: [
           {
             title:
               'High-strength cellulose fiber architectures for lightweight composites',
             type: 'project',
-            year: 2025
           }
         ]
       }

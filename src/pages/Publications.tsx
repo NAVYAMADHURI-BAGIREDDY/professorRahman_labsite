@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion'; 
 import AnimatedSection from '../components/common/AnimatedSection';
 import { publications, UnifiedPublication, Category } from '../data/publications';
-import pubBanner from '../../images/pub.png';
+import pubBanner from '../../images/pub.jpg';
 
 const Publications = () => {
   const [category, setCategory] = useState<Category>('journal');

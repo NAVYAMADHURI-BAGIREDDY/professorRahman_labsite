@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from '../components/common/SectionHeading';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { newsItems } from '../data/newsData';
-import newsBanner from '../../images/news.jpg';
+import newsBanner from '../../images/newsupdate.png';
 
 type Category = 'all' | 'publication' | 'award' | 'conference' | 'general';
 
