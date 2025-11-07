@@ -45,7 +45,7 @@ const Research = () => {
       <section className="bg-white mt-10">
         <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="space-y-6 sm:space-y-8">
-            {areas.map(({ id, title, image, description, focus }) => (
+            {areas.map(({ id, title, image, description, focus, domains }) => (
               <AnimatedSection key={id}>
                 <div className="bg-gray-50 rounded-lg p-4 sm:p-6 hover:shadow-md transition flex flex-col md:flex-row items-start gap-4 border border-gray-100">
                   {/* LEFT: Image + overlay */}
@@ -66,12 +66,12 @@ const Research = () => {
                         Research Focus
                       </h4>
                       <ul className="space-y-[2px] text-lg text-white font-bold leading-relaxed">
-                        {focus.map((f) => {
-                          const to = `/projectDetail/${encodeURIComponent(id)}/${slugify(f)}`;
+                        {(domains ?? []).map((dom) => {
+                          const to = `/projectDetail/${encodeURIComponent(id)}/${slugify(dom.title)}`;
                           return (
-                            <li key={f}>
+                            <li key={dom.id}>
                               <Link to={to} className="underline hover:text-cyan-600">
-                                {f}
+                                {dom.title}
                               </Link>
                             </li>
                           );

@@ -12,7 +12,7 @@ function slugify(s: string) {
 }
 
 const ProjectDetail = () => {
-  // Prefer route params for separate pages; fall back to query params for backward compatibility
+  // Prefer route params for separate pages
   const { areaId, focus: focusSlugFromRoute } = useParams<{ areaId?: string; focus?: string }>();
   const [params] = useSearchParams();
   const focusFromQuery = params.get('focus') || undefined;

@@ -44,30 +44,13 @@ export const researchAreas: ResearchArea[] = [
     href: '/research/materials',
     domains: [
       {
-        id: 'biotic-nanofibers',
-        title: 'Biotic Nanofibers',
+        id: 'biotic-nanofibers-and-nanocomposites',
+        title: 'Biotic Nanofibers and Nanocomposites',
         image:
           'https://images.pexels.com/photos/256263/pexels-photo-256263.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-        href: '/research/materials/biotic-nanofibers',
+        href: '/research/materials/biotic-nanofibers-and-nanocomposites',
         description:
           'Slanting towards environmental and economic concerns, our lab is dedicated to developing green composites for multifunctional applications, ranging from automotive and economic packaging to sports and textile applications. Aiming to replace synthetic polymers or plastics, our research will optimize the properties of natural polymers, such as proteins, cellulose, and other carbohydrates, as well as nanomaterials (e.g., nanocellulose, calcium carbonate, hydroxyapatite), to develop fully bio-based, high-performance structures. We are also advancing the development of next-generation fibers derived from renewable sources such as cellulose, algae, and mycelium, with exceptional properties and added functionalities that can replace glass and carbon fibers.',
-        projects: [
-          {
-            title:
-              'High-strength cellulose fiber architectures for lightweight composites',
-            type: 'project',
-            year: 2025
-          }
-        ]
-      },
-      {
-        id: 'multifunctional-bionanocomposites',
-        title: 'Multifunctional Bionanocomposites',
-        image:
-          'https://images.pexels.com/photos/3850684/pexels-photo-3850684.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-        href: '/research/materials/multifunctional-bionanocomposites',
-        description:
-          'We create fully bio-based, high-performance composites by combining biopolymers with functional nanofillers (e.g., nanocellulose, CaCO₃, hydroxyapatite). We also explore next-gen renewable fibers (cellulose, algae, mycelium) to achieve multifunctionality and replace conventional fiber reinforcements.',
         projects: [
           {
             title:
