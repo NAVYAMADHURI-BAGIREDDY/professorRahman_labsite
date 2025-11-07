@@ -1,6 +1,6 @@
-import research1 from '../../images/research1.png';
-import research2 from '../../images/research2.png';
-import research3 from '../../images/research3.png';
+import research1 from '../../images/research4.jpg';
+import research2 from '../../images/research5.png';
+import research3 from '../../images/research6.png';
 
 export interface Project {
   title: string;
@@ -120,7 +120,7 @@ export const researchAreas: ResearchArea[] = [
     title: 'MANUFACTURING FOR CIRCULARITY',
     image: research2,
     description:
-      'We translate bio-inspired design principles into lightweight, damage-tolerant architectures via additive and bio-manufacturing with tailored multiscale geometries.',
+      'Intricate hierarchical structures found in nature reveal how exceptional mechanical and functional performance can be achieved with minimal material diversity. These distinguished properties stem not just from the material composition but, more importantly, from the topology and spatial arrangement of their building blocks. At our lab, we draw inspiration from these natural design principles to engineer advanced lightweight structures with tailored multiscale geometries. Leveraging the capabilities of additive manufacturing, we aim to translate these design paradigms at the macroscale into damage-tolerant and energy-efficient architectures.',
     focus: [
       'Additive Manufacturing of Biotic Materials',
       'Additive Manufacturing of Recyclable Materials',

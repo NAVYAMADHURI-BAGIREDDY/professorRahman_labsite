@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import AnimatedSection from '../components/common/AnimatedSection';
-import contactBanner from "../../images/contact.png";
+import contactBanner from "../../images/conatctus.png";
 
 const Contact = () => {
   return (
