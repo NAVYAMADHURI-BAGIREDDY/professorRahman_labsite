@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +18,15 @@ const Header = () => {
       <div className="max-w-screen-xl mx-auto px-6 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Brand (Logo + Text) */}
         <Link to="/" className="flex items-center gap-3 sm:gap-4">
-          <img
+          <motion.img
             src={logoSrc}
             alt="Maksud Innovation Lab logo"
             className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain"
             loading="eager"
             decoding="async"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             onError={(e) => {
               // fallback if BASE_URL is misconfigured at runtime
               (e.currentTarget as HTMLImageElement).src = '/images/logomic.png';
