@@ -12,7 +12,6 @@ function slugify(s: string) {
 }
 
 const ProjectDetail = () => {
-  // Route params for separate pages
   const { areaId, focus: focusSlugFromRoute } = useParams<{ areaId?: string; focus?: string }>();
   const [params] = useSearchParams();
   const focusFromQuery = params.get('focus') || undefined;
@@ -20,16 +19,15 @@ const ProjectDetail = () => {
 
   const { area, domain } = useMemo(() => {
     const desiredAreaId = areaId ?? areaIdFromQuery;
-    const desiredFocusSlug = focusSlugFromRoute ?? (focusFromQuery ? slugify(focusFromQuery) : undefined);
+    const desiredFocusSlug =
+      focusSlugFromRoute ?? (focusFromQuery ? slugify(focusFromQuery) : undefined);
 
-    // For both area and focus slug, render the single focus page.
     if (desiredAreaId && desiredFocusSlug) {
       const a = researchAreas.find(r => String(r.id) === String(desiredAreaId));
       const d = a?.domains?.find(dom => slugify(dom.title) === desiredFocusSlug);
       return { area: a, domain: d };
     }
 
-    // If only a focus slug is provided, search globally.
     if (desiredFocusSlug) {
       for (const a of researchAreas) {
         const d = a.domains?.find(dom => slugify(dom.title) === desiredFocusSlug);
@@ -69,54 +67,69 @@ const ProjectDetail = () => {
                   id={slugify(domain.title)}
                   className="scroll-mt-24 md:scroll-mt-28 bg-gray-50 rounded-lg p-4 sm:p-6 border border-gray-100"
                 >
-                  <div className="flex flex-col md:flex-row items-start gap-4">
+                  <div className="flex flex-col md:flex-row items-start gap-6">
                     {/* Left */}
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <h3 className="text-gray-800 text-xl md:text-2xl font-bold mb-2 tracking-tight">
                         {domain.title}
                       </h3>
+
                       {domain.description && (
                         <p className="text-gray-600 leading-relaxed text-base md:text-medium font-medium">
                           {domain.description}
                         </p>
                       )}
+
+                      {/* ✅ Projects section moved inside left column */}
+                      {Array.isArray(domain.projects) && domain.projects.length > 0 && (
+                        <div className="mt-4 pt-4 border-t border-gray-100">
+                          <h4 className="text-sm font-semibold uppercase tracking-wide text-gray-700 mb-2">
+                            Projects
+                          </h4>
+                          <ul className="flex flex-wrap gap-2">
+                            {domain.projects.map((p, i) => (
+                              <li
+                                key={`${domain.id}-proj-${i}`}
+                                className="px-3 py-1 rounded-full bg-white border border-gray-200 text-sm"
+                              >
+                                {p.href ? (
+                                  <a href={p.href} className="hover:underline">
+                                    {p.title}
+                                  </a>
+                                ) : (
+                                  p.title
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
 
-                    {/* Right */}
-                    <div className="relative flex-shrink-0 w-full md:w-[420px] h-56 md:h-60 overflow-hidden rounded-md shadow-sm bg-gray-200">
-                      <img
-                        src={domain.image}
-                        alt={domain.title}
-                        className="absolute inset-0 w-full h-full object-cover"
-                        loading="lazy"
-                      />
+                    {/* Right: single or multiple images */}
+                    <div className="relative flex-shrink-0 w-full md:w-[360px] md:sticky md:top-24 ml-auto">
+                      {Array.isArray(domain.images) && domain.images.length > 0 ? (
+                        <div className="flex flex-col items-end gap-3 w-full">
+                          {domain.images.map((src, idx) => (
+                            <img
+                              key={idx}
+                              src={src}
+                              alt={`${domain.title} ${idx + 1}`}
+                              className="block w-full h-auto max-h-[200px] rounded-lg shadow-sm object-contain"
+                              loading="lazy"
+                            />
+                          ))}
+                        </div>
+                      ) : domain.image ? (
+                        <img
+                          src={domain.image}
+                          alt={domain.title}
+                          className="block w-full h-auto object-contain"
+                          loading="lazy"
+                        />
+                      ) : null}
                     </div>
                   </div>
-
-                  {/* Projects */}
-                  {Array.isArray(domain.projects) && domain.projects.length > 0 && (
-                    <div className="mt-4 pt-4 border-t border-gray-100">
-                      <h4 className="text-sm font-semibold uppercase tracking-wide text-gray-700 mb-2">
-                        Projects
-                      </h4>
-                      <ul className="flex flex-wrap gap-2">
-                        {domain.projects.map((p, i) => (
-                          <li
-                            key={`${domain.id}-proj-${i}`}
-                            className="px-3 py-1 rounded-full bg-white border border-gray-200 text-sm"
-                          >
-                            {p.href ? (
-                              <a href={p.href} className="hover:underline">
-                                {p.title}
-                              </a>
-                            ) : (
-                              p.title
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
                 </div>
               </AnimatedSection>
             </div>

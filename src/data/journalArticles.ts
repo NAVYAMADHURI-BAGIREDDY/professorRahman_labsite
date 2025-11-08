@@ -86,8 +86,8 @@ export interface JournalArticle {
 
 export const journalArticles: JournalArticle[] = [
   {
-    id: 'pub75',
-    title: '75. Polymer Derived and Ni-Single Atom Doped Carbon Nanofibers for CO2 Capture and Electroreduction to CO',
+    id: 'pub73',
+    title: '73. Polymer Derived and Ni-Single Atom Doped Carbon Nanofibers for CO2 Capture and Electroreduction to CO',
     link: 'https://doi.org/10.1002/cssc.202500602',
     authors: 'Shilpa, S.; Yuan, F.; Li, Z.; Dahiya, P.; Mata, A.C.; Yadav, R.M.; Gao, G.; Hung, S.F.; Khan, S.A.; Wu, J.; Rahman, M.M.; Roy, S*',
     conference: 'Chem Sus Chem',
@@ -95,8 +95,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub75
   },
   {
-    id: 'pub74',
-    title: '74. Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
+    id: 'pub72',
+    title: '72. Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
     link: 'https://doi.org/10.1038/s41467-025-60242-1',
     authors: 'Saadi, M.A.S.R.; Cui, Y.; Bhakta, S.P.; Hassan, Sakib; Harikrishnan, V.; Siqueira,  I.R.; Pasquali, M.; Bennett, M.; Ajayan, P.M.; Rahman, M.R.*',
     conference: 'Nature Communications',
@@ -104,8 +104,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub74
   },
   {
-    id: 'pub73',
-    title: '73. Macroscale ceramic origami structures with hyper-elastic coating',
+    id: 'pub71',
+    title: '71. Macroscale ceramic origami structures with hyper-elastic coating',
     link: 'https://doi.org/10.1007/s42114-025-01284-3',
     authors: 'Thakur, M.S.H.; Nath, M.D.; Paulino, G.H.; Ajayan, P.M.; Rahman, M.M.*',
     conference: 'Advanced Composites and Hybrid Materials',
@@ -113,8 +113,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub73
   },
   {
-    id: 'pub72',
-    title: '72. Hexagonal Boron Nitride reinforced quick-setting multifunctional cement',
+    id: 'pub70',
+    title: '70. Hexagonal Boron Nitride reinforced quick-setting multifunctional cement',
     link: 'https://doi.org/10.1093/oxfmat/itaf002',
     authors: 'Harikishan, V.; Islam, Md.; Herkel, S.; Meng, W.; Nagarajaiah, S.; Khater, A.; Johnson, K.; Boul, P.; Lou, M.; Rahman, M.M.*; Ajayan, P.M',
     conference: 'Oxford Open Materials Science',
@@ -122,8 +122,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub72
   },
   {
-    id: 'pub71',
-    title: '71. Direct Ink Writing of Metals, Multi-metals, and Metal/Non-metal Interfaces',
+    id: 'pub69',
+    title: '69. Direct Ink Writing of Metals, Multi-metals, and Metal/Non-metal Interfaces',
     link: 'https://doi.org/10.1007/s10853-024-10340-0',
     authors: 'Sajadi, M.S.; Das, R.; Thakur, M.S.H.; Boul, P.; Rahman, M. M.*; Tiwary, C.S.; Ajayan, P.M.',
     conference: 'Journal of Materials Science',
@@ -131,8 +131,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub71
   },
   {
-    id: 'pub70',
-    title: '70. A General Simulation based Study on Printability of Inks in Direct Ink Writing',
+    id: 'pub68',
+    title: '68. A General Simulation based Study on Printability of Inks in Direct Ink Writing',
     link: 'https://www.nature.com/articles/s41598-024-74058-4',
     authors: 'Sourov, M.A.; Emu, S.I.; Thakur, M.S.H.; Morshed, A., Rahman, M.M*',
     conference: 'Scientific Reports',
@@ -140,8 +140,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub70
   },
   {
-    id: 'pub69',
-    title: '69. Graphene-coated nickel in biological environments: role of structural defects',
+    id: 'pub67',
+    title: '67. Graphene-coated nickel in biological environments: role of structural defects',
     link: 'https://doi.org/10.1039/D4NR00280F',
     authors: 'Devadig, R.; Sigdel, P.; Rahman, Md.; Ajayan, P. M.; Rahman, M.M.*; Gadhamshetty, V.',
     conference: 'Nanoscale',
@@ -149,8 +149,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub69
   },
   {
-    id: 'pub68',
-    title: '68. Three-dimensional Printing of Wood',
+    id: 'pub66',
+    title: '66. Three-dimensional Printing of Wood',
     link: 'https://doi.org/10.1126/sciadv.adk3250',
     authors: 'Thakur, M.S.H.; Shi, C.; Logan, K.; Saadi, M.A.S.R.; Naskar, A.; Ajayan, P.M.; Rahman, M.M.*',
     conference: 'Science Advances',
@@ -158,8 +158,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub68
   },
   {
-    id: 'pub67',
-    title: '67. Preserving fresh eggs via egg-derived bio-nanocomposite coating',
+    id: 'pub65',
+    title: '65. Preserving fresh eggs via egg-derived bio-nanocomposite coating',
     link: 'https://doi.org/10.1002/adfm.202310091',
     authors: 'Zinke, A.; Pottackal, N.; Zahin, F.; Nur, I.; Ahmed, F.; ji, Y.; Mohammed, Z.; Meyer, M.D.; Miller, C.; Bennett, M.; Rangari, V.; Meredith, J.; Ajayan, P.M.; Rahman, M.M.*',
     conference: 'Advanced Functional Materials',
@@ -167,8 +167,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub67
   },
   {
-    id: 'pub66',
-    title: '66. Tuning Dielectric Properties with Nanofiller Dimensionality in Polymer Nanocomposites',
+    id: 'pub64',
+    title: '64. Tuning Dielectric Properties with Nanofiller Dimensionality in Polymer Nanocomposites',
     link: 'https://doi.org/10.1021/acsami.4c16329',
     authors: 'Likhi, F.H.; Singh, M.; Potdukhe, H.; Ajayan, P.M.; Rahman, M.M.; Karim, A',
     conference: 'ACS Applied Materials and Interfaces',
@@ -176,8 +176,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub66
   },
   {
-    id: 'pub65', 
-    title: '65. Algae-derived nacre-like dielectric bionanocomposite with high loading hexagonal boron nitride for green electronics', 
+    id: 'pub63', 
+    title: '63. Algae-derived nacre-like dielectric bionanocomposite with high loading hexagonal boron nitride for green electronics', 
     link: 'https://doi.org/10.1021/acsnano.4c09365', 
     authors: 'Saadi, M.A.S.R.; Likhi, F.H.; Zahin, F.; Yuan, Y.; Karim, A.; Ajayan, P.M.; Rahman, M.M.*', 
     conference: 'ACS Nano',
@@ -185,8 +185,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub65
   },
   {
-    id: 'pub64',
-    title: '64. Fluorinated 2D conjugated porous organic polymer films with modular structural topology for controlled molecular sieving',
+    id: 'pub62',
+    title: '62. Fluorinated 2D conjugated porous organic polymer films with modular structural topology for controlled molecular sieving',
     link: 'https://doi.org/10.1039/D4TA04342A',
     authors: 'Gayle, J.; Hardian, R.; Guo, G.; Wang, X.; Rahman, M.M.; Verduzco, R.; Vajtai, R.; Ajayan, P.M.; Roy, S.; Szekely, G',
     conference: 'Journal of Materials Chemistry A',
@@ -194,8 +194,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub64
   },
   {
-    id: 'pub63',
-    title: '63. Development of asphaltene-derived carbon fiber reinforced composites via additive manufacturing',
+    id: 'pub61',
+    title: '61. Development of asphaltene-derived carbon fiber reinforced composites via additive manufacturing',
     link: 'https://doi.org/10.1016/j.carbon.2024.119413',
     authors: 'Akash, N.M.; Saad, S.; Bari, M.A.A.; Sarker, R.; Gupta, C.; Sarabi, G.A.; Phani, A.; Zahin, F.; Tabassum, S.; Subramanian, K.; Kim, S.; Rahman, M.M.; Egberts, P.; Kibria, M.G',
     conference: 'Carbon',
@@ -203,8 +203,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub63
   },
   {
-    id: 'pub62',
-    title: '62. Process optimization, techno-economic analysis, and environmental impact assessment of producing soy protein isolate-cellulose nanocrystal coating solution for increasing fruit’s shelf-life',
+    id: 'pub60',
+    title: '60. Process optimization, techno-economic analysis, and environmental impact assessment of producing soy protein isolate-cellulose nanocrystal coating solution for increasing fruit’s shelf-life',
     link: 'https://doi.org/10.1016/j.indcrop.2024.118213',
     authors: 'Naveenkumar, R.; Prakash, N.; Rahman, M.M.; Troy, R',
     conference: 'Industrial Crops and Products',
@@ -212,8 +212,8 @@ export const journalArticles: JournalArticle[] = [
     image: pub62
   },
   {
-    id: 'pub61',
-    title: '61. Economic and Environmental Assessment of Asphaltene-derived Carbon Fiber Production',
+    id: 'pub59',
+    title: '59. Economic and Environmental Assessment of Asphaltene-derived Carbon Fiber Production',
     link: 'https://doi.org/10.1039/D3GC01573D',
     authors: 'Bari, M.A.A.; Nabil, S.; Saad, S.; Sarkar, R.; Sabiha, S.; Rahman, M.M.; Kibria, Md',
     conference: 'Green Chemistry',
@@ -221,31 +221,13 @@ export const journalArticles: JournalArticle[] = [
     image: pub61
   },
   {
-    id: 'pub60',
-    title: '60. Processing Dynamics of Carbon Nanotube–Epoxy Nanocomposites during 3D Printing',
+    id: 'pub58',
+    title: '58. Processing Dynamics of Carbon Nanotube–Epoxy Nanocomposites during 3D Printing',
     link: 'https://doi.org/10.1016/j.xcrp.2023.101617',
     authors: 'Khater, A.; Saadi, M. A. S. R.; Bhattacharyya, S.; Kutana, A.; Tripathi, M.; Kamble, M.; Song, S.; Lou, M.; Barnes, M.; Meyer, M.; Harikrishnan, V.; Dalton, A. B.; Koratkar, N.; Tiwary, C. S.; Boul, P. J.; Yakobson, B.; Zhu, H.; Ajayan, P. M.; Rahman, M.M.*',
     conference: 'Cell Reports Physical Science',
     year: 2023,
     image: pub60
-  },
-    {
-    id: 'pub59',
-    title: '59. Economic and Environmental Assessment of Asphaltene-derived Carbon Fiber Production',
-    link: 'https://pubs.rsc.org/en/content/articlelanding/2023/gc/d3gc01573d',
-    authors: 'Bari, M.A.A.; Nabil, S.; Saad, S.; Sarkar, R.; Sabiha, S.; Rahman, M. M.; Kibria, Md.',
-    conference: 'Green Chemistry',
-    year: 2023,
-    image: pub59
-  },
-  {
-    id: 'pub58',
-    title: '58. Processing Dynamics of Carbon Nanotube–Epoxy Nanocomposites during 3D Printing',
-    link: 'https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(23)00430-7',
-    authors: 'Khater, A.; Saadi, M. A. S. R.; Bhattacharyya, S.; Kutana, A.; Tripathi, M.; Kamble, M.; Song, S.; Lou, M.; Barnes, M.; Meyer, M.; Harikrishnan, V.; Dalton, A. B.; Koratkar, N.; Tiwary, C. S.; Boul, P. J.; Yakobson, B.; Zhu, H.; Ajayan, P. M.; Rahman, M. M.*',
-    conference: 'Cell Reports Physical Science',
-    year: 2023,
-    image: pub58
   },
   {
     id: 'pub57',
