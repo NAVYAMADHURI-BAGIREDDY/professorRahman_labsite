@@ -12,7 +12,7 @@ function slugify(s: string) {
 }
 
 const ProjectDetail = () => {
-  // Prefer route params for separate pages
+  // Route params for separate pages
   const { areaId, focus: focusSlugFromRoute } = useParams<{ areaId?: string; focus?: string }>();
   const [params] = useSearchParams();
   const focusFromQuery = params.get('focus') || undefined;
@@ -22,7 +22,7 @@ const ProjectDetail = () => {
     const desiredAreaId = areaId ?? areaIdFromQuery;
     const desiredFocusSlug = focusSlugFromRoute ?? (focusFromQuery ? slugify(focusFromQuery) : undefined);
 
-    // If we have both an area and a focus slug, render that single focus page.
+    // For both area and focus slug, render the single focus page.
     if (desiredAreaId && desiredFocusSlug) {
       const a = researchAreas.find(r => String(r.id) === String(desiredAreaId));
       const d = a?.domains?.find(dom => slugify(dom.title) === desiredFocusSlug);

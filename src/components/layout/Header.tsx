@@ -4,26 +4,24 @@ import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => setIsMenuOpen((v) => !v);
-
-  // Use a stable, absolute path from Vite's /public folder
-  // Make sure the file is at: public/images/logomic.png
-  const logoUrl = '/images/logomic.png';
+  const toggleMenu = () => setIsMenuOpen(v => !v);
 
   const { pathname } = useLocation();
   useEffect(() => setIsMenuOpen(false), [pathname]);
+
+  const logoUrl = '/images/logomic.png';
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md py-3">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-6 lg:px-8 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 sm:gap-4">
-          {/* Plain <img> to avoid re-animation/blink */}
           <img
             src={logoUrl}
-            alt="Maksud Innovation Lab logo"
-            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain motion-reduce:transition-none motion-reduce:transform-none"
+            alt="Lab logo"
+            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain"
             loading="eager"
             decoding="async"
+            onError={(e) => console.error('Logo failed to load:', (e.currentTarget as HTMLImageElement).src)}
           />
           <div className="flex flex-col leading-tight">
             <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-cyan-700">Maksud</span>
@@ -69,22 +67,14 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md z-40">
           <nav id="mobile-nav" className="flex flex-col space-y-4 px-4 py-4">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `text-base font-medium ${isActive ? 'text-green-800' : 'text-gray-800'}`
-              }
-            >
+            <NavLink to="/" end className={({ isActive }) => `text-base font-medium ${isActive ? 'text-green-800' : 'text-gray-800'}`}>
               Home
             </NavLink>
             {['Team', 'Research', 'Publications', 'News', 'Contact'].map((item) => (
               <NavLink
                 key={item}
                 to={`/${item.toLowerCase()}`}
-                className={({ isActive }) =>
-                  `text-base font-medium ${isActive ? 'text-green-800' : 'text-gray-800'}`
-                }
+                className={({ isActive }) => `text-base font-medium ${isActive ? 'text-green-800' : 'text-gray-800'}`}
               >
                 {item}
               </NavLink>

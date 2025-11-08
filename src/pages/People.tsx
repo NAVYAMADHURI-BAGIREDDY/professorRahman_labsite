@@ -139,7 +139,7 @@ const People = () => {
             </motion.div>
           </div>
 
-          {/* Director: left-aligned block, text centered under image */}
+          {/* Lab Director */}
           {director && (
             <div>
               <h2 className="text-2xl md:text-3xl font-raleway font-semibold text-gray-900 mb-8">

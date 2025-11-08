@@ -79,7 +79,7 @@ export const researchAreas: ResearchArea[] = [
       },
       {
         id: 'carbon-based-fibers',
-        title: 'Carbon-Based Fibers & Composites',
+        title: 'Carbon-Based Fibers and Composites',
         image:
           'https://images.pexels.com/photos/5217880/pexels-photo-5217880.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
         href: '/research/materials/carbon-based-fibers',
@@ -96,7 +96,6 @@ export const researchAreas: ResearchArea[] = [
       }
     ]
   },
-
   {
     id: 'manufacturing',
     title: 'Manufacturing for Circularity',

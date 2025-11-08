@@ -43,7 +43,7 @@ const News = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-5xl font-raleway mb-4"
           >
-            News & Updates
+            News and Updates
           </motion.h1>
         </div>
       </section>
