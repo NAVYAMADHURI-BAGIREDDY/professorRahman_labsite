@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((v) => !v);
 
-  const base = import.meta.env.BASE_URL || '/';
-  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
-  const logoSrc = `${normalizedBase}images/logomic.png`;
+  // Use a stable, absolute path from Vite's /public folder
+  // Make sure the file is at: public/images/logomic.png
+  const logoUrl = '/images/logomic.png';
 
   const { pathname } = useLocation();
   useEffect(() => setIsMenuOpen(false), [pathname]);
@@ -18,18 +17,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md py-3">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-6 lg:px-8 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 sm:gap-4">
-          <motion.img
-            src={logoSrc}
+          {/* Plain <img> to avoid re-animation/blink */}
+          <img
+            src={logoUrl}
             alt="Maksud Innovation Lab logo"
             className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain motion-reduce:transition-none motion-reduce:transform-none"
             loading="eager"
             decoding="async"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = `${normalizedBase}images/logomic.png`;
-            }}
           />
           <div className="flex flex-col leading-tight">
             <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-cyan-700">Maksud</span>
@@ -38,10 +32,16 @@ const Header = () => {
         </Link>
 
         <nav className="hidden md:flex space-x-6 lg:space-x-8">
-          <NavLink to="/" end className={({ isActive }) =>
-            `lg:text-xl sm:text-2xl font-raleway font-bold ${isActive ? 'text-cyan-800 underline underline-offset-4' : 'text-cyan-700'}`
-          }>Home</NavLink>
-          {['Team','Research','Publications','News','Contact'].map((item) => (
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              `lg:text-xl sm:text-2xl font-raleway font-bold ${isActive ? 'text-cyan-800 underline underline-offset-4' : 'text-cyan-700'}`
+            }
+          >
+            Home
+          </NavLink>
+          {['Team', 'Research', 'Publications', 'News', 'Contact'].map((item) => (
             <NavLink
               key={item}
               to={`/${item.toLowerCase()}`}
@@ -69,10 +69,16 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md z-40">
           <nav id="mobile-nav" className="flex flex-col space-y-4 px-4 py-4">
-            <NavLink to="/" end className={({ isActive }) =>
-              `text-base font-medium ${isActive ? 'text-green-800' : 'text-gray-800'}`
-            }>Home</NavLink>
-            {['Team','Research','Publications','News','Contact'].map((item) => (
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                `text-base font-medium ${isActive ? 'text-green-800' : 'text-gray-800'}`
+              }
+            >
+              Home
+            </NavLink>
+            {['Team', 'Research', 'Publications', 'News', 'Contact'].map((item) => (
               <NavLink
                 key={item}
                 to={`/${item.toLowerCase()}`}
