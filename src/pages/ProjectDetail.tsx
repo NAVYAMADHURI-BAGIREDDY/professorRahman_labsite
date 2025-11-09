@@ -39,7 +39,7 @@ const ProjectDetail = () => {
   }, [areaId, areaIdFromQuery, focusFromQuery, focusSlugFromRoute]);
 
   return (
-    <div className="bg-white mt-16">
+    <div className="bg-white mt-16 pb-24 sm:pb-12">
       {/* Header */}
       <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <div className="flex items-center gap-3">

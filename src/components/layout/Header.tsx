@@ -9,10 +9,20 @@ const Header = () => {
   const { pathname } = useLocation();
   useEffect(() => setIsMenuOpen(false), [pathname]);
 
+  const logoUrl = '/images/logomic.png';
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md py-3">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-6 lg:px-8 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 sm:gap-4">
+          <img
+            src={logoUrl}
+            alt="Lab logo"
+            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain"
+            loading="eager"
+            decoding="async"
+            onError={(e) => console.error('Logo failed to load:', (e.currentTarget as HTMLImageElement).src)}
+          />
           <div className="flex flex-col leading-tight">
             <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-cyan-700">Maksud</span>
             <span className="text-sm sm:text-base font-raleway font-semibold text-cyan-600 tracking-wide">Innovation Lab</span>

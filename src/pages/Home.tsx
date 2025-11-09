@@ -8,7 +8,7 @@ import introBg from '../../images/bacterial_cellulose.png';
 
 import { newsItems } from '../data/newsData';
 import { publications } from '../data/publications';
-import imageData from '../../images/green-energy.jpg';
+import imageData from '../../images/home-drop.png';
 import { FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 
@@ -81,7 +81,7 @@ const Home = () => {
   };
 
   // Highlighted Publications
-  const highlighted_pub_id: string[] = ['pub68', 'pub74', 'pub53', 'pub49', 'pub36', 'pub26'];
+  const highlighted_pub_id: string[] = ['pub66', 'pub72', 'pub53', 'pub49', 'pub36', 'pub26'];
   type Pub = typeof publications[number];
   const meta = (p: Pub) => p.conference ?? p.bookTitle ?? p.applicationNumber ?? '';
   const byId = new Map(publications.map(p => [p.id, p]));
@@ -94,11 +94,11 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10" />
           <img
             src={imageData}
             alt="Laboratory research"
-            className="w-full h-[120%] sm:h-[140%] object-cover translate-y-16 sm:translate-y-[70px]"
+            className="w-full h-[90%] sm:h-[110%] object-cover translate-y-16 sm:translate-y-[25px]"
           />
         </div>
 
@@ -144,20 +144,20 @@ const Home = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a
-              href="https://scholar.google.com/citations?user=hky0f9UAAAAJ&hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#D14836] p-3 rounded-full text-white hover:opacity-80"
+            href="https://scholar.google.com/citations?user=hky0f9UAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#D14836] h-11 w-11 flex items-center justify-center rounded-full text-white hover:opacity-80"
             >
-              <SiGooglescholar className="w-5 h-5" />
+              <SiGooglescholar className="h-6 w-6" />
             </a>
             <a
-              href="https://www.linkedin.com/in/maksud-rahman-04559883/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#0077B5] p-3 rounded-full text-white hover:opacity-80"
+            href="https://www.linkedin.com/in/maksud-rahman-04559883/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#0077B5] h-12 w-12 flex items-center justify-center rounded-full text-white hover:opacity-80"
             >
-              <FaLinkedin className="w-5 h-5" />
+              <FaLinkedin className="h-6 w-6" />
             </a>
           </motion.div>
         </div>
@@ -206,7 +206,7 @@ const Home = () => {
       {/* News Section */}
       <section className="bg-white pt-4 pb-16 relative">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mt-10 mb-3">
             <SectionHeading title="Latest News" centered />
           </div>
 

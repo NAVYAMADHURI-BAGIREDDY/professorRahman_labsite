@@ -41,7 +41,7 @@ const Publications = () => {
       </section>
 
       {/* Publications Section */}
-      <section className="bg-white mt-10">
+      <section className="bg-white mt-10 pb-24 sm:pb-12">
         <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
           {/* Filter Buttons */}
           <div className="flex flex-wrap gap-2 mb-10">
