@@ -55,8 +55,6 @@ import pub54 from '../../images/Publications/54.jpg';
 import pub55 from '../../images/Publications/55.jpg';
 import pub56 from '../../images/Publications/56.jpg';
 import pub57 from '../../images/Publications/57.jpg';
-import pub58 from '../../images/Publications/58.jpg';
-import pub59 from '../../images/Publications/59.png';
 import pub60 from '../../images/Publications/60.jpg';
 import pub61 from '../../images/Publications/61.jpg';
 import pub62 from '../../images/Publications/62.jpg';

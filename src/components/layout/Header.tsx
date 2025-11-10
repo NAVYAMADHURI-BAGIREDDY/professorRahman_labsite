@@ -2,14 +2,18 @@ import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
+import labLogo from '../../images/logomic.png';
+
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(v => !v);
 
   const { pathname } = useLocation();
   useEffect(() => setIsMenuOpen(false), [pathname]);
+  
+  const logoUrl = labLogo;
 
-  const logoUrl = '/images/logomic.png';
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md py-3">
