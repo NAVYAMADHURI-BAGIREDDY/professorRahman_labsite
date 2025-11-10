@@ -191,7 +191,7 @@ const Home = () => {
                 </p>
 
                 <Link
-                  to="/people"
+                  to="/team"
                   className="text-cyan-600 hover:text-primary-400 font-semibold text-2xl flex items-center justify-center transition-colors"
                 >
                   Meet Our Team
