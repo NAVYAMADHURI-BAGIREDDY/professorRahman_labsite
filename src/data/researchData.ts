@@ -27,14 +27,24 @@ export interface Project {
   href?: string;
 }
 
+export interface DomainBlock {
+  id?: string;
+  title: string;
+  description?: string;
+  image?: string;
+  images?: string[];
+  projects?: Project[];
+}
+
 export interface Domain {
   id: string;
   title: string;
+  href?: string;
+  description?: string;
   image?: string;
   images?: string[];
-  description?: string;
-  href?: string;
   projects?: Project[];
+  blocks?: DomainBlock[];     // multiple sections under the same domain
 }
 
 export interface ResearchArea {
@@ -64,22 +74,36 @@ export const researchAreas: ResearchArea[] = [
       {
         id: 'biotic-nanofibers-and-nanocomposites',
         title: 'Biotic Nanofibers and Nanocomposites',
-        images: [focusBiotic, focusBiotic2], 
         href: '/research/materials/biotic-nanofibers-and-nanocomposites',
-        description:
-          'Slanting towards environmental and economic concerns, our lab is dedicated to developing green composites for multifunctional applications, ranging from automotive and economic packaging to sports and textile applications. Aiming to replace synthetic polymers or plastics, our research will optimize the properties of natural polymers, such as proteins, cellulose, and other carbohydrates, as well as nanomaterials (e.g., nanocellulose, calcium carbonate, hydroxyapatite), to develop fully bio-based, high-performance structures. We are also advancing the development of next-generation fibers derived from renewable sources such as cellulose, algae, and mycelium, with exceptional properties and added functionalities that can replace glass and carbon fibers.',
-        projects: [
+        blocks: [
           {
-          title: 'Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
-          href: 'https://www.nature.com/articles/s41467-025-60242-1'
+            id: 'nanofibers',
+            title: 'Biotic Nanofibers',
+            image: focusBiotic,
+            description: 'Development of next-generation fibers derived from renewable sources such as cellulose, algae, and mycelium, with exceptional properties and added functionalities that can replace glass and carbon fibers.',
+            projects: [
+              {
+                title: 'Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
+                href: 'https://www.nature.com/articles/s41467-025-60242-1'
+              },
+              {
+                title: 'High-performance green nanocomposites using aligned bacterial cellulose and soy protein',
+                href: 'https://www.sciencedirect.com/science/article/abs/pii/S0266353816318346'
+              }
+            ]
           },
           {
-          title: 'Preserving Fresh Eggs via Egg-Derived Bionanocomposite Coating',
-          href: 'https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202310091'
-          },
-          {
-          title: 'High-performance green nanocomposites using aligned bacterial cellulose and soy protein',
-          href: 'https://www.sciencedirect.com/science/article/abs/pii/S0266353816318346'
+            id: 'nanocomposites',
+            title: 'Biotic Nanocomposites',
+            image: focusBiotic2,
+            description:
+            'Optimizing the properties of natural polymers and nanomaterials such as proteins, cellulose, nanocellulose, calcium carbonate, and hydroxyapatite to develop fully bio-based, high-performance structures.',
+            projects: [
+              {
+                title: 'Preserving Fresh Eggs via Egg-Derived Bionanocomposite Coating',
+                href: 'https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202310091'
+              }
+            ]
           }
         ]
       },

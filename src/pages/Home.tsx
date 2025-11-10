@@ -115,7 +115,7 @@ const Home = () => {
               </h1>
             </div>
             <div>
-              <p className="font-semibold font-raleway text-2xl sm:text-2xl md:text-2xl lg:text-3xl tracking-widest">
+              <p className="font-semibold font-raleway text3xl sm:text-3xl md:text-3xl lg:text-3xl tracking-widest">
                 of Circular Materials and Manufacturing
               </p>
             </div>

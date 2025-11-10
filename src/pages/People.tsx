@@ -6,6 +6,7 @@ import { people, Person } from '../data/peopleData';
 import { SiGooglescholar, SiLinkedin } from 'react-icons/si';
 import teamBanner from '../../images/team.png';
 import groupPhoto from '../../images/group.png'; 
+
 const People = () => {
   const [selected, setSelected] = useState<Person | null>(null);
 
@@ -105,7 +106,7 @@ const People = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-5xl font-raleway mb-4"
           >
-            Our Team
+            The Team
           </motion.h1>
         </div>
       </section>
@@ -120,9 +121,7 @@ const People = () => {
               transition={{ duration: 0.5 }}
             >
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                We work at the intersection of advanced materials, additive
-                manufacturing, and sustainability—designing circular solutions and
-                mentoring the next generation of researchers.
+                A passionate team of researchers, engineers, and innovators shaping the future of sustainable materials and manufacturing. Our group brings together diverse expertise to develop circular-economy solutions, advance solar-module technology, and transform scientific ideas into real-world impact. United by curiosity and a commitment to sustainable innovation, we work together to push boundaries and create meaningful change.
               </p>
             </motion.div>
             <motion.div
