@@ -106,7 +106,7 @@ const People = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-5xl font-raleway mb-4"
           >
-            The Team
+            Our Team
           </motion.h1>
         </div>
       </section>
@@ -121,7 +121,7 @@ const People = () => {
               transition={{ duration: 0.5 }}
             >
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                A passionate team of researchers, engineers, and innovators shaping the future of sustainable materials and manufacturing. Our group brings together diverse expertise to develop circular-economy solutions, advance solar-module technology, and transform scientific ideas into real-world impact. United by curiosity and a commitment to sustainable innovation, we work together to push boundaries and create meaningful change.
+                Our Lab is composed of a dynamic team of passionate students and postdoctoral researchers, who work together at the forefront of materials innovation. We foster an inclusive, collaborative, and interdisciplinary research environment where creativity meets scientific rigor. Our members bring expertise spanning materials science and mechanical engineering to tackle challenges in circular materials, bio-inspired designs, and advanced manufacturing technologies. Together, we aim to transform fundamental discoveries into real-world solutions that promote sustainability, functionality, and circular design.
               </p>
             </motion.div>
             <motion.div

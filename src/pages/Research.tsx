@@ -65,7 +65,7 @@ const Research = () => {
                       <h4 className="text-white text-medium sm:text-medium font-bold uppercase mb-3 leading-tight">
                         Research Focus
                       </h4>
-                      <ul className="space-y-[2px] text-lg text-white font-bold leading-relaxed">
+                      <ul className="space-y-[3px] text-lg text-white font-bold leading-relaxed">
                         {(domains ?? []).map((dom) => {
                           const to = `/projectDetail/${encodeURIComponent(id)}/${slugify(dom.title)}`;
                           return (

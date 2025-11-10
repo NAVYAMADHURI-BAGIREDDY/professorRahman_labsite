@@ -27,8 +27,8 @@ import alberta from '../../images/fund_logos/alberta.png';
 import flow from '../../images/fund_logos/flow.png';
 
 const homePubImages: Record<string, string> = {
-  pub74: hp1,
-  pub68: hp2,
+  pub66: hp1,
+  pub72: hp2,
   pub53: hp3,
   pub49: hp4,
   pub36: hp5,
