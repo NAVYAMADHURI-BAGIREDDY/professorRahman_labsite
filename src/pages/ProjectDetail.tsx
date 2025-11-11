@@ -12,7 +12,10 @@ function slugify(s: string) {
 }
 
 const ProjectDetail = () => {
-  const { areaId, focus: focusSlugFromRoute } = useParams<{ areaId?: string; focus?: string }>();
+  const { areaId, focus: focusSlugFromRoute } = useParams<{
+    areaId?: string;
+    focus?: string;
+  }>();
   const [params] = useSearchParams();
 
   const focusFromQuery = params.get('focus') || undefined;
@@ -24,14 +27,14 @@ const ProjectDetail = () => {
       focusSlugFromRoute ?? (focusFromQuery ? slugify(focusFromQuery) : undefined);
 
     if (desiredAreaId && desiredFocusSlug) {
-      const a = researchAreas.find(r => String(r.id) === String(desiredAreaId));
-      const d = a?.domains?.find(dom => slugify(dom.title) === desiredFocusSlug);
+      const a = researchAreas.find((r) => String(r.id) === String(desiredAreaId));
+      const d = a?.domains?.find((dom) => slugify(dom.title) === desiredFocusSlug);
       return { area: a, domain: d };
     }
 
     if (desiredFocusSlug) {
       for (const a of researchAreas) {
-        const d = a.domains?.find(dom => slugify(dom.title) === desiredFocusSlug);
+        const d = a.domains?.find((dom) => slugify(dom.title) === desiredFocusSlug);
         if (d) return { area: a, domain: d };
       }
     }
@@ -76,29 +79,38 @@ const ProjectDetail = () => {
                   )}
                 </div>
 
-                {/* Project sections */}
+                {/* Project List */}
                 <div className="mt-8 space-y-8">
                   {(domain.projects ?? []).map((p, idx) => {
                     const projectNumber = idx + 1;
-                    const imageSrc =
-                      Array.isArray(p.images) && p.images.length > 0 ? p.images[0] : p.image;
 
-                    // Build a single publication line, only if there is meaningful metadata
-                    const hasMeta = Boolean(p.authors || p.conference || p.year || p.name);
-                    const metaLine = hasMeta
-                      ? [
-                          p.authors || undefined,
-                          p.year ? `(${p.year})` : undefined,
-                          p.name || p.title,
-                          p.conference || undefined,
+                    const publicationItems = (p.publications ?? [])
+                      .map((pub, i) => {
+                        const line = [
+                          pub.authors || undefined,
+                          pub.year ? `(${pub.year})` : undefined,
+                          pub.name || undefined,
+                          pub.journal || undefined,
                         ]
                           .filter(Boolean)
                           .join('. ')
-                      : '';
+                          .trim();
 
-                    // Fallback to title if link exists and no metadata
-                    const publicationLine =
-                      metaLine || (p.href && p.title ? p.title : '');
+                        if (!line && !(pub.href && pub.name)) return null;
+
+                        return {
+                          key: `pub-${i}`,
+                          text: line || pub.name || '',
+                          href: pub.href,
+                        };
+                      })
+                      .filter(Boolean) as { key: string; text: string; href?: string }[];
+
+                    const hasMultipleImages = Array.isArray(p.images) && p.images.length > 1;
+                    const fallbackImage =
+                      Array.isArray(p.images) && p.images.length === 1
+                        ? p.images[0]
+                        : p.image;
 
                     return (
                       <div
@@ -106,49 +118,64 @@ const ProjectDetail = () => {
                         className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 md:p-6"
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
+
                           {/* Left: text */}
                           <div className="flex-1 min-w-0">
                             <h4 className="text-lg md:text-xl font-semibold text-cyan-600 tracking-tight">
                               {p.title || `Project ${projectNumber}`}
                             </h4>
 
-                            {p.description ? (
+                            {p.description && (
                               <p className="mt-2 text-gray-800 text-base md:text-lg leading-relaxed">
                                 {p.description}
                               </p>
-                            ) : null}
+                            )}
 
-                            {publicationLine ? (
+                            {publicationItems.length > 0 && (
                               <div className="mt-4">
                                 <h4 className="text-sm font-semibold tracking-wide text-gray-700">
                                   Related Publications:
                                 </h4>
                                 <ol className="mt-2 list-decimal list-inside space-y-1 text-gray-800">
-                                  <li className="break-words">
-                                    {p.href ? (
-                                      <a
-                                        href={p.href}
-                                        className="hover:underline text-black-700"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                      >
-                                        {publicationLine}
-                                      </a>
-                                    ) : (
-                                      publicationLine
-                                    )}
-                                  </li>
+                                  {publicationItems.map((item) => (
+                                    <li key={item.key} className="break-words">
+                                      {item.href ? (
+                                        <a
+                                          href={item.href}
+                                          className="hover:underline text-gray-800"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
+                                          {item.text}
+                                        </a>
+                                      ) : (
+                                        item.text
+                                      )}
+                                    </li>
+                                  ))}
                                 </ol>
                               </div>
-                            ) : null}
+                            )}
                           </div>
 
-                          {/* Right: image */}
-                          {imageSrc ? (
-                            <div className="relative w-full md:w-[380px] md:ml-auto md:top-10">
+                          {/* Right: images */}
+                          {hasMultipleImages ? (
+                            <div className="relative w-full md:w-[380px] md:ml-auto mt-10 flex flex-col gap-4">
+                              {p.images!.map((src, i) => (
+                                <img
+                                  key={`${domain.id}-img-${i}`}
+                                  src={src}
+                                  alt={`${p.title || `Project ${projectNumber}`} image ${i + 1}`}
+                                  className="block w-full h-auto rounded-lg shadow-sm object-contain"
+                                  loading="lazy"
+                                />
+                              ))}
+                            </div>
+                          ) : fallbackImage ? (
+                            <div className="relative w-full md:w-[380px] md:ml-auto mt-10">
                               <img
-                                src={imageSrc}
-                                alt={p.title || `${domain.title} project ${projectNumber}`}
+                                src={fallbackImage}
+                                alt={p.title || `${domain.title} project`}
                                 className="block w-full h-auto rounded-lg shadow-sm object-contain"
                                 loading="lazy"
                               />
