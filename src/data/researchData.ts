@@ -1,7 +1,7 @@
 import research1 from '../../images/research1.png';
 import research2 from '../../images/research5.png';
 import research3 from '../../images/research6.jpg';
-import focusFood from '../../images/projects/sciencefood.jpg';
+import focusFood from '../../images/projects/foodcoating.png';
 import focusLiving1 from '../../images/projects/livingcompo.png';
 import focusLiving2 from '../../images/projects/livingcompo2.png';
 import focusLiving3 from '../../images/projects/livingcompo3.png';
@@ -77,7 +77,7 @@ export const researchAreas: ResearchArea[] = [
     domains: [
       {
         id: 'biotic-nanofibers',
-        title: 'Biotic Nanofibers',
+        title: 'Biotic Nanofibers and Polymers',
         href: '/research/materials/biotic-nanofibers-and-nanocomposites',
         description:
           'We are advancing the development of next-generation fibers derived from renewable sources such as cellulose, algae, and mycelium, with exceptional properties and added functionalities that can replace glass and carbon fibers.',
@@ -85,7 +85,7 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Biotic Nanofibre from Microbes',
             description: 'For generations, microbes have produced finely structured natural fibres, offering a renewable platform for advanced material design. Bacterial cellulose, in particular, exhibits exceptional strength and purity, yet its broader use has been limited by challenges in controlling fibril alignment and adding new functionalities. By steering microbial growth through controlled fluid flow and introducing functional nanomaterials during biosynthesis, biotic nanofibres can be created with enhanced strength, flexibility, and thermal performance. This direction opens exciting possibilities for sustainable structural materials, advanced packaging, textiles, and green electronics.',
-            images: [focusFibre,focusFibre2],
+            images: [focusFibre2,focusFibre],
             publications: [
               {
                 name: 'Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
@@ -104,7 +104,7 @@ export const researchAreas: ResearchArea[] = [
             ]
           },
           {
-            title: 'Green Polymers from Agro Sources',
+            title: 'Green Polymers from Agro-resources',
             description: 'For decades, vast amounts of agro-resources and plant-based residues have remained underutilized despite their natural potential to form strong and sustainable polymers. By extracting and transforming these non-edible components, it becomes possible to develop bio-based resins and composites that offer a credible alternative to petroleum-derived materials. Through gentle chemical modification and fiber reinforcement, these green polymers achieve impressive strength, durability, and cost-effectiveness while relying entirely on renewable feedstocks. This direction strengthens the broader vision of circularity, where waste streams are converted into high-value materials for sustainable manufacturing and everyday applications.',
             image: focusFibre3,
             publications: [
@@ -159,7 +159,7 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Carbon Based Fibre and Nanomaterials',
             description: 'For decades, vast quantities of carbon-rich by-products from petroleum refining have been treated as low-value waste despite their inherent potential as precursors for advanced materials. These residues, particularly asphaltenes, contain the aromatic architectures needed to form strong carbon fibres and high-performance nanomaterials. By transforming these overlooked resources through controlled spinning, stabilization, and rapid thermal conversion, they can be upgraded into robust carbon fibres and graphene-like nanostructures without the costly pretreatment typically required. Such approaches not only unlock new pathways for producing lightweight, high-strength, and thermally stable materials, but also redirect industrial waste streams toward higher-value applications, supporting both economic and environmental sustainability.',
-            images: [focusCarbon3,focusCarbon4],
+            image: focusCarbon4,
             publications: [
               { 
                 name: 'Transformation of petroleum asphaltenes to carbon fibers',
