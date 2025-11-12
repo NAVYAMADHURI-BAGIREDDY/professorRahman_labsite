@@ -61,14 +61,18 @@ const ProjectDetail = () => {
       </section>
 
       <section className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8 mt-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">{area.title}</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+          {area.title}
+          </h2>
 
         <AnimatedSection key={domain.id}>
           <div id={slugify(domain.title)} className="scroll-mt-24 md:scroll-mt-28">
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-              <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">{domain.title}</h3>
+              <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">{domain.title}
+              </h3>
               {domain.description && (
-                <p className="mt-3 text-gray-700 text-base md:text-lg leading-relaxed">{domain.description}</p>
+                <p className="mt-3 text-gray-700 text-base md:text-lg leading-relaxed">{domain.description}
+                </p>
               )}
             </div>
 
@@ -82,7 +86,8 @@ const ProjectDetail = () => {
                   <div key={`${domain.id}-project-${idx}`} className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 md:p-6">
                     <div className="flex flex-col md:flex-row gap-6 items-start">
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-lg md:text-xl font-semibold text-cyan-600 tracking-tight">{title}</h4>
+                        <h4 className="text-lg md:text-xl font-semibold text-cyan-600 tracking-tight">{title} 
+                        </h4>
                         {p.description && <p className="mt-2 text-gray-800 text-base md:text-lg leading-relaxed">{p.description}</p>}
 
                         {pubs.length > 0 && (
@@ -97,7 +102,8 @@ const ProjectDetail = () => {
                                 const ptitle = pub.name ? `${pub.name}. ` : '';
                                 const journal = pub.journal ? <strong className="font-extrabold text-gray-900">{pub.journal}</strong> : null;
 
-                                const content = <>{authors}{year}{ptitle}{journal}</>;
+                                const content = <>{authors}{year}{ptitle}{journal}
+                                </>;
                                 return (
                                   <li key={`pub-${i}`} className="break-words">
                                     {pub.href ? (

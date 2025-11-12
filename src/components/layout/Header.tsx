@@ -43,7 +43,7 @@ const Header = () => {
           >
             Home
           </NavLink>
-          {['Team', 'Research', 'Publications', 'News', 'Contact'].map((item) => (
+          {['Research', 'Team', 'Publications', 'News', 'Contact'].map((item) => (
             <NavLink
               key={item}
               to={`/${item.toLowerCase()}`}

@@ -29,7 +29,7 @@ const News = () => {
       {/* Hero Section */}
       <section className="relative h-[160px] bg-gray-900 mt-20">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="absolute inset-0" />
           <img
             src={newsBanner} 
             alt="News and updates" 

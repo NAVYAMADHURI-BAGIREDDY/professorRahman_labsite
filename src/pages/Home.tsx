@@ -27,8 +27,8 @@ import alberta from '../../images/fund_logos/alberta.png';
 import flow from '../../images/fund_logos/flow.png';
 
 const homePubImages: Record<string, string> = {
-  pub66: hp1,
-  pub72: hp2,
+  pub72: hp1,
+  pub66: hp2,
   pub53: hp3,
   pub49: hp4,
   pub36: hp5,
@@ -81,7 +81,7 @@ const Home = () => {
   };
 
   // Highlighted Publications
-  const highlighted_pub_id: string[] = ['pub66', 'pub72', 'pub53', 'pub49', 'pub36', 'pub26'];
+  const highlighted_pub_id: string[] = ['pub72', 'pub66', 'pub53', 'pub49', 'pub36', 'pub26'];
   type Pub = typeof publications[number];
   const meta = (p: Pub) => p.conference ?? p.bookTitle ?? p.applicationNumber ?? '';
   const byId = new Map(publications.map(p => [p.id, p]));
@@ -203,10 +203,68 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Highlighted Publications */}
+      <section className="bg-white pt-4 pb-16 mt-10">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading title="Highlighted Publications" centered />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            {highlightedPubs.map((pub, idx) => (
+              <AnimatedSection key={pub.id} delay={0.08 * idx}>
+                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-full p-6 transition-transform transform hover:scale-105">
+                  {pub.image && (
+                    <img
+                      src={homePubImages[pub.id] || pub.image}
+                      alt={pub.title}
+                      className="w-full h-auto max-h-40 object-contain rounded-md mb-4 bg-white p-2"
+                    />
+                  )}
+                  <p className="text-2xl text-cyan-600 font-semibold mb-1 text-center">
+                    {meta(pub)}
+                  </p>
+                  <h3 className="text-lg font-semibold mb-2 text-center">
+                    {pub.link ? (
+                      <a
+                        href={pub.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-black-800"
+                      >
+                        {pub.title.replace(/^\d+\.\s*/, '')}
+                      </a>
+                    ) : (
+                      pub.title.replace(/^\d+\.\s*/, '')
+                    )}
+                  </h3>
+                  {(pub.authors ?? pub.author) && (() => {
+                    const authorString = pub.authors ?? pub.author;
+                    const firstAuthor = authorString.split(',')[0];
+                    return (
+                      <p className="text-sm text-gray-700 text-center italic">
+                        {firstAuthor} et al.
+                      </p>
+                    );
+                  })()}
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              to="/publications"
+              className="text-cyan-600 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
+            >
+              View All Publications
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
       {/* News Section */}
       <section className="bg-white pt-4 pb-16 relative">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center mt-10 mb-3">
+          <div className="flex justify-center mb-3">
             <SectionHeading title="Latest News" centered />
           </div>
 
@@ -264,8 +322,7 @@ const Home = () => {
                               href={news.Link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="hover:underline text-cyan-600"
-                            >
+                              className="hover:underline text-cyan-600" >
                               {news.title}
                             </a>
                           ) : (
@@ -276,14 +333,13 @@ const Home = () => {
                       <img
                         src={news.image}
                         alt={news.title}
-                        className="w-full h-36 md:h-40 object-cover rounded-md"
-                      />
+                        className="w-full h-36 md:h-40 object-cover rounded-md" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                ))}
+              </div>
+           </div>
 
           {/* View All */}
           <div className="mt-10 text-center">
@@ -292,63 +348,6 @@ const Home = () => {
               className="text-cyan-600 hover:text-primary-400 font-medium text-2xl inline-flex items-center transition-colors"
             >
               View All News
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Highlighted Publications */}
-      <section className="bg-white pt-4 pb-16">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Highlighted Publications" centered />
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {highlightedPubs.map((pub, idx) => (
-              <AnimatedSection key={pub.id} delay={0.08 * idx}>
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-full p-6 transition-transform transform hover:scale-105">
-                  {pub.image && (
-                    <img
-                      src={homePubImages[pub.id] || pub.image}
-                      alt={pub.title}
-                      className="w-full h-auto max-h-40 object-contain rounded-md mb-4 bg-white p-2"
-                    />
-                  )}
-                  <p className="text-2xl text-cyan-600 font-semibold mb-1 text-center">
-                    {meta(pub)}
-                  </p>
-                  <h3 className="text-lg font-semibold mb-2 text-center">
-                    {pub.link ? (
-                      <a
-                        href={pub.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-black-800"
-                      >
-                        {pub.title.replace(/^\d+\.\s*/, '')}
-                      </a>
-                    ) : (
-                      pub.title.replace(/^\d+\.\s*/, '')
-                    )}
-                  </h3>
-                  {(pub.authors ?? pub.author) && (() => {
-                    const authorString = pub.authors ?? pub.author;
-                    const firstAuthor = authorString.split(',')[0];
-                    return (
-                      <p className="text-sm text-gray-700 text-center italic">
-                        {firstAuthor} et al.
-                      </p>
-                    );
-                  })()}
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <Link
-              to="/publications"
-              className="text-cyan-600 hover:text-primary-400 font-medium text-2xl flex items-center justify-center transition-colors"
-            >
-              View All Publications
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

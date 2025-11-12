@@ -1,4 +1,4 @@
-import research1 from '../../images/research1.png';
+import research1 from '../../images/research1.jpg';
 import research2 from '../../images/research5.png';
 import research3 from '../../images/research6.jpg';
 import focusFood from '../../images/projects/foodcoating.png';
@@ -9,7 +9,7 @@ import focusCarbon2 from '../../images/projects/dynamics.jpg';
 import focusCarbon4 from '../../images/projects/fjhmodel.png';
 import focusBiotic2 from '../../images/projects/egg.png';
 import focusAMBio from '../../images/projects/3dwood.png';
-import focusAMRecycle2 from '../../images/projects/diw.png';
+import focusAMRecycle2 from '../../images/projects/bullet.png';
 import focusAMBio2 from '../../images/projects/burning.png'; 
 import focusFibre from '../../images/projects/bacteria-cellulose.png';
 import focusFibre2 from '../../images/projects/cellulose.png';
@@ -158,9 +158,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Carbon Based Fibre and Nanomaterials',
             description: 'For decades, vast quantities of carbon-rich by-products from petroleum refining have been treated as low-value waste despite their inherent potential as precursors for advanced materials. These residues, particularly asphaltenes, contain the aromatic architectures needed to form strong carbon fibres and high-performance nanomaterials. By transforming these overlooked resources through controlled spinning, stabilization, and rapid thermal conversion, they can be upgraded into robust carbon fibres and graphene-like nanostructures without the costly pretreatment typically required. Such approaches not only unlock new pathways for producing lightweight, high-strength, and thermally stable materials, but also redirect industrial waste streams toward higher-value applications, supporting both economic and environmental sustainability.',
-            images: [{
-              src: focusCarbon4, caption: ''
-            }],
+            images: [
+              {src: focusCarbon4, caption: 'Sustainable valorization of asphaltene'}
+            ],
             publications: [
               { 
                 name: 'Transformation of petroleum asphaltenes to carbon fibers',
@@ -236,9 +236,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: '3D Printing of Wood Structure',
             description: 'For countless centuries, natural wood has served as a fundamental material for a wide variety of purposes, encompassing the construction of buildings, the manufacturing of furniture, and the creation of architectural structures. Traditionally, wood shaping has relied on subtractive manufacturing techniques. However, this process often generates a substantial amount of waste material, resulting in material wastage and increased production costs. In light of the growing concerns surrounding sustainability and the need for effective waste management, recycling waste wood has become imperative. A potential opportunity arises if complex wood structures can be created using this waste wood through additive processes. To address this challenge, we work on developing an additive manufacturing process, which will enable complex structure manufacturing of wood with tailored properties and lower costs.',
-            images: [{
-              src: focusAMBio, caption: ''
-            }],
+            images: [
+             { src: focusAMBio, caption: '3D printing process of wood'}
+            ],
             publications: [
               { name: 'Three-dimensional Printing of Wood',
                 href: 'https://doi.org/10.1126/sciadv.adk3250',
@@ -251,16 +251,16 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Architected Fire-resistant Wood',
             description: 'Over the past three decades, fire incidents have caused over 1.16 million deaths worldwide, with more than 80% in residential buildings. In the United States alone, 2023 recorded 1.39 million fires, causing 3,670 deaths and $23 billion in losses. Despite its combustibility, natural wood remains central to construction due to its abundance and aesthetics. Current fire-retardant coatings on wood only protect surfaces, degrade over time, and often use toxic halogenated compounds. Our research group aim to deliver a completely environment-friendly novel and robust solution: intrinsically fire-resistant architected wood structures fabricated via state-of-the-art additive manufacturing technology.',
-            images: [{
-              src: focusAMBio2, caption: ''
-            }],
+            images: [
+              {src: focusAMBio2, caption: ''}
+            ],
             publications: [
               {
-                name: 'Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
-                href: 'https://doi.org/10.1038/s41467-025-60242-1',
-                authors: 'Saadi, M.A.S.R.; Cui, Y.; Bhakta, S.P.; Hassan, Sakib; Harikrishnan, V.; Siqueira,  I.R.; Pasquali, M.; Bennett, M.; Ajayan, P.M.; Rahman, M.R.*',
-                journal: 'Nature Communications',
-                year: 2025,
+                name: 'Direct Ink Writing: A 3D Printing Technology for Diverse Materials',
+                href: 'https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adma.202108855',
+                authors: 'Saadi, M. a. S. R.; Maguire, A.; Pottackal, N. T.; Thakur, M. S. H.; Ikram, M. Md.; Hart, A. J.; Ajayan, P. M.; Rahman, M. M.',
+                journal: 'Advanced Materials',
+                year: 2022,
               }
             ]
           }
@@ -274,19 +274,10 @@ export const researchAreas: ResearchArea[] = [
           'We design and development architected recyclable nanocomposite materials using additive manufacturing (AM) techniques. By tailoring the composition, structure, and interfaces within these composites, we aim to unlock novel mechanical and functional properties that go beyond conventional material systems. Looking ahead, we plan to expand our work to a wider range of polymers and fiber reinforcements, exploring how interface engineering can be used to program structural and functional behaviors directly into the printed composites. Our ultimate goal is to develop lightweight, high-performance composite structures with unconventional mechanical responses, paving the way for their application in aerospace and next-generation structural systems.',
         projects: [
           {
-            title: 'Three-dimensional printing of complex graphite structures',
-            description: '',
-            images: [{
-              src: focusAMRecycle2, caption: ''
-            }],
-            publications: [
-              {
-                name: 'Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
-                href: 'https://doi.org/10.1038/s41467-025-60242-1',
-                authors: 'Saadi, M.A.S.R.; Cui, Y.; Bhakta, S.P.; Hassan, Sakib; Harikrishnan, V.; Siqueira,  I.R.; Pasquali, M.; Bennett, M.; Ajayan, P.M.; Rahman, M.R.*',
-                journal: 'Nature Communications',
-                year: 2025,
-              }
+            title: 'Design and Impact of Thermoplastic',
+            description: 'For decades, designing lightweight yet impact-resistant materials has remained a critical challenge in defense and aerospace applications. Through advanced additive manufacturing, architected porous structures can now be tailored with precise geometries to absorb energy and withstand extreme loading. By utilizing high-performance thermoplastics and engineered lattice designs such as Schwarzites and Tubulanes, these materials achieve remarkable strength, resilience, and stability under dynamic impact. Combining experimental testing with computational modeling enables a deeper understanding of their deformation behavior, guiding the development of next-generation protective and structural systems.',
+            images: [
+              { src: focusAMRecycle2, caption: '' }
             ]
           }
         ]
