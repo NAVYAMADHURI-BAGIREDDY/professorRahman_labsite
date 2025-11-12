@@ -317,7 +317,7 @@ export const journalArticles: JournalArticle[] = [
     year: 2022,
     image: pub48
   },
-   {
+  {
     id: 'pub47',
     title: '47. Transformation of petroleum asphaltenes to carbon fibers',
     link: 'https://doi.org/10.1016/j.carbon.2022.01.011',

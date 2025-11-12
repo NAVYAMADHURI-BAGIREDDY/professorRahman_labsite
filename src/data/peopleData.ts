@@ -1,4 +1,4 @@
- import maksud from '../../images/People_page/Maksud Rahman portrait.jpg';
+import maksud from '../../images/People_page/Maksud Rahman portrait.jpg';
 import saadi from '../../images/People_page/saadi.png';
 import shajed from '../../images/People_page/shajed.png';
 import toffal from '../../images/People_page/tofazzal.png';
@@ -27,7 +27,7 @@ export interface Person {
 export const people: Person[] = [
   {
     id: 'prof-rahman',
-    name: 'Prof. Maksud Rahman',
+    name: 'Maksud Rahman',
     title: 'PI & Director',
     image: maksud,
     bio: 'Maksud Rahman is an Assistant Professor in the Department of Mechanical and Aerospace Engineering at the University of Houston, Texas. His research interests lie in the design and manufacturing next-generation nanocomposites via advanced manufacturing technologies, including additive manufacturing, emphasizing circularity and sustainability for load-bearing structures, foods, textiles, energy, and environmental applications. He has published articles in many prestigious journals, including Science Advances, Nature Communications, Advanced Materials, Advanced Functional Materials, and ACS Nano. His research achievements have been featured by Science, Nature, BBC, New Scientist, and many other media outlets. Prof. Rahman has received several federal and industrial grants from the USA and Canada, including NSF and USDA, as Principal Investigator. He received the prestigious Herschel M Rich award in 2020 at Rice University and is the Climate Reality Project Leader trained by former vice-president Al Gore.',
@@ -70,20 +70,6 @@ export const people: Person[] = [
     category: 'current'
   },
   {
-    id: 'Saadi',
-    name: 'M.A.S.R. Saadi',
-    title: 'PhD Student',
-    image: saadi,
-    bio: 'M.A.S.R. Saadi completed his BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET), during which he studied the effect of multi-scale reinforcement particle size on mechanical and thermal properties of polymer composites. During his MS in Mechanical and Aerospace Engineering at the George Washington University, his work focused on nanomechanics and electronic structure of organic photovoltaics and 2D materials. He is currently pursuing a PhD degree in Materials Science and NanoEngineering at Rice University, where he is working on the development of sustainable bionanocomposites for multifunctional application with particular focus on energy, environment and food nexus. His developed bionanocomposites typically comprise of hierarchically assembled high performance 1D and 2D nanosystems in carbohydrate and protein-based matrices.Hobby/Other interests: Singing different forms of Metal, Rock and Bengali Folk music, Table-tennis, Soccer, FIFA',
-    education: [
-      'MS in Mechanical and Aerospace Engineering at the George Washington University',
-      'BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET)'
-    ],
-    linkedin: 'https://www.linkedin.com/in/m-a-s-r-saadi-b15a691a9/@uh.edu',
-    googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao',
-    category: 'current'
-  },
-  {
     id: 'Fahad',
     name: 'Mir Muhammad Fahad',
     title: 'PhD student',
@@ -99,7 +85,7 @@ export const people: Person[] = [
   {
     id: 'Rifat',
     name: 'Md Rifat Hossain ',
-    title: 'Visiting Research Scientist ',
+    title: 'PhD Student',
     image: rifat,
     bio: 'Prior to beginning his journey as a visiting research scientist at the University of Houston, Md Rifat Hossain earned a Master of Science in Mechanical Engineering from Rensselaer Polytechnic Institute. During his time at RPI, his research focused on developing multiscale methodologies using the finite element method to investigate the material properties of fibrous structures commonly found in biological tissues.Currently at the University of Houston, Rifat is engaged in research centered on the 3D printing of polyetherimide (PEI), aiming to explore its applications through experimental and computational techniques.',
     education: [
@@ -111,7 +97,7 @@ export const people: Person[] = [
   {
     id: '<Mahjabin>',
     name: 'Mahjabin Rahman',
-    title: 'Visiting Research Scientist',
+    title: 'PhD Student',
     image: mahjabin,
     bio: 'Mahjabin Rahman earned her M.Sc. in Industrial Engineering from the University of Pittsburgh before joining the University of Houston as a volunteer researcher in Mechanical Engineering. During her time at Pitt as a Circular Economy Fellow, she explored end-of-life (EOL) photovoltaic (PV) solar panels, focusing on how optimized recycling systems, material recovery, and supply-chain efficiency can reduce environmental impact and resource waste. Building on this foundation, she continues to apply her sustainability-driven approach through her current work on developing nanocomposite films to extend the shelf life of fruits and vegetables, by integrating materials engineering with circular economy principles to reduce food waste and promote sustainable consumption.',
     education: [
@@ -120,6 +106,20 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/mahjabin-rahman-663306116/',
     googlescholar:'https://scholar.google.com/citations?user=jOhgz7AAAAAJ&hl=en&oi=ao',
+    category: 'current'
+  },
+  {
+    id: 'Saadi',
+    name: 'M.A.S.R. Saadi',
+    title: 'PhD Student (Rice University)',
+    image: saadi,
+    bio: 'M.A.S.R. Saadi completed his BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET), during which he studied the effect of multi-scale reinforcement particle size on mechanical and thermal properties of polymer composites. During his MS in Mechanical and Aerospace Engineering at the George Washington University, his work focused on nanomechanics and electronic structure of organic photovoltaics and 2D materials. He is currently pursuing a PhD degree in Materials Science and NanoEngineering at Rice University, where he is working on the development of sustainable bionanocomposites for multifunctional application with particular focus on energy, environment and food nexus. His developed bionanocomposites typically comprise of hierarchically assembled high performance 1D and 2D nanosystems in carbohydrate and protein-based matrices.Hobby/Other interests: Singing different forms of Metal, Rock and Bengali Folk music, Table-tennis, Soccer, FIFA',
+    education: [
+      'MS in Mechanical and Aerospace Engineering at the George Washington University',
+      'BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET)'
+    ],
+    linkedin: 'https://www.linkedin.com/in/m-a-s-r-saadi-b15a691a9/@uh.edu',
+    googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao',
     category: 'current'
   },
   {

@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import AnimatedSection from '../components/common/AnimatedSection';
-import contactBanner from "../../images/contact.jpg";
+import contactBanner from "../../images/contactus.png";
 
 const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[160px] bg-gray-900 mt-16">
+      <section className="relative h-[160px] bg-gray-900 mt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img
@@ -104,8 +104,7 @@ const Contact = () => {
 
             {/* Google Map Embed */}
             <AnimatedSection delay={0.2}>
-              <div className="bg-gray-50 rounded-lg p-6 sm:p-8 h-full flex flex-col">
-                <div className="mt-4">
+              <div className="bg-gray-50 rounded-lg p-3 sm:p-4 h-full flex items-center justify-center">
                   <div id="uh-map" className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-md">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7507.268344293069!2d-95.34396182415117!3d29.722856175087074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640be59ddbfffff%3A0xf65ddb544650f173!2sEngineering%20Building%201-Cullen%20College%20of%20Engineering!5e1!3m2!1sen!2sus!4v1749091331104!5m2!1sen!2sus"
@@ -115,10 +114,8 @@ const Contact = () => {
                       className="border-0 w-full h-full"
                     ></iframe>
                   </div>
-                </div>
               </div>
             </AnimatedSection>
-
           </div>
         </div>
       </section>

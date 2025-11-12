@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from '../components/common/SectionHeading';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { newsItems } from '../data/newsData';
-import newsBanner from '../../images/newsupdate.png';
+import newsBanner from '../../images/media.png';
 
 type Category = 'all' | 'publication' | 'award' | 'conference' | 'general';
 
@@ -27,7 +27,7 @@ const News = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[160px] bg-gray-900 mt-16">
+      <section className="relative h-[160px] bg-gray-900 mt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img

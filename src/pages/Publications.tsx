@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion'; 
 import AnimatedSection from '../components/common/AnimatedSection';
 import { publications, UnifiedPublication, Category } from '../data/publications';
-import pubBanner from '../../images/pub.jpg';
+import pubBanner from '../../images/journal.png';
 
 const Publications = () => {
   const [category, setCategory] = useState<Category>('journal');
@@ -19,7 +19,7 @@ const Publications = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[160px] bg-gray-900 mt-16">
+      <section className="relative h-[160px] bg-gray-900 mt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img

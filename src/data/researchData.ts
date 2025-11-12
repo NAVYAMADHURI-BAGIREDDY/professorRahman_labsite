@@ -2,33 +2,26 @@ import research1 from '../../images/research1.png';
 import research2 from '../../images/research5.png';
 import research3 from '../../images/research6.jpg';
 import focusFood from '../../images/projects/foodcoating.png';
-import focusLiving1 from '../../images/projects/livingcompo.png';
-import focusLiving2 from '../../images/projects/livingcompo2.png';
-import focusLiving3 from '../../images/projects/livingcompo3.png';
 import focusgreen from '../../images/projects/algae.png';
-import focusgreen2 from '../../images/projects/graphene.png';
-import focusgreen3 from '../../images/projects/greenelectronic.png';
 import focusDesign from '../../images/projects/origami.png';
 import focusDesign2 from '../../images/projects/cement.png';
-import focusCarbon1 from '../../images/projects/carbonfibre.png';
 import focusCarbon2 from '../../images/projects/dynamics.jpg';
-import focusCarbon3 from '../../images/projects/FJH.png';
 import focusCarbon4 from '../../images/projects/fjhmodel.png';
-import focusBiotic from '../../images/projects/flow2d.png';
 import focusBiotic2 from '../../images/projects/egg.png';
-import focusRecycle from '../../images/projects/dielectric.png';
-import focusRecycle2 from '../../images/projects/3d.png';
 import focusAMBio from '../../images/projects/3dwood.png';
-import focusAMRecycle from '../../images/projects/complex.png';
 import focusAMRecycle2 from '../../images/projects/diw.png';
 import focusAMBio2 from '../../images/projects/burning.png'; 
 import focusFibre from '../../images/projects/bacteria-cellulose.png';
 import focusFibre2 from '../../images/projects/cellulose.png';
 import focusFibre3 from '../../images/projects/green_fibre.png';
 
+export interface Figure {
+  src: string;
+  caption?: string; // independent figure name
+}
 
 export interface Publication {
-  name?: string;        // display name (paper title)
+  name?: string;        // paper title
   href?: string;        // DOI or link
   authors?: string;     // author list
   journal?: string;     // journal name
@@ -37,9 +30,8 @@ export interface Publication {
 
 export interface Project {
   title: string;
-  description?: string;
-  image?: string;
-  images?: string[];
+  description?: string;  
+  images?: Figure[];       
   publications?: Publication[];  
 }
 
@@ -85,7 +77,10 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Biotic Nanofibre from Microbes',
             description: 'For generations, microbes have produced finely structured natural fibres, offering a renewable platform for advanced material design. Bacterial cellulose, in particular, exhibits exceptional strength and purity, yet its broader use has been limited by challenges in controlling fibril alignment and adding new functionalities. By steering microbial growth through controlled fluid flow and introducing functional nanomaterials during biosynthesis, biotic nanofibres can be created with enhanced strength, flexibility, and thermal performance. This direction opens exciting possibilities for sustainable structural materials, advanced packaging, textiles, and green electronics.',
-            images: [focusFibre2,focusFibre],
+            images: [
+              {src: focusFibre2, caption: 'Aligned plant-derived cellulose fibres'},
+              {src: focusFibre,  caption: 'Bacterial cellulose sheet under shear'}
+            ],
             publications: [
               {
                 name: 'Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
@@ -106,7 +101,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Green Polymers from Agro-resources',
             description: 'For decades, vast amounts of agro-resources and plant-based residues have remained underutilized despite their natural potential to form strong and sustainable polymers. By extracting and transforming these non-edible components, it becomes possible to develop bio-based resins and composites that offer a credible alternative to petroleum-derived materials. Through gentle chemical modification and fiber reinforcement, these green polymers achieve impressive strength, durability, and cost-effectiveness while relying entirely on renewable feedstocks. This direction strengthens the broader vision of circularity, where waste streams are converted into high-value materials for sustainable manufacturing and everyday applications.',
-            image: focusFibre3,
+            images: [{
+              src: focusFibre3, caption: 'bla bla'
+            }],
             publications: [
               {
                 name: '“Green” composites using bioresins from agro-wastes and modified sisal fibers',
@@ -136,7 +133,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Bionanocomposite',
             description: 'For generations, biological materials have offered remarkable structural and functional capabilities, yet their full potential in advanced engineering applications has remained largely untapped. By combining naturally derived polymers with nanoscale reinforcements, biotic nanocomposites create a new class of high-performance, sustainable materials that leverage the strengths of both biology and nanotechnology. These composites exhibit improved barrier properties, enhanced mechanical stability, and inherent antimicrobial behavior, all while remaining biodegradable and low-cost. As global industries seek alternatives to synthetic coatings and energy-intensive preservation methods, biotic nanocomposites present a promising pathway toward environmentally responsible solutions for packaging, protection, and long-term material circularity.',
-            image: focusBiotic2,
+            images: [{
+              src: focusBiotic2, caption: 'bla bla'
+            }],
             publications: [
               {
                 name: 'Preserving fresh eggs via egg-derived bio-nanocomposite coating',
@@ -159,7 +158,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Carbon Based Fibre and Nanomaterials',
             description: 'For decades, vast quantities of carbon-rich by-products from petroleum refining have been treated as low-value waste despite their inherent potential as precursors for advanced materials. These residues, particularly asphaltenes, contain the aromatic architectures needed to form strong carbon fibres and high-performance nanomaterials. By transforming these overlooked resources through controlled spinning, stabilization, and rapid thermal conversion, they can be upgraded into robust carbon fibres and graphene-like nanostructures without the costly pretreatment typically required. Such approaches not only unlock new pathways for producing lightweight, high-strength, and thermally stable materials, but also redirect industrial waste streams toward higher-value applications, supporting both economic and environmental sustainability.',
-            image: focusCarbon4,
+            images: [{
+              src: focusCarbon4, caption: ''
+            }],
             publications: [
               { 
                 name: 'Transformation of petroleum asphaltenes to carbon fibers',
@@ -187,7 +188,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Carbon Based Composites',
             description: 'For years, carbon nanomaterials have been recognized for their remarkable strength and thermal conductivity, yet their integration into polymers has been hindered by issues such as agglomeration, voids, and poor interfacial bonding. As manufacturing moves toward more precise and sustainable approaches, extrusion-based additive techniques offer a way to overcome these limitations. By using shear-driven flow during printing, carbon nanotubes can be more uniformly dispersed, better aligned, and more effectively bonded within the polymer matrix. This advancement enables stronger, more reliable, and thermally efficient carbon-based composites for next-generation structural and functional applications.',
-            image: focusCarbon2,
+            images: [{
+              src: focusCarbon2, caption: ''
+            }],
             publications: [
               {
                 name: 'Development of asphaltene-derived carbon fiber reinforced composites via additive manufacturing',
@@ -233,7 +236,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: '3D Printing of Wood Structure',
             description: 'For countless centuries, natural wood has served as a fundamental material for a wide variety of purposes, encompassing the construction of buildings, the manufacturing of furniture, and the creation of architectural structures. Traditionally, wood shaping has relied on subtractive manufacturing techniques. However, this process often generates a substantial amount of waste material, resulting in material wastage and increased production costs. In light of the growing concerns surrounding sustainability and the need for effective waste management, recycling waste wood has become imperative. A potential opportunity arises if complex wood structures can be created using this waste wood through additive processes. To address this challenge, we work on developing an additive manufacturing process, which will enable complex structure manufacturing of wood with tailored properties and lower costs.',
-            image: focusAMBio,
+            images: [{
+              src: focusAMBio, caption: ''
+            }],
             publications: [
               { name: 'Three-dimensional Printing of Wood',
                 href: 'https://doi.org/10.1126/sciadv.adk3250',
@@ -246,7 +251,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Architected Fire-resistant Wood',
             description: 'Over the past three decades, fire incidents have caused over 1.16 million deaths worldwide, with more than 80% in residential buildings. In the United States alone, 2023 recorded 1.39 million fires, causing 3,670 deaths and $23 billion in losses. Despite its combustibility, natural wood remains central to construction due to its abundance and aesthetics. Current fire-retardant coatings on wood only protect surfaces, degrade over time, and often use toxic halogenated compounds. Our research group aim to deliver a completely environment-friendly novel and robust solution: intrinsically fire-resistant architected wood structures fabricated via state-of-the-art additive manufacturing technology.',
-            image: focusAMBio2,
+            images: [{
+              src: focusAMBio2, caption: ''
+            }],
             publications: [
               {
                 name: 'Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
@@ -269,7 +276,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Three-dimensional printing of complex graphite structures',
             description: '',
-            image: focusAMRecycle2,
+            images: [{
+              src: focusAMRecycle2, caption: ''
+            }],
             publications: [
               {
                 name: 'Flow-induced 2D nanomaterials intercalated aligned bacterial cellulose',
@@ -292,7 +301,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Damage-Tolerant Architected Ceramic',
             description: 'For centuries, ceramics have been prized for their exceptional strength and stiffness, yet their inherent brittleness has limited their use in demanding structural roles. Unlike natural systems that combine hard minerals with soft phases to prevent catastrophic failure, engineered ceramics often lack mechanisms for damage control. By creating architected ceramic structures and introducing a thin external polymer layer, brittleness can be redirected into more graceful, tolerant failure modes. This simple surface-based approach enables lightweight ceramic components that are far stronger, tougher, and more reliable than traditional counterparts.',
-            image: focusDesign,
+            images: [
+              {src: focusDesign, caption: '' 
+              }],
             publications: [
               {
                 name: 'Damage-tolerant 3D Printed Ceramics via Conformal Coating',
@@ -320,7 +331,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Damage-Tolerant Architected Cement',
             description: 'For decades, cement has been relied on for its strong compressive performance, yet its brittleness has continued to limit structural resilience. As construction demands more adaptable and damage-tolerant materials, shaping cement into controlled architectures offers a promising path forward. By engineering printable cement inks with tailored rheology, complex geometries can be fabricated that distribute stress more efficiently and resist sudden fracture. This approach transforms conventional brittle cement into tougher, more reliable architected structures suited for modern structural and functional needs.',
-            image: focusDesign2,
+            images: [{
+              src: focusDesign2, caption: ''
+            }],
             publications: [
               {
                 name: 'Direct Ink Writing of Cement Structures Modified with Nanoscale Additive',
@@ -365,7 +378,9 @@ export const researchAreas: ResearchArea[] = [
           {
             title: 'Protein-based Bionanocomposite Coating for Perishable Food Preservation',
             description: 'For generations, natural proteins have played essential roles in food systems, yet their potential as protective materials for extending shelf life remains largely underutilized. In a world where vast quantities of fresh produce spoil before consumption, relying on synthetic additives and inedible coatings raises growing health and environmental concerns. Protein-based biopolymers offer a compelling alternative. When combined with biocompatible nanomaterials, these proteins can form edible, flexible, and conformal coatings that slow ripening, reduce dehydration, and hinder microbial growth. Such protein-driven bionanocomposite barriers provide a safe, washable, and sustainable approach to preserving perishable foods while addressing global challenges of spoilage and waste.',
-            image: focusFood,
+            images: [{
+              src: focusFood, caption: ''
+            }],
             publications: [
               {
                 name: 'Multifunctional bionanocomposite coatings for perishable fruits',
@@ -389,7 +404,9 @@ export const researchAreas: ResearchArea[] = [
             title:
               'Bionanocomposite Based Insulating Substance',
             description: 'For years, the rapid growth of electronic devices has intensified concerns over mounting e-waste and the reliance on synthetic insulating materials. Natural biopolymers offer a sustainable path forward when combined with high-performance nanomaterials. By integrating renewable carbohydrate-based polymers with nanoscale fillers, bionanocomposites can be engineered to exhibit strong mechanical integrity, thermal stability, flame resistance, and reliable dielectric behavior. These materials provide an eco-friendly alternative to conventional polymer insulators, enabling greener approaches to energy storage, flexible circuitry, and next-generation electronic components.',
-            image: focusgreen,
+            images: [{
+              src: focusgreen, caption: ''
+            }],
             publications: [
               {
                 name: 'Algae-derived nacre-like dielectric bionanocomposite with high loading hexagonal boron nitride for green electronics',

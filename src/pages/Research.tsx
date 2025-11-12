@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/common/AnimatedSection';
 import { researchAreas } from '../data/researchData';
-import pubBanner from '../../images/research.jpg';
+import pubBanner from '../../images/lab.png';
 
 function slugify(s: string) {
   return s
@@ -19,9 +19,9 @@ const Research = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[160px] bg-gray-900 mt-16">
+      <section className="relative h-[160px] bg-gray-900 mt-20">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="absolute inset-0 bg-black/40 z-10" />
           <img
             src={pubBanner}
             alt="Research"
