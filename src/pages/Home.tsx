@@ -8,7 +8,7 @@ import introBg from '../../images/bacterial_cellulose.png';
 
 import { newsItems } from '../data/newsData';
 import { publications } from '../data/publications';
-import imageData from '../../images/homebanner.png';
+import backDrop from '../../images/homebanner.png';
 import { FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 
@@ -96,7 +96,7 @@ const Home = () => {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10" />
           <img
-            src={imageData}
+            src={backDrop}
             alt="Laboratory research"
             className="w-full h-[90%] sm:h-[110%] object-cover translate-y-16 sm:translate-y-[25px]"
           />
