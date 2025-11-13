@@ -156,32 +156,25 @@ export const researchAreas: ResearchArea[] = [
           'Our lab is committed to integrating sustainability into composite manufacturing by developing waste-derived carbon fibers and nanomaterials as functional reinforcements in recyclable polymer matrices. One of our recent achievements includes the successful development of carbon fiber and graphene from asphaltene—a byproduct of the petroleum industry. We are now advancing efforts to incorporate these asphaltene-derived materials into polymer systems, aligning with the broader goal of utilizing carbon to drive decarbonization. In parallel, we are exploring the use of carbon-based reinforcements synthesized through environmentally conscious processes. For instance, we are particularly interested in carbon nanotubes (CNTs) synthesized from methane or light hydrocarbons that can be spun into macroscopic fibers and used to fabricate high-performance nanocomposites. We are developing both polymer composites reinforced with high-volume CNT fibers with enhanced toughness and interfacial strength, thereby improving resistance to delamination and extending material durability.',
         projects: [
           {
-            title: 'Carbon Based Fibre and Nanomaterials',
+            title: 'Carbon Based Fiber and Nanomaterials',
             description: 'For decades, vast quantities of carbon-rich by-products from petroleum refining have been treated as low-value waste despite their inherent potential as precursors for advanced materials. These residues, particularly asphaltenes, contain the aromatic architectures needed to form strong carbon fibres and high-performance nanomaterials. By transforming these overlooked resources through controlled spinning, stabilization, and rapid thermal conversion, they can be upgraded into robust carbon fibres and graphene-like nanostructures without the costly pretreatment typically required. Such approaches not only unlock new pathways for producing lightweight, high-strength, and thermally stable materials, but also redirect industrial waste streams toward higher-value applications, supporting both economic and environmental sustainability.',
             images: [
               {src: focusCarbon4, caption: 'Sustainable valorization of asphaltene'}
             ],
             publications: [
-              { 
-                name: 'Transformation of petroleum asphaltenes to carbon fibers',
-                href: 'https://doi.org/10.1016/j.carbon.2022.01.011',
-                authors: 'Saad, S.; Zeraati, A. S.; Roy, S.; Shahriar Rahman Saadi, M. A.; Radović, J. R.; Rajeev, A.; Miller, K. A.; Bhattacharyya, S.; Larter, S. R.; Natale, G.; Sundararaj, U.; Ajayan, P. M.; Rahman, M. M.; Kibria, M. G.',
-                journal: 'Carbon',
-                year: 2022
-              },
-              {
-                name: 'Graphene as Thinnest Coating on Copper Electrodes in Microbial Methanol Fuel Cells',
-                href: 'https://pubs.acs.org/doi/10.1021/acsnano.2c05512',
-                authors: 'Islam, J.; Obulisamy, P.K.; Upadhyayula, V.K.K.; Dalton, A.B.; Ajayan, P.M.; Rahman, M. M.*; Tripathi, M.; Sani, R.; Gadhamshetty, V.',
-                journal: 'ACS Nano',
-                year: 2023
-              },
               {
                 name: 'Sustainable valorization of asphaltenes via flash joule heating',
                 href: 'https://www.science.org/doi/10.1126/sciadv.add3555',
                 authors: 'Saadi, M.A.S.R.; Advincula, P.A.; Thakur, M.S.H.; Khater, A.; Saad, S.; Zeraati, A.s.; Nabil, S.K.; Zinke, A.; Roy, S.; Lou, M.; Bheemasetti, S.N.; Bari, M.A.A.; Zheng, Y.; Beckham, J.L.; Gadhamshetty, V.; Vashisth, A.; Kibria, M.G.; Tour, J.M.; Ajayan, P.M.; Rahman, M. M.',
                 journal: 'Science Advances',
                 year: 2022,
+              },
+              { 
+                name: 'Transformation of petroleum asphaltenes to carbon fibers',
+                href: 'https://doi.org/10.1016/j.carbon.2022.01.011',
+                authors: 'Saad, S.; Zeraati, A. S.; Roy, S.; Shahriar Rahman Saadi, M. A.; Radović, J. R.; Rajeev, A.; Miller, K. A.; Bhattacharyya, S.; Larter, S. R.; Natale, G.; Sundararaj, U.; Ajayan, P. M.; Rahman, M. M.; Kibria, M. G.',
+                journal: 'Carbon',
+                year: 2022
               }
             ]
           },
