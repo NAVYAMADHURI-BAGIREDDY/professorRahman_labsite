@@ -8,7 +8,7 @@ import introBg from '../../images/bacterial_cellulose.png';
 
 import { newsItems } from '../data/newsData';
 import { publications } from '../data/publications';
-import imageData from '../../images/home-drop.png';
+import imageData from '../../images/homebanner.png';
 import { FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 

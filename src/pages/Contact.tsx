@@ -37,7 +37,7 @@ const Contact = () => {
             <AnimatedSection>
               <div className="bg-gray-50 rounded-lg p-6 sm:p-8 h-full flex flex-col border border-gray-100 shadow-sm">
                 <h4 className="font-raleway font-bold text-lg">
-                  Inquiries should be directed to Professor Maksud Rahman
+                  Inquiries should be directed to Prof. Maksud Rahman
                 </h4>
                 
                 <div className="space-y-6 mt-4">
@@ -121,18 +121,7 @@ const Contact = () => {
             </AnimatedSection>
           </div>
 
-          {/* Current Openings */}
-          <AnimatedSection delay={0.3}>
-            <div className="bg-gray-50 rounded-lg p-6 sm:p-8 mt-10 border border-gray-100 shadow-sm">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-                Career Opportunities
-              </h3>
-              <p className="text-gray-700 text-base leading-relaxed">
-                We currently do not have any positions open for now. Please check back later or reach out via email for
-                future opportunities.
-              </p>
-            </div>
-          </AnimatedSection>
+          
         </div>
       </section>
     </div>

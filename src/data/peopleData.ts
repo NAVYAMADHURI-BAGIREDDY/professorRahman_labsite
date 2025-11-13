@@ -56,20 +56,6 @@ export const people: Person[] = [
     category: 'current'
   },
   {
-    id: 'Saadi',
-    name: 'M.A.S.R. Saadi',
-    title: 'PhD Student (Rice University)',
-    image: saadi,
-    bio: 'M.A.S.R. Saadi completed his BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET), during which he studied the effect of multi-scale reinforcement particle size on mechanical and thermal properties of polymer composites. During his MS in Mechanical and Aerospace Engineering at the George Washington University, his work focused on nanomechanics and electronic structure of organic photovoltaics and 2D materials. He is currently pursuing a PhD degree in Materials Science and NanoEngineering at Rice University, where he is working on the development of sustainable bionanocomposites for multifunctional application with particular focus on energy, environment and food nexus. His developed bionanocomposites typically comprise of hierarchically assembled high performance 1D and 2D nanosystems in carbohydrate and protein-based matrices.Hobby/Other interests: Singing different forms of Metal, Rock and Bengali Folk music, Table-tennis, Soccer, FIFA',
-    education: [
-      'MS in Mechanical and Aerospace Engineering at the George Washington University',
-      'BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET)'
-    ],
-    linkedin: 'https://www.linkedin.com/in/m-a-s-r-saadi-b15a691a9/@uh.edu',
-    googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao',
-    category: 'current'
-  },
-  {
     id: 'Tofazzal',
     name: 'Md Tofazzal Hossain',
     title: 'PhD Student',
@@ -120,6 +106,20 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/mahjabin-rahman-663306116/',
     googlescholar:'https://scholar.google.com/citations?user=jOhgz7AAAAAJ&hl=en&oi=ao',
+    category: 'current'
+  },
+  {
+    id: 'Saadi',
+    name: 'M.A.S.R. Saadi',
+    title: 'PhD Student (Rice University)',
+    image: saadi,
+    bio: 'M.A.S.R. Saadi completed his BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET), during which he studied the effect of multi-scale reinforcement particle size on mechanical and thermal properties of polymer composites. During his MS in Mechanical and Aerospace Engineering at the George Washington University, his work focused on nanomechanics and electronic structure of organic photovoltaics and 2D materials. He is currently pursuing a PhD degree in Materials Science and NanoEngineering at Rice University, where he is working on the development of sustainable bionanocomposites for multifunctional application with particular focus on energy, environment and food nexus. His developed bionanocomposites typically comprise of hierarchically assembled high performance 1D and 2D nanosystems in carbohydrate and protein-based matrices.Hobby/Other interests: Singing different forms of Metal, Rock and Bengali Folk music, Table-tennis, Soccer, FIFA',
+    education: [
+      'MS in Mechanical and Aerospace Engineering at the George Washington University',
+      'BS in Materials and Metallurgical Engineering from Bangladesh University of Engineering and Technology (BUET)'
+    ],
+    linkedin: 'https://www.linkedin.com/in/m-a-s-r-saadi-b15a691a9/@uh.edu',
+    googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao',
     category: 'current'
   },
   {

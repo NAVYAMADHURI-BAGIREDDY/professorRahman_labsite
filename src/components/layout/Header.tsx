@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-import labLogo from '../../images/logomic.png';
+import labLogo from '../../images/lablogo.png';
 
 
 const Header = () => {
