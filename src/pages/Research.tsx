@@ -55,11 +55,11 @@ const Research = () => {
         <h3 className="text-gray-800 text-2xl md:text-2xl font-bold mb-2 tracking-tight">
           {title}
         </h3>
-        <p className="text-gray-600 leading-relaxed text-base md:text-medium font-medium mb-6">
+        <p className="text-gray-600 leading-relaxed text-base md:text-medium font-medium mb-8">
           {description}
         </p>
 
-        <h4 className="ext-gray-900 text-xl font-bold uppercase mb-2">
+        <h4 className="ext-gray-900 text-xl font-bold uppercase mb-4">
           Research Focus
           </h4>
         <ul className="space-y-1 text-cyan-700 text-lg font-semibold">

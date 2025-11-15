@@ -580,7 +580,7 @@ export const journalArticles: JournalArticle[] = [
   },
   {
     id: 'pub18',
-    title: '18. Aligned Bacterial Cellulose Arrays for Composite Material',
+    title: '18. Aligned Bacterial Cellulose Arrays as "Green" Nanofibers for Composite Material',
     link: 'https://pubs.acs.org/doi/10.1021/acsmacrolett.6b00621',
     authors: 'Rahman, M. M. ; Netravali, A. N.',
     conference: 'ACS Macro Letters',

@@ -1,19 +1,20 @@
-import research1 from '../../images/research6.jpg';
+import research1 from '../../images/research4.jpg';
 import research2 from '../../images/research3.jpg';
-import research3 from '../../images/research4.jpg';
-import focusFood from '../../images/projects/foodcoating.png';
-import focusgreen from '../../images/projects/algae.png';
-import focusDesign from '../../images/projects/origami.png';
+import focusFood from '../../images/projects/strawberry.png';
+import focusGreen from '../../images/projects/algae.png';
+import focusDesign from '../../images/projects/damagemodel.jpeg';
 import focusDesign2 from '../../images/projects/cement.png';
-import focusCarbon2 from '../../images/projects/dynamics.jpg';
+import focusDesign3 from '../../images/projects/deformation.jpg';
+import focusCarbon2 from '../../images/projects/carbonsite.png';
 import focusCarbon4 from '../../images/projects/fjhmodel.png';
-import focusBiotic2 from '../../images/projects/egg.png';
+import focusCarbonfiber from '../../images/projects/carbonfiber.png';
 import focusAMBio from '../../images/projects/3dwood.png';
 import focusAMRecycle2 from '../../images/projects/bullet.png';
 import focusAMBio2 from '../../images/projects/burning.png'; 
 import focusFibre from '../../images/projects/bacteria-cellulose.png';
 import focusFibre2 from '../../images/projects/cellulose.png';
-import focusFibre3 from '../../images/projects/green_fibre.png';
+import focusFiber3 from '../../images/projects/eggshell.png';
+import focusCapture from '../../images/projects/carbon.jpg';
 
 export interface Figure {
   src: string;
@@ -59,10 +60,11 @@ export const researchAreas: ResearchArea[] = [
     title: 'Materials for Circularity',
     image: research1,
     description:
-      'Our lab focuses on developing circular materials through the integration of bio-based design, recyclability, and carbon valorization in advanced composites. We engineer nanofibers and nanocomposites from renewable polymers as sustainable alternatives to conventional plastics and design recyclable, high-performance thermoplastics enhanced with nanomaterials and supramolecular modifiers. Simultaneously, we convert waste and renewable carbon sources into durable carbon-based fibers and composites, establishing a unified framework for renewable, recyclable, and resilient materials that advance next-generation circular manufacturing.',
+      'Our lab develops multifunctional circular materials by integrating bio-based design, recyclability, and decarbonization into advanced composite materials. We study how a material’s composition, processing, structure, and properties work together to guide better, more sustainable designs. We create fibers, nanofibers, and nanocomposites from biomaterials as alternatives to traditional plastics. We also convert waste and renewable carbon sources into advanced carbon fibers and recyclable polymer composites. Our research supports a wide range of applications from structures and food systems to textiles, energy, and environmental technologies, all aimed at advancing the next generation of sustainable design.',
     focus: [
       'Biotic Nanofibers',
-      'Biotic Nanocomposites',
+      'Biomaterials for Food Safety and Security',
+      'Multifunctional Bionanocomposites',
       'Carbon-Based Fibers & Composites'
     ],
     href: '/research/materials',
@@ -76,10 +78,10 @@ export const researchAreas: ResearchArea[] = [
         projects: [
           {
             title: 'Biotic Nanofibre from Microbes',
-            description: 'For generations, microbes have produced finely structured natural fibres, offering a renewable platform for advanced material design. Bacterial cellulose, in particular, exhibits exceptional strength and purity, yet its broader use has been limited by challenges in controlling fibril alignment and adding new functionalities. By steering microbial growth through controlled fluid flow and introducing functional nanomaterials during biosynthesis, biotic nanofibres can be created with enhanced strength, flexibility, and thermal performance. This direction opens exciting possibilities for sustainable structural materials, advanced packaging, textiles, and green electronics.',
+            description: 'Microbes naturally produce highly ordered fibrous networks that serve as a renewable foundation for next-generation materials. Among them, bacterial cellulose stands out for its strength, purity, and biodegradability, yet its full potential has remained untapped due to limited control over structure and functionality. By guiding microbial fiber formation through directed fluid environments and integrating nanoscale additives during growth, biotic nanofibres can be engineered with improved mechanical, thermal, and functional performance. This approach enables sustainable pathways for high-performance materials spanning structural components, flexible packaging, advanced textiles, and eco-friendly electronic systems.',
             images: [
-              {src: focusFibre2, caption: 'Aligned plant-derived cellulose fibres'},
-              {src: focusFibre,  caption: 'Bacterial cellulose sheet under shear'}
+              {src: focusFibre2, caption: 'Aligned bacetrial cellulose from rotational culture'},
+              {src: focusFibre,  caption: 'Wide-angle X-ray scattering (WAXS) patterns for bacterial cellulose: (i) static and (iv) rotational culture'}
             ],
             publications: [
               {
@@ -90,10 +92,10 @@ export const researchAreas: ResearchArea[] = [
                 year: 2025,
               },
               {
-                name: 'Oriented Bacterial Cellulose-Soy Protein based Fully ‘Green’ Nanocomposites',
-                href: 'https://doi.org/10.1016/j.compscitech.2016.10.003',
-                authors: 'Rahman, M. M.; Netravali, A. N.',
-                journal: 'Composites Science and Technology',
+                name: 'Aligned Bacterial Cellulose Arrays as "Green" Nanofibers for Composite Material',
+                href: 'https://pubs.acs.org/doi/10.1021/acsmacrolett.6b00621',
+                authors: 'Rahman, M. M. ; Netravali, A. N.',
+                journal: 'ACS Macro Letters',
                 year: 2016,
               }
             ]
@@ -102,15 +104,15 @@ export const researchAreas: ResearchArea[] = [
             title: 'Green Polymers from Agro-resources',
             description: 'For decades, vast amounts of agro-resources and plant-based residues have remained underutilized despite their natural potential to form strong and sustainable polymers. By extracting and transforming these non-edible components, it becomes possible to develop bio-based resins and composites that offer a credible alternative to petroleum-derived materials. Through gentle chemical modification and fiber reinforcement, these green polymers achieve impressive strength, durability, and cost-effectiveness while relying entirely on renewable feedstocks. This direction strengthens the broader vision of circularity, where waste streams are converted into high-value materials for sustainable manufacturing and everyday applications.',
             images: [{
-              src: focusFibre3, caption: 'bla bla'
+              src: focusFiber3, caption: 'Soy protein based green polymer modified by eggshell nanoparticles'
             }],
             publications: [
               {
-                name: '“Green” composites using bioresins from agro-wastes and modified sisal fibers',
-                href: 'https://4spepublications.onlinelibrary.wiley.com/doi/abs/10.1002/pc.24607',
-                authors: 'Patil, N.V.; Rahman, M. M.; Netravali, A.N.',
-                journal: 'Polymer Composites',
-                year: 2017,
+              name: 'Bio-derived “Green” Composite from Soy Protein and Eggshell Nanopowder',
+              href: 'https://pubs.acs.org/doi/10.1021/sc5003193',
+              authors: 'Rahman, M. M.; Netravali, A. N.; Tiimob, B. J.; Rangari, V. K.',
+              journal: 'ACS Sustainable Chemistry and Engineering',
+              year: 2014,
               },
               {
                 name: 'Green Resin from Forestry Waste Residue “Karanja (Pongamia pinnata) Seed Cake” for Biobased Composite Structures',
@@ -124,19 +126,26 @@ export const researchAreas: ResearchArea[] = [
         ]
       },
       {
-        id: 'biotic-nanocomposites',
-        title: 'Biotic Nanocomposites',
-        href: '/research/materials/biotic-nanofibers-and-nanocomposites',
+        id: 'food-safety-biomaterials',
+        title: 'Biomaterials for Food Safety and Security',
+        href: '/research/design/food-safety-biomaterials',
         description:
-          'Slanting towards environmental and economic concerns, our lab is dedicated to developing green composites for multifunctional applications, ranging from automotive and economic packaging to sports and textile applications. Aiming to replace synthetic polymers or plastics, our research will optimize the properties of natural polymers, such as proteins, cellulose, and other carbohydrates, as well as nanomaterials (e.g., nanocellulose, calcium carbonate, hydroxyapatite), to develop fully bio-based, high-performance structures.',
+          'Global hunger and food waste remain pressing challenges, with over 800 million people affected by undernourishment and nearly one-third of all food produced lost annually due to spoilage. At our lab, we are committed to developing sustainable, multi-functional materials that enhance food security, safety, and shelf life while minimizing environmental impact. Our work focuses on creating cost-effective, eco-friendly solutions by repurposing food waste into high-performance materials. In addition, we are developing bio-based seed-coating that support plant establishment by integrating biodegradability, encapsulation, seed preservation, germination enhancement, and delivery of micronutrients to mitigate environmental stress. Moving beyond conventional coatings, we are also exploring the potential of additive manufacturing to create novel food structures and materials, opening the door to personalized, data-driven nutrition and the future of food innovation.',
         projects: [
           {
-            title: 'Bionanocomposite',
-            description: 'For generations, biological materials have offered remarkable structural and functional capabilities, yet their full potential in advanced engineering applications has remained largely untapped. By combining naturally derived polymers with nanoscale reinforcements, biotic nanocomposites create a new class of high-performance, sustainable materials that leverage the strengths of both biology and nanotechnology. These composites exhibit improved barrier properties, enhanced mechanical stability, and inherent antimicrobial behavior, all while remaining biodegradable and low-cost. As global industries seek alternatives to synthetic coatings and energy-intensive preservation methods, biotic nanocomposites present a promising pathway toward environmentally responsible solutions for packaging, protection, and long-term material circularity.',
-            images: [{
-              src: focusBiotic2, caption: 'bla bla'
-            }],
+            title: 'Protein-based Bionanocomposite Coating for Perishable Food Preservation',
+            description: 'For generations, natural proteins have played essential roles in food systems, yet their potential as protective materials for extending shelf life remains largely underutilized. In a world where vast quantities of fresh produce spoil before consumption, relying on synthetic additives and inedible coatings raises growing health and environmental concerns. Protein-based biopolymers offer a compelling alternative. When combined with biocompatible nanomaterials, these proteins can form edible, flexible, and conformal coatings that slow ripening, reduce dehydration, and hinder microbial growth. Such protein-driven bionanocomposite barriers provide a safe, washable, and sustainable approach to preserving perishable foods while addressing global challenges of spoilage and waste.',
+            images: [
+              {src: focusFood, caption: 'Protein-cellulose based nanocomposite coating on strawberry with time-lapse photographs'}
+            ],
             publications: [
+              {
+                name: 'Multifunctional bionanocomposite coatings for perishable fruits',
+                href: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.201908291',
+                authors: 'Jung, S.; Cui, Y.; Barnes, M.; Satam, C.; Zhang, S.; Chowdhury, R.; Adumbumkulath, A.; Sahin, O.; Miller, C.; Sajadi, S.M.; Sassi, L.; Ji, Y.; Bennett, M.; Yu, M.; Friguglietti, J.; Merchant, F.; Verduzco, R.; Roy, S.; Vajtai, R.; Meredith, J.C.; Youngblood, J.; Koratkar, N.; Rahman, M.M.*; Ajayan, P.M',
+                journal: 'Advanced Materials',
+                year: 2020,
+              }, 
               {
                 name: 'Preserving fresh eggs via egg-derived bio-nanocomposite coating',
                 href: 'https://doi.org/10.1002/adfm.202310091',
@@ -149,17 +158,62 @@ export const researchAreas: ResearchArea[] = [
         ]
       },
       {
+        id: 'biotic-nanocomposites',
+        title: 'Multifunctional Bionanocomposites',
+        href: '/research/materials/biotic-nanofibers-and-nanocomposites',
+        description:
+          'Slanting towards environmental and economic concerns, our lab is dedicated to developing green composites for multifunctional applications, ranging from automotive and economic packaging to sports and textile applications. Aiming to replace synthetic polymers or plastics, our research will optimize the properties of natural polymers, such as proteins, cellulose, and other carbohydrates, as well as nanomaterials (e.g., nanocellulose, calcium carbonate, hydroxyapatite), to develop fully bio-based, high-performance structures.',
+        projects: [
+          {
+            title:
+              'Bionanocomposite for Green Electronics',
+            description: 'As electronic devices continue to proliferate, so does the environmental burden of e-waste and petroleum-based insulating materials. Renewable biopolymers, when combined with functional nanomaterials, offer a sustainable alternative. These bionanocomposites can deliver strong mechanical stability, thermal endurance, flame resistance, and dependable dielectric performance. This direction enables eco-friendly materials for energy storage, flexible circuits, and next-generation green electronics.',
+            images: [
+              { src: focusGreen, caption: 'Green electronics application of Algae-derived bionanocomposite'}
+            ],
+            publications: [
+              {
+                name: 'Algae-derived nacre-like dielectric bionanocomposite with high loading hexagonal boron nitride for green electronics',
+                href: 'https://doi.org/10.1021/acsnano.4c09365', 
+                authors: 'Saadi, M.A.S.R.; Likhi, F.H.; Zahin, F.; Yuan, Y.; Karim, A.; Ajayan, P.M.; Rahman, M.M.*', 
+                journal: 'ACS Nano',
+                year: 2024
+              }
+            ]
+          },
+          {
+            title:
+              'Bionanocomposite for Carbon dioxide Capture',
+            description: 'Rising atmospheric CO₂ levels continue to threaten environmental stability, demanding sustainable materials that can mitigate emissions while retaining structural performance. Bionanocomposites, when combined with functional porous materials, offer a promising pathway for carbon capture and storage. By integrating natural biopolymers with high-surface-area nanostructures, these composites enable selective CO₂ adsorption, enhanced durability, and tunable porosity. Such sustainable hybrid materials bridge the gap between environmental functionality and mechanical strength, paving the way for green solutions in construction, packaging, and energy systems.',
+            images: [
+              { src: focusCapture, caption: 'Fabrication of wood-CALF-20 composite'}
+            ],
+            publications: [
+              {
+               name: 'Functional Wood for Carbon Dioxide Capture',
+               href: 'https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(23)00028-0',
+               authors: 'Roy, S.; Philip, F.A.; Oliveira, E.F.; Singh, G.; Joseph, S.; Yadav, R.M.; Adumbumkulath, A.; Hassan, S.; Khater, A.; Vinu, A.; Shimizu, G.; Ajayan, P.M.; Kibria, M.G.; Rahman, M. M.*',
+               journal: 'Cell Reports Physical Science',
+               year: 2023,
+              }
+            ]
+          }
+        ],
+        
+      },
+      {
         id: 'carbon-based-fibers',
         title: 'Carbon Based Fibers and Composites',
         href: '/research/materials/carbon-based-fibers',
         description:
-          'Our lab is committed to integrating sustainability into composite manufacturing by developing waste-derived carbon fibers and nanomaterials as functional reinforcements in recyclable polymer matrices. One of our recent achievements includes the successful development of carbon fiber and graphene from asphaltene—a byproduct of the petroleum industry. We are now advancing efforts to incorporate these asphaltene-derived materials into polymer systems, aligning with the broader goal of utilizing carbon to drive decarbonization. In parallel, we are exploring the use of carbon-based reinforcements synthesized through environmentally conscious processes. For instance, we are particularly interested in carbon nanotubes (CNTs) synthesized from methane or light hydrocarbons that can be spun into macroscopic fibers and used to fabricate high-performance nanocomposites. We are developing both polymer composites reinforced with high-volume CNT fibers with enhanced toughness and interfacial strength, thereby improving resistance to delamination and extending material durability.',
+          'Our work focuses on creating sustainable, high-performance composites using carbon materials derived from low-value or clean-synthesis sources. We develop carbon fibers, graphene, and other carbon nanomaterials from waste streams such as asphaltene, and explore environmentally conscious routes for producing carbon nanotubes (CNTs) from light hydrocarbons. By integrating these carbon reinforcements into recyclable polymer matrices, we engineer tougher, stronger composites with improved interfacial performance and long-term durability.',
         projects: [
           {
             title: 'Carbon Based Fiber and Nanomaterials',
-            description: 'For decades, vast quantities of carbon-rich by-products from petroleum refining have been treated as low-value waste despite their inherent potential as precursors for advanced materials. These residues, particularly asphaltenes, contain the aromatic architectures needed to form strong carbon fibres and high-performance nanomaterials. By transforming these overlooked resources through controlled spinning, stabilization, and rapid thermal conversion, they can be upgraded into robust carbon fibres and graphene-like nanostructures without the costly pretreatment typically required. Such approaches not only unlock new pathways for producing lightweight, high-strength, and thermally stable materials, but also redirect industrial waste streams toward higher-value applications, supporting both economic and environmental sustainability.',
+            description: 'Carbon-rich industrial residues possess significant potential as sustainable building blocks for advanced materials. By employing controlled conversion methods, including spinning, stabilization, and rapid thermal treatment, these by-products can be converted into robust carbon fibers and high-performance nanomaterials. This method facilitates the development of lightweight, thermally stable, and mechanically robust materials, while also repurposing waste streams for high-value applications, thereby enhancing economic and environmental sustainability.',
             images: [
-              {src: focusCarbon4, caption: 'Sustainable valorization of asphaltene'}
+              {src: focusCarbon4, caption: 'Flash graphene from asphaltene'},
+              {src: focusCarbonfiber, caption: 'Development of carbon fibers from asphaltene'}
             ],
             publications: [
               {
@@ -182,24 +236,8 @@ export const researchAreas: ResearchArea[] = [
             title: 'Carbon Based Composites',
             description: 'For years, carbon nanomaterials have been recognized for their remarkable strength and thermal conductivity, yet their integration into polymers has been hindered by issues such as agglomeration, voids, and poor interfacial bonding. As manufacturing moves toward more precise and sustainable approaches, extrusion-based additive techniques offer a way to overcome these limitations. By using shear-driven flow during printing, carbon nanotubes can be more uniformly dispersed, better aligned, and more effectively bonded within the polymer matrix. This advancement enables stronger, more reliable, and thermally efficient carbon-based composites for next-generation structural and functional applications.',
             images: [{
-              src: focusCarbon2, caption: ''
-            }],
-            publications: [
-              {
-                name: 'Development of asphaltene-derived carbon fiber reinforced composites via additive manufacturing',
-                href: 'https://doi.org/10.1016/j.carbon.2024.119413',
-                authors: 'Akash, N.M.; Saad, S.; Bari, M.A.A.; Sarker, R.; Gupta, C.; Sarabi, G.A.; Phani, A.; Zahin, F.; Tabassum, S.; Subramanian, K.; Kim, S.; Rahman, M.M.; Egberts, P.; Kibria, M.G.',
-                journal: 'Carbon',
-                year: 2024,
-              },
-              {
-               name: 'Processing Dynamics of Carbon Nanotube–Epoxy Nanocomposites during 3D Printing',
-               href: 'https://doi.org/10.1016/j.xcrp.2023.101617',
-               authors: 'Khater, A.; Saadi, M. A. S. R.; Bhattacharyya, S.; Kutana, A.; Tripathi, M.; Kamble, M.; Song, S.; Lou, M.; Barnes, M.; Meyer, M.; Harikrishnan, V.; Dalton, A. B.; Koratkar, N.; Tiwary, C. S.; Boul, P. J.; Yakobson, B.; Zhu, H.; Ajayan, P. M.; Rahman, M.M.*',
-               journal: 'Cell Reports Physical Science',
-               year: 2023,
-              }
-            ]
+              src: focusCarbon2, caption: 'Interfaces of carbon nanotube fibers in polymer composite'
+            }]
           }
         ]
       }
@@ -247,15 +285,6 @@ export const researchAreas: ResearchArea[] = [
             images: [
               {src: focusAMBio2, caption: ''}
             ],
-            publications: [
-              {
-                name: 'Direct Ink Writing: A 3D Printing Technology for Diverse Materials',
-                href: 'https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adma.202108855',
-                authors: 'Saadi, M. a. S. R.; Maguire, A.; Pottackal, N. T.; Thakur, M. S. H.; Ikram, M. Md.; Hart, A. J.; Ajayan, P. M.; Rahman, M. M.',
-                journal: 'Advanced Materials',
-                year: 2022,
-              }
-            ]
           }
         ]
       },
@@ -280,14 +309,14 @@ export const researchAreas: ResearchArea[] = [
         title: 'Bio-Inspired Damage-Tolerant Design',
         href: '/research/manufacturing/bio-inspired-design',
         description:
-          'The quest for the simultaneous full-scale attainment of strength and toughness in structural materials has traditionally been a trade-off. Despite many efforts, such synthetic composite has not yet been possible due to the lack of intelligent material design and manufacturing. Nature, on the other hand, overcomes such limitations by developing damage-tolerant composite materials through multiple length-scale internalized designs where the optimized composition of the hard phase (providing high strength) is packaged with soft organic phases (providing high toughness) in a complex architecture. Taking inspiration from nature’s complex designs, our research focuses on maximizing the combination of strength and toughness in brittle materials like ceramics using bio-based soft polymers by arranging different constituent blocks (hard and soft materials) in specific combinations and using intricate geometric designs at various length scales.',
+          'Building structural materials with full-scale strength and toughness has traditionally been a trade-off. Many attempts have failed to create a synthetic composite due to poor material design and manufacturing. However, nature develops damage-tolerant composite materials through multiple length-scale internalized designs that combine the optimized hard phase (high strength) with soft organic phases (high toughness) in a complex architecture. Drawing inspiration from complex designs of nature, our research maximizes strength and toughness in brittle materials like ceramics using bio-based soft polymers by arranging hard and soft blocks in specific combinations and using intricate geometric designs at various length scales.',
         projects: [
           {
             title: 'Damage-Tolerant Architected Ceramic',
             description: 'For centuries, ceramics have been prized for their exceptional strength and stiffness, yet their inherent brittleness has limited their use in demanding structural roles. Unlike natural systems that combine hard minerals with soft phases to prevent catastrophic failure, engineered ceramics often lack mechanisms for damage control. By creating architected ceramic structures and introducing a thin external polymer layer, brittleness can be redirected into more graceful, tolerant failure modes. This simple surface-based approach enables lightweight ceramic components that are far stronger, tougher, and more reliable than traditional counterparts.',
             images: [
-              {src: focusDesign, caption: '' 
-              }],
+              {src: focusDesign, caption: 'CT scan images of A) uncoated ceramic and B) coated ceramic under various load levels' }
+            ],
             publications: [
               {
                 name: 'Damage-tolerant 3D Printed Ceramics via Conformal Coating',
@@ -302,22 +331,16 @@ export const researchAreas: ResearchArea[] = [
                 authors: 'Thakur, M.S.H.; Nath, M.D.; Paulino, G.H.; Ajayan, P.M.; Rahman, M.M.*',
                 journal: 'Advanced Composites and Hybrid Materials',
                 year: 2025
-              },
-              {
-                name: '3D printed metamaterials for Damping Enhancement and Vibration Isolation: Schwarzites',
-                href: 'https://www.sciencedirect.com/science/article/abs/pii/S0888327022008871',
-                authors: 'Herkal, S.; Rahman, M. M.*; Nagarajah, S.; Harikrishnan, V, Ajayan, P. M.',
-                journal: 'Mechanical Systems and Signal Processing',
-                year: 2023
               }
             ]
           },
           {
             title: 'Damage-Tolerant Architected Cement',
             description: 'For decades, cement has been relied on for its strong compressive performance, yet its brittleness has continued to limit structural resilience. As construction demands more adaptable and damage-tolerant materials, shaping cement into controlled architectures offers a promising path forward. By engineering printable cement inks with tailored rheology, complex geometries can be fabricated that distribute stress more efficiently and resist sudden fracture. This approach transforms conventional brittle cement into tougher, more reliable architected structures suited for modern structural and functional needs.',
-            images: [{
-              src: focusDesign2, caption: ''
-            }],
+            images: [
+              { src: focusDesign2, caption: '3D printing of architected cement'},
+              { src: focusDesign3, caption: 'Deformation resilient architected cement structure'}
+            ],
             publications: [
               {
                 name: 'Direct Ink Writing of Cement Structures Modified with Nanoscale Additive',
@@ -325,6 +348,13 @@ export const researchAreas: ResearchArea[] = [
                 authors: 'Sajadi, S.M.; Boul, P.J.; Thaemlitz, C.; Meiyazhagan, A.K.; Puthirath, A.B.; Tiwary, C.S.; Rahman, M.M.*; Ajayan, P.M',
                 journal: 'Advanced Engineering Materials',
                 year: 2019,
+              },
+              {
+                 name: '34. Deformation Resilient Cement Structures using 3D Printed Molds',
+                 href: 'https://www.sciencedirect.com/science/article/pii/S2589004221001425#!',
+                 authors: 'Sajadi, S. M.; Tiwari, C.S.; Rahmati, A. H.; Eichmann, S. L.; Thaemlitz, C. J.; Salpekar, D.; Puthirath, A. B.; Boul, P. J.; Rahman, M. M.*; AshokKumar, M.; Ajayan, P. M.',
+                 journal: 'iScience',
+                 year: 2021,
               }
             ]
           }
@@ -337,71 +367,6 @@ export const researchAreas: ResearchArea[] = [
         description:
           'Drawing inspiration from the natural world has led to the development of living materials, where living organisms are incorporated into material systems to generate structurally complex materials in situ, which would be otherwise extremely difficult to achieve by physical and chemical means. Our lab aims at developing such materials, investigating their stimuli responsivity, longevity, biocompatibility, and self-healing properties, and finally, evaluating their use in a myriad of applications. We aim to develop cellulose-based living nanocomposites that leverage the power of microorganisms, such as cellulose-producing bacteria, as self-healing and self-strengthening agents within three-dimensional polymeric matrices. By embedding microbes directly into the material system, we enable the in-situ growth of cellulose-based nanocomposites with enhanced structural and functional performance. Our work focuses on tuning stimuli-responsiveness, biocompatibility, longevity, and energy efficiency, pushing the boundaries of sustainable, adaptive material design through living systems.',
         projects: []
-      }
-    ]
-  },
-  {
-    id: 'design',
-    title: 'Design and Applications for Circularity',
-    image: research3,
-    description:
-      'Our lab advances circular materials design across the food–energy–water nexus. We transform food waste into high-performance, biodegradable materials and engineer smart, bio-based seed coatings that improve germination, nutrient delivery, and stress resilience. Meanwhile, our Green Electronics and Energy Materials initiative develops bionanocomposites as biodegradable alternatives for flexible electronics, minimizing e-waste and fossil dependence. Together, these efforts establish a circular and regenerative materials platform that enhances both environmental and economic resilience.',
-    focus: [
-      'Biomaterials for Food Safety and Security',
-      'Green Electronics and Energy Materials'
-    ],
-    href: '/research/design',
-    domains: [
-      {
-        id: 'food-safety-biomaterials',
-        title: 'Biomaterials for Food Safety and Security',
-        href: '/research/design/food-safety-biomaterials',
-        description:
-          'Global hunger and food waste remain pressing challenges, with over 800 million people affected by undernourishment and nearly one-third of all food produced lost annually due to spoilage. At our lab, we are committed to developing sustainable, multi-functional materials that enhance food security, safety, and shelf life while minimizing environmental impact. Our work focuses on creating cost-effective, eco-friendly solutions by repurposing food waste into high-performance materials. In addition, we are developing bio-based seed-coating that support plant establishment by integrating biodegradability, encapsulation, seed preservation, germination enhancement, and delivery of micronutrients to mitigate environmental stress. Moving beyond conventional coatings, we are also exploring the potential of additive manufacturing to create novel food structures and materials, opening the door to personalized, data-driven nutrition and the future of food innovation.',
-        projects: [
-          {
-            title: 'Protein-based Bionanocomposite Coating for Perishable Food Preservation',
-            description: 'For generations, natural proteins have played essential roles in food systems, yet their potential as protective materials for extending shelf life remains largely underutilized. In a world where vast quantities of fresh produce spoil before consumption, relying on synthetic additives and inedible coatings raises growing health and environmental concerns. Protein-based biopolymers offer a compelling alternative. When combined with biocompatible nanomaterials, these proteins can form edible, flexible, and conformal coatings that slow ripening, reduce dehydration, and hinder microbial growth. Such protein-driven bionanocomposite barriers provide a safe, washable, and sustainable approach to preserving perishable foods while addressing global challenges of spoilage and waste.',
-            images: [{
-              src: focusFood, caption: ''
-            }],
-            publications: [
-              {
-                name: 'Multifunctional bionanocomposite coatings for perishable fruits',
-                href: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.201908291',
-                authors: 'Jung, S.; Cui, Y.; Barnes, M.; Satam, C.; Zhang, S.; Chowdhury, R.; Adumbumkulath, A.; Sahin, O.; Miller, C.; Sajadi, S.M.; Sassi, L.; Ji, Y.; Bennett, M.; Yu, M.; Friguglietti, J.; Merchant, F.; Verduzco, R.; Roy, S.; Vajtai, R.; Meredith, J.C.; Youngblood, J.; Koratkar, N.; Rahman, M.M.*; Ajayan, P.M',
-                journal: 'Advanced Materials',
-                year: 2020,
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 'green-electronics',
-        title: 'Green Electronics and Energy Materials',
-        href: '/research/design/green-electronics',
-        description:
-          'The electronics industry faces serious environmental challenges, including fossil resource depletion, hazardous materials, and growing e-waste. Flexible electronics today rely on non-degradable synthetic polymers for dielectric and conductive functions. As a sustainable alternative, we focus on biopolymers derived from plants and microorganisms. However, their limited thermal, electrical, and mechanical properties present performance challenges. To address this, we are designing high-performance, biopolymer-based materials by enhancing their functionality through nanocomposite engineering. Our goal is to create eco-friendly alternatives to synthetic polymers, enabling more sustainable and responsible electronics.',
-        projects: [
-          {
-            title:
-              'Bionanocomposite Based Insulating Substance',
-            description: 'For years, the rapid growth of electronic devices has intensified concerns over mounting e-waste and the reliance on synthetic insulating materials. Natural biopolymers offer a sustainable path forward when combined with high-performance nanomaterials. By integrating renewable carbohydrate-based polymers with nanoscale fillers, bionanocomposites can be engineered to exhibit strong mechanical integrity, thermal stability, flame resistance, and reliable dielectric behavior. These materials provide an eco-friendly alternative to conventional polymer insulators, enabling greener approaches to energy storage, flexible circuitry, and next-generation electronic components.',
-            images: [{
-              src: focusgreen, caption: ''
-            }],
-            publications: [
-              {
-                name: 'Algae-derived nacre-like dielectric bionanocomposite with high loading hexagonal boron nitride for green electronics',
-                href: 'https://doi.org/10.1021/acsnano.4c09365', 
-                authors: 'Saadi, M.A.S.R.; Likhi, F.H.; Zahin, F.; Yuan, Y.; Karim, A.; Ajayan, P.M.; Rahman, M.M.*', 
-                journal: 'ACS Nano',
-                year: 2024
-              }
-            ]
-          }
-        ]
       }
     ]
   }
