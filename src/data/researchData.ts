@@ -9,7 +9,7 @@ import focusCarbon2 from '../../images/projects/carbonsite.png';
 import focusCarbon4 from '../../images/projects/fjhmodel.png';
 import focusCarbonfiber from '../../images/projects/carbonfiber.png';
 import focusAMBio from '../../images/projects/3dwood.png';
-import focusAMRecycle2 from '../../images/projects/bullet.png';
+import focusAMRecycle2 from '../../images/projects/ballistic.png';
 import focusAMBio2 from '../../images/projects/burning.png'; 
 import focusFibre from '../../images/projects/bacteria-cellulose.png';
 import focusFibre2 from '../../images/projects/cellulose.png';
@@ -62,10 +62,10 @@ export const researchAreas: ResearchArea[] = [
     description:
       'Our lab develops multifunctional circular materials by integrating bio-based design, recyclability, and decarbonization into advanced composite materials. We study how a material’s composition, processing, structure, and properties work together to guide better, more sustainable designs. We create fibers, nanofibers, and nanocomposites from biomaterials as alternatives to traditional plastics. We also convert waste and renewable carbon sources into advanced carbon fibers and recyclable polymer composites. Our research supports a wide range of applications from structures and food systems to textiles, energy, and environmental technologies, all aimed at advancing the next generation of sustainable design.',
     focus: [
-      'Biotic Nanofibers',
+      'Biotic Nanofibers and Polymers',
       'Biomaterials for Food Safety and Security',
       'Multifunctional Bionanocomposites',
-      'Carbon-Based Fibers & Composites'
+      'Carbon-Based Fibers and Composites'
     ],
     href: '/research/materials',
     domains: [
@@ -74,11 +74,11 @@ export const researchAreas: ResearchArea[] = [
         title: 'Biotic Nanofibers and Polymers',
         href: '/research/materials/biotic-nanofibers-and-nanocomposites',
         description:
-          'We are advancing the development of next-generation fibers derived from renewable sources such as cellulose, algae, and mycelium, with exceptional properties and added functionalities that can replace glass and carbon fibers.',
-        projects: [
+          'We are advancing the development of next-generation green fibers and polymers derived from biotic sources such as cellulose, protein, algae, and mycelium, with exceptional properties and added functionalities that can replace glass and carbon fibers and their composites in many applications.',
+          projects: [
           {
-            title: 'Biotic Nanofibre from Microbes',
-            description: 'Microbes naturally produce highly ordered fibrous networks that serve as a renewable foundation for next-generation materials. Among them, bacterial cellulose stands out for its strength, purity, and biodegradability, yet its full potential has remained untapped due to limited control over structure and functionality. By guiding microbial fiber formation through directed fluid environments and integrating nanoscale additives during growth, biotic nanofibres can be engineered with improved mechanical, thermal, and functional performance. This approach enables sustainable pathways for high-performance materials spanning structural components, flexible packaging, advanced textiles, and eco-friendly electronic systems.',
+            title: 'Biotic Nanofiber from Microbes',
+            description: 'Microbes naturally produce highly ordered fibrous networks that serve as a renewable foundation for next-generation materials. Among them, bacterial cellulose stands out for its strength, purity, and biodegradability, yet its full potential has remained untapped due to limited control over structure and functionality. By guiding microbial fiber formation and integrating nanoscale additives during growth, biotic nanofibers can be engineered with improved structural and functional performance. This approach enables sustainable pathways for high-performance materials spanning structural components, flexible packaging, advanced textiles, and eco-friendly electronic systems.',
             images: [
               {src: focusFibre2, caption: 'Aligned bacetrial cellulose from rotational culture'},
               {src: focusFibre,  caption: 'Wide-angle X-ray scattering (WAXS) patterns for bacterial cellulose: (i) static and (iv) rotational culture'}
@@ -102,7 +102,7 @@ export const researchAreas: ResearchArea[] = [
           },
           {
             title: 'Green Polymers from Agro-resources',
-            description: 'For decades, vast amounts of agro-resources and plant-based residues have remained underutilized despite their natural potential to form strong and sustainable polymers. By extracting and transforming these non-edible components, it becomes possible to develop bio-based resins and composites that offer a credible alternative to petroleum-derived materials. Through gentle chemical modification and fiber reinforcement, these green polymers achieve impressive strength, durability, and cost-effectiveness while relying entirely on renewable feedstocks. This direction strengthens the broader vision of circularity, where waste streams are converted into high-value materials for sustainable manufacturing and everyday applications.',
+            description: 'For decades, vast amounts of agro-resources and plant-based residues have remained underutilized despite their natural potential to form strong and sustainable polymers. By extracting and transforming these non-edible components, it becomes possible to develop green polymers and composites that offer a credible alternative to petroleum-derived materials. Through gentle chemical modification and fiber reinforcement, these green polymers achieve impressive strength, durability, and cost-effectiveness while relying entirely on renewable feedstocks. This direction strengthens the broader vision of circularity, where waste streams are converted into high-value materials for sustainable manufacturing and everyday applications.',
             images: [{
               src: focusFiber3, caption: 'Soy protein based green polymer modified by eggshell nanoparticles'
             }],
@@ -130,8 +130,8 @@ export const researchAreas: ResearchArea[] = [
         title: 'Biomaterials for Food Safety and Security',
         href: '/research/design/food-safety-biomaterials',
         description:
-          'Global hunger and food waste remain pressing challenges, with over 800 million people affected by undernourishment and nearly one-third of all food produced lost annually due to spoilage. At our lab, we are committed to developing sustainable, multi-functional materials that enhance food security, safety, and shelf life while minimizing environmental impact. Our work focuses on creating cost-effective, eco-friendly solutions by repurposing food waste into high-performance materials. In addition, we are developing bio-based seed-coating that support plant establishment by integrating biodegradability, encapsulation, seed preservation, germination enhancement, and delivery of micronutrients to mitigate environmental stress. Moving beyond conventional coatings, we are also exploring the potential of additive manufacturing to create novel food structures and materials, opening the door to personalized, data-driven nutrition and the future of food innovation.',
-        projects: [
+          'Global hunger and food waste remain pressing challenges, with over 800 million people affected by undernourishment and nearly one-third of all food produced lost annually due to spoilage. At our lab, we are committed to developing sustainable, multi-functional materials that enhance food security, safety, and shelf life while minimizing environmental impact. In addition, we are developing bio-based seed-coating that support plant establishment by integrating biodegradability, encapsulation, seed preservation, germination enhancement, and delivery of micronutrients to mitigate environmental stress. Moving beyond coatings, we are also exploring the potential of additive manufacturing to create novel food structures and materials, opening the door to personalized, data-driven nutrition and the future of food innovation.',
+          projects: [
           {
             title: 'Protein-based Bionanocomposite Coating for Perishable Food Preservation',
             description: 'For generations, natural proteins have played essential roles in food systems, yet their potential as protective materials for extending shelf life remains largely underutilized. In a world where vast quantities of fresh produce spoil before consumption, relying on synthetic additives and inedible coatings raises growing health and environmental concerns. Protein-based biopolymers offer a compelling alternative. When combined with biocompatible nanomaterials, these proteins can form edible, flexible, and conformal coatings that slow ripening, reduce dehydration, and hinder microbial growth. Such protein-driven bionanocomposite barriers provide a safe, washable, and sustainable approach to preserving perishable foods while addressing global challenges of spoilage and waste.',
@@ -162,8 +162,8 @@ export const researchAreas: ResearchArea[] = [
         title: 'Multifunctional Bionanocomposites',
         href: '/research/materials/biotic-nanofibers-and-nanocomposites',
         description:
-          'Slanting towards environmental and economic concerns, our lab is dedicated to developing green composites for multifunctional applications, ranging from automotive and economic packaging to sports and textile applications. Aiming to replace synthetic polymers or plastics, our research will optimize the properties of natural polymers, such as proteins, cellulose, and other carbohydrates, as well as nanomaterials (e.g., nanocellulose, calcium carbonate, hydroxyapatite), to develop fully bio-based, high-performance structures.',
-        projects: [
+          'Slanting towards environmental and economic concerns, our lab is dedicated to developing bionanocomposites for multifunctional applications such smart packaging, textile, environmental, and electronics applications. Aiming to replace synthetic polymers or plastics, our research will optimize the properties of natural polymers, such as proteins, cellulose, and other carbohydrates, as well as inorganic nanomaterials (e.g., graphene, hBN, calcium carbonate, hydroxyapatite etc.), to develop fully high-performance bio-based multifunctional nanocomposite structures.', 
+          projects: [
           {
             title:
               'Bionanocomposite for Green Electronics',
@@ -206,11 +206,11 @@ export const researchAreas: ResearchArea[] = [
         title: 'Carbon Based Fibers and Composites',
         href: '/research/materials/carbon-based-fibers',
         description:
-          'Our work focuses on creating sustainable, high-performance composites using carbon materials derived from low-value or clean-synthesis sources. We develop carbon fibers, graphene, and other carbon nanomaterials from waste streams such as asphaltene, and explore environmentally conscious routes for producing carbon nanotubes (CNTs) from light hydrocarbons. By integrating these carbon reinforcements into recyclable polymer matrices, we engineer tougher, stronger composites with improved interfacial performance and long-term durability.',
-        projects: [
+          'With an intent of decarbonization, our work focuses on creating high-performance composites using carbon materials derived from low-value or clean-synthesis sources. We develop carbon fibers, graphene, and other carbon nanomaterials from waste streams such as asphaltene, and explore environmentally conscious routes for producing carbon nanotubes (CNTs) from light hydrocarbons. By integrating these carbon reinforcements into recyclable polymer matrices, we engineer composite materials with improved interfacial performance and long-term durability.', 
+          projects: [
           {
             title: 'Carbon Based Fiber and Nanomaterials',
-            description: 'Carbon-rich industrial residues possess significant potential as sustainable building blocks for advanced materials. By employing controlled conversion methods, including spinning, stabilization, and rapid thermal treatment, these by-products can be converted into robust carbon fibers and high-performance nanomaterials. This method facilitates the development of lightweight, thermally stable, and mechanically robust materials, while also repurposing waste streams for high-value applications, thereby enhancing economic and environmental sustainability.',
+            description: 'Carbon-rich industrial residues possess significant potential as sustainable building blocks for advanced materials. By employing controlled conversion methods, including spinning, stabilization, and rapid thermal treatment, these by-products can be converted into carbon fibers and carbon-based nanomaterials such as graphene. This method facilitates the development of lightweight functional composites, while also repurposing waste streams for high-value applications, thereby enhancing economic and environmental sustainability.',
             images: [
               {src: focusCarbon4, caption: 'Flash graphene from asphaltene'},
               {src: focusCarbonfiber, caption: 'Development of carbon fibers from asphaltene'}
@@ -234,9 +234,9 @@ export const researchAreas: ResearchArea[] = [
           },
           {
             title: 'Carbon Based Composites',
-            description: 'For years, carbon nanomaterials have been recognized for their remarkable strength and thermal conductivity, yet their integration into polymers has been hindered by issues such as agglomeration, voids, and poor interfacial bonding. As manufacturing moves toward more precise and sustainable approaches, extrusion-based additive techniques offer a way to overcome these limitations. By using shear-driven flow during printing, carbon nanotubes can be more uniformly dispersed, better aligned, and more effectively bonded within the polymer matrix. This advancement enables stronger, more reliable, and thermally efficient carbon-based composites for next-generation structural and functional applications.',
+            description: 'For years, carbon nanomaterials such as carbon nanotubes (CNTs) have been recognized for their remarkable strength and thermal conductivity, yet their integration into polymers has been hindered by issues such as agglomeration, voids, and poor interfacial bonding. In the next few years, we would like to address and solve these limitations through the development of CNTs fibers and futuristic CNTF composites that might replace many traditional fiber composites. This advancement enables stronger, more reliable, and thermally efficient carbon-based composites for next-generation structural and functional applications.',
             images: [{
-              src: focusCarbon2, caption: 'Interfaces of carbon nanotube fibers in polymer composite'
+              src: focusCarbon2, caption: '3D printing of fire-resistant wood structures'
             }]
           }
         ]
@@ -283,7 +283,7 @@ export const researchAreas: ResearchArea[] = [
             title: 'Architected Fire-resistant Wood',
             description: 'Over the past three decades, fire incidents have caused over 1.16 million deaths worldwide, with more than 80% in residential buildings. In the United States alone, 2023 recorded 1.39 million fires, causing 3,670 deaths and $23 billion in losses. Despite its combustibility, natural wood remains central to construction due to its abundance and aesthetics. Current fire-retardant coatings on wood only protect surfaces, degrade over time, and often use toxic halogenated compounds. Our research group aim to deliver a completely environment-friendly novel and robust solution: intrinsically fire-resistant architected wood structures fabricated via state-of-the-art additive manufacturing technology.',
             images: [
-              {src: focusAMBio2, caption: ''}
+              {src: focusAMBio2, caption: 'Natural vs. 3D-printed architected wood under flame exposure'}
             ],
           }
         ]
@@ -293,13 +293,13 @@ export const researchAreas: ResearchArea[] = [
         title: 'Additive Manufacturing of Recyclable Materials',
         href: '/research/manufacturing/recyclable-materials',
         description:
-          'We design and development architected recyclable nanocomposite materials using additive manufacturing (AM) techniques. By tailoring the composition, structure, and interfaces within these composites, we aim to unlock novel mechanical and functional properties that go beyond conventional material systems. Looking ahead, we plan to expand our work to a wider range of polymers and fiber reinforcements, exploring how interface engineering can be used to program structural and functional behaviors directly into the printed composites. Our ultimate goal is to develop lightweight, high-performance composite structures with unconventional mechanical responses, paving the way for their application in aerospace and next-generation structural systems.',
+          'We design and develop architected recyclable (thermoplastic) composites using additive manufacturing (AM) techniques. By tailoring the composition, structure, and interfaces between polymers and reinforcements in these composites, our goal is to develop lightweight, high-performance architected composites with unconventional mechanical and functional responses, for their application in aerospace and next-generation structural systems.',
         projects: [
           {
-            title: 'Design and Impact of Thermoplastic',
-            description: 'For decades, designing lightweight yet impact-resistant materials has remained a critical challenge in defense and aerospace applications. Through advanced additive manufacturing, architected porous structures can now be tailored with precise geometries to absorb energy and withstand extreme loading. By utilizing high-performance thermoplastics and engineered lattice designs such as Schwarzites and Tubulanes, these materials achieve remarkable strength, resilience, and stability under dynamic impact. Combining experimental testing with computational modeling enables a deeper understanding of their deformation behavior, guiding the development of next-generation protective and structural systems.',
+            title: 'Impact-resistant Thermoplastic Nanocomposites',
+            description: 'For decades, designing lightweight yet impact-resistant materials have remained a critical challenge in defense and aerospace applications. Through additive manufacturing, architected porous structures can now be tailored with precise geometries to absorb energy and withstand dynamic loading. By utilizing high-performance thermoplastics and engineered lattice designs such as Schwarzites and Tubulanes, these materials achieve remarkable strength, resilience, and stability under dynamic impact. Combining experimental testing with computational modeling enables a deeper understanding of their deformation behavior, guiding the development of next-generation protective and structural systems.',
             images: [
-              { src: focusAMRecycle2, caption: '' }
+              { src: focusAMRecycle2, caption: 'Ballistic impact response of a 3D-printed thermoplastic lattice structure' }
             ]
           }
         ]
