@@ -27,28 +27,30 @@ const News = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[160px] bg-gray-900 mt-20">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0" />
-          <img
-            src={newsBanner} 
-            alt="News and updates" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="relative z-20 text-white max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl md:text-5xl font-raleway mb-4"
-          >
-            News and Updates
-          </motion.h1>
+      <section className="relative mt-20 h-[160px]">
+        {/* Background image */}
+        <img
+          src={newsBanner}
+          alt="News and updates"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Centered heading */}
+        <div className="relative z-20 h-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-full items-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl font-raleway mb-0 text-white"
+            >
+              News and Updates
+            </motion.h1>
+          </div>
         </div>
       </section>
 
-      {/* News Section (keep AnimatedSection) */}
+      {/* News Section */}
       <section className="bg-white pt-6 pb-16">
         <div className="max-w-screen-xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="space-y-12">
@@ -64,12 +66,20 @@ const News = () => {
                           <span className="text-xl font-medium text-gray-900">
                             {d ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''}
                           </span>
-                          <span className="block text-gray-600 text-lg">{d ? d.getFullYear() : ''}</span>
+                          <span className="block text-gray-600 text-lg">
+                            {d ? d.getFullYear() : ''}
+                          </span>
                         </div>
                       </div>
 
                       <div className="md:hidden mb-2 text-base text-gray-600">
-                        {d ? d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : ''}
+                        {d
+                          ? d.toLocaleDateString('en-US', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            })
+                          : ''}
                       </div>
 
                       <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -77,7 +87,12 @@ const News = () => {
                           <div className="flex-1">
                             <h3 className="text-xl sm:text-xl font-semibold mb-2 text-cyan-600">
                               {item.Link ? (
-                                <a href={item.Link} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-cyan-600">
+                                <a
+                                  href={item.Link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="hover:underline hover:text-cyan-600"
+                                >
                                   {item.title}
                                 </a>
                               ) : (
@@ -91,7 +106,11 @@ const News = () => {
 
                           {item.image && (
                             <div className="sm:w-64 w-full sm:flex-shrink-0">
-                              <img src={item.image} alt={item.title} className="w-full h-44 object-cover rounded-md" />
+                              <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-44 object-cover rounded-md"
+                              />
                             </div>
                           )}
                         </div>

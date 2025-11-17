@@ -94,20 +94,27 @@ const People = () => {
 
   return (
     <div>
-      <section className="relative h-[160px] bg-gray-900 mt-20">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0" />
-          <img src={teamBanner} alt="Team" className="w-full h-full object-cover" />
-        </div>
-        <div className="relative z-20 text-white max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl md:text-5xl font-raleway mb-4"
-          >
-            Our Team
-          </motion.h1>
+      {/* Hero Section */}
+      <section className="relative mt-20 h-[160px]">
+        {/* Background image */}
+        <img
+          src={teamBanner}
+          alt="Team"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Centered content */}
+        <div className="relative z-20 h-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-full items-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl font-raleway mb-0 text-white"
+            >
+              Our Team
+            </motion.h1>
+          </div>
         </div>
       </section>
 
@@ -140,13 +147,13 @@ const People = () => {
 
           {/* Lab Director */}
           {director && (
-            <div>
-              <h2 className="text-2xl md:text-3xl font-raleway font-semibold text-gray-900 mb-8">
+            <div className="flex flex-col items-center md:items-start">
+              <h2 className="text-2xl md:text-3xl font-raleway font-semibold text-gray-900 mb-8 text-center md:text-left">
                 Lab Director
               </h2>
-              <div className="flex justify-center md:justify-start">
+
+              <div className="flex justify-center md:justify-start w-full">
                 <AnimatedSection delay={0.05}>
-                  {/* fixed width = image width -> keeps block left, centers text under image */}
                   <div
                     className="flex flex-col cursor-pointer hover:scale-105 transition-transform w-[17rem]"
                     onClick={() => setSelected(director)}
@@ -159,7 +166,6 @@ const People = () => {
                       />
                     </div>
 
-                    {/* text/icons centered within the same width */}
                     <div className="mt-5 text-center">
                       <h3 className="font-raleway text-[19px] font-semibold text-gray-900 mb-1">
                         {director.name}
@@ -169,7 +175,7 @@ const People = () => {
                           {director.title}
                         </p>
                       )}
-                      <div className="flex gap-3 justify-center">
+                      <div className="flex gap-3 justify-center mt-3 flex-wrap w-full">
                         {director.googlescholar && (
                           <a
                             href={director.googlescholar}

@@ -120,8 +120,6 @@ const Contact = () => {
               </div>
             </AnimatedSection>
           </div>
-
-          
         </div>
       </section>
     </div>

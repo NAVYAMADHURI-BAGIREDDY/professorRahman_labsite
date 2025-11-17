@@ -127,7 +127,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl font-raleway sm:text-xl md:text-1.5xl mb-8 max-w-2xl"
           >
-            Redesigning Materials. Rethinking Waste. Rebuilding the Future
+            Redesigning Materials. Rethinking Waste. Rebuilding the Future.
           </motion.p>
 
           <motion.div
@@ -261,19 +261,19 @@ const Home = () => {
       </section>
 
 
-      {/* News Section */}
+      {/* ------------- UPDATED NEWS SECTION ------------- */}
       <section className="bg-white pt-4 pb-16 relative">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center mb-3">
             <SectionHeading title="Latest News" centered />
           </div>
 
-          {/* Arrows */}
+          {/* DESKTOP ARROWS (hidden on mobile) */}
           <button
             onClick={prevNews}
             disabled={startIdx === 0}
             aria-label="Previous news"
-            className={`absolute left-4 md:left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
+            className={`hidden md:flex absolute left-4 md:left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
               startIdx === 0 ? 'opacity-40 cursor-not-allowed' : ''
             }`}
           >
@@ -284,20 +284,56 @@ const Home = () => {
             onClick={nextNews}
             disabled={startIdx >= total - windowSize}
             aria-label="Next news"
-            className={`absolute right-4 md:right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
+            className={`hidden md:flex absolute right-4 md:right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-cyan-600 rounded-full p-2 shadow-md transition ${
               startIdx >= total - windowSize ? 'opacity-40 cursor-not-allowed' : ''
             }`}
           >
             <ArrowRight className="w-6 h-6" />
           </button>
 
-          {/* Viewport */}
-          <div className="mt-0 overflow-hidden relative">
-            {/* Track */}
+          {/* MOBILE: 3 VERTICAL CARDS, NO ARROWS */}
+          <div className="md:hidden mt-0 space-y-4">
+            {topFiveNews.slice(0, 3).map((news) => (
+              <div key={news.id} className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[20rem] flex flex-col">
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-xs text-gray-500 mb-2 block">
+                      {new Date(news.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      })}
+                    </span>
+                    <h3 className="text-base font-semibold leading-snug mb-2 min-h-[2.75rem]">
+                      {news.Link ? (
+                        <a
+                          href={news.Link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline text-cyan-600"
+                        >
+                          {news.title}
+                        </a>
+                      ) : (
+                        news.title
+                      )}
+                    </h3>
+                  </div>
+                  <img
+                    src={news.image}
+                    alt={news.title}
+                    className="w-full h-36 object-cover rounded-md"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* DESKTOP: ORIGINAL CAROUSEL */}
+          <div className="hidden md:block mt-0 overflow-hidden relative">
             <div
               className="flex -mx-3 transition-transform duration-500 ease-linear"
               style={{
-                // move one card at a time; 100% per slide on mobile, 33.333% on desktop
                 transform: `translateX(-${(startIdx * 100) / windowSize}%)`,
               }}
             >
@@ -306,7 +342,7 @@ const Home = () => {
                   key={news.id}
                   className="basis-full md:basis-1/3 shrink-0 px-3"
                 >
-                  <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[20rem] md:h-[21rem] flex flex-col">
+                  <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[21rem] flex flex-col">
                     <div className="p-5 flex-1 flex flex-col justify-between">
                       <div>
                         <span className="text-xs text-gray-500 mb-2 block">
@@ -322,7 +358,8 @@ const Home = () => {
                               href={news.Link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="hover:underline text-cyan-600" >
+                              className="hover:underline text-cyan-600"
+                            >
                               {news.title}
                             </a>
                           ) : (
@@ -333,13 +370,14 @@ const Home = () => {
                       <img
                         src={news.image}
                         alt={news.title}
-                        className="w-full h-36 md:h-40 object-cover rounded-md" />
-                      </div>
+                        className="w-full h-40 object-cover rounded-md"
+                      />
                     </div>
                   </div>
-                ))}
-              </div>
-           </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* View All */}
           <div className="mt-10 text-center">
@@ -353,6 +391,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* ------------- END UPDATED NEWS SECTION ------------- */}
 
       {/* Funding */}
       <section className="bg-white pt-4 pb-16">

@@ -14,35 +14,40 @@ const Publications = () => {
     return acc;
   }, {} as Record<number, UnifiedPublication[]>);
 
-  const years = Object.keys(publicationsByYear).map(Number).sort((a, b) => b - a);
+  const years = Object.keys(publicationsByYear)
+    .map(Number)
+    .sort((a, b) => b - a);
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[160px] bg-gray-900 mt-20">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0" />
-          <img
-            src={pubBanner}
-            alt="Publications"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="relative z-20 text-white max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl md:text-5xl font-raleway mb-4"
-          >
-            Publications
-          </motion.h1>
+      <section className="relative mt-20 h-[160px]">
+        {/* Background image */}
+        <img
+          src={pubBanner}
+          alt="Publications"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Centered content */}
+        <div className="relative z-20 h-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-full items-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl font-raleway mb-0 text-white"
+            >
+              Publications
+            </motion.h1>
+          </div>
         </div>
       </section>
 
       {/* Publications Section */}
       <section className="bg-white mt-10 pb-24 sm:pb-12">
         <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
+          
           {/* Filter Buttons */}
           <div className="flex flex-wrap gap-2 mb-10">
             {[
@@ -119,7 +124,6 @@ const Publications = () => {
                     </div>
                   ))}
                 </div>
-
               </AnimatedSection>
             ))}
           </div>
