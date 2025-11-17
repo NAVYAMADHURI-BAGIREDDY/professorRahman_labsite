@@ -5,7 +5,7 @@ import AnimatedSection from '../components/common/AnimatedSection';
 import { people, Person } from '../data/peopleData';
 import { SiGooglescholar, SiLinkedin } from 'react-icons/si';
 import teamBanner from '../../images/people.png';
-import groupPhoto from '../../images/group.png'; 
+import groupPhoto from '../../images/group.png';
 
 const People = () => {
   const [selected, setSelected] = useState<Person | null>(null);
@@ -128,7 +128,16 @@ const People = () => {
               transition={{ duration: 0.5 }}
             >
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                Our Lab is composed of a dynamic team of passionate students and postdoctoral researchers, who work together at the forefront of materials innovation. We foster an inclusive, collaborative, and interdisciplinary research environment where creativity meets scientific rigor. Our members bring expertise spanning materials science and mechanical engineering to tackle challenges in circular materials, bio-inspired designs, and advanced manufacturing technologies. Together, we aim to transform fundamental discoveries into real-world solutions that promote sustainability, functionality, and circular design.
+                Our Lab is composed of a dynamic team of passionate students and
+                postdoctoral researchers, who work together at the forefront of
+                materials innovation. We foster an inclusive, collaborative, and
+                interdisciplinary research environment where creativity meets
+                scientific rigor. Our members bring expertise spanning materials
+                science and mechanical engineering to tackle challenges in circular
+                materials, bio-inspired designs, and advanced manufacturing
+                technologies. Together, we aim to transform fundamental discoveries
+                into real-world solutions that promote sustainability,
+                functionality, and circular design.
               </p>
             </motion.div>
             <motion.div
@@ -147,7 +156,7 @@ const People = () => {
 
           {/* Lab Director */}
           {director && (
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-center md:items-start w-full">
               <h2 className="text-2xl md:text-3xl font-raleway font-semibold text-gray-900 mb-8 text-center md:text-left">
                 Lab Director
               </h2>
@@ -155,7 +164,7 @@ const People = () => {
               <div className="flex justify-center md:justify-start w-full">
                 <AnimatedSection delay={0.05}>
                   <div
-                    className="flex flex-col cursor-pointer hover:scale-105 transition-transform w-[17rem]"
+                    className="flex flex-col cursor-pointer hover:scale-105 transition-transform w-[17rem] mx-auto md:mx-0"
                     onClick={() => setSelected(director)}
                   >
                     <div className="w-[17rem] h-[17rem] rounded-full overflow-hidden">
