@@ -5,7 +5,7 @@ import AnimatedSection from '../components/common/AnimatedSection';
 import { people, Person } from '../data/peopleData';
 import { SiGooglescholar, SiLinkedin } from 'react-icons/si';
 import teamBanner from '../../images/people.png';
-import groupPhoto from '../../images/group.png';
+import groupPhoto from '../../images/People_page/group.png';
 
 const People = () => {
   const [selected, setSelected] = useState<Person | null>(null);

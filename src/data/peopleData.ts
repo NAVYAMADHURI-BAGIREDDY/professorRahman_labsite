@@ -6,6 +6,7 @@ import fahad from '../../images/People_page/fahad.png';
 import rifat from '../../images/People_page/rifat.png';
 import mahjabin from '../../images/People_page/mahjabin.png';
 import mia from '../../images/People_page/mia.png';
+import chen from '../../images/People_page/chen.png';
 
 import ali from '../../images/People_page/ali.png';
 
@@ -123,6 +124,19 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/m-a-s-r-saadi-b15a691a9/',
     googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao',
+    category: 'current'
+  },
+  {
+    id: 'Chen',
+    name: 'Chen Shi',
+    title: 'PhD Student (Rice University)',
+    image: chen,
+    bio: 'Chen is a Ph.D. student in Materials Science and NanoEngineering at Rice University, where he works on developing structures from carbon nanotube.',
+    education: [
+      
+    ],
+    linkedin: '',
+    googlescholar: '',
     category: 'current'
   },
   {
