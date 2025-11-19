@@ -112,7 +112,7 @@ const People = () => {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl font-raleway mb-0 text-white"
             >
-              Our Team
+              Team
             </motion.h1>
           </div>
         </div>
