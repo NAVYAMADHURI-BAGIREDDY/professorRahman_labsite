@@ -135,7 +135,7 @@ export const people: Person[] = [
     education: [
       
     ],
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/chen-shi-027810250/',
     googlescholar: '',
     category: 'current'
   },
