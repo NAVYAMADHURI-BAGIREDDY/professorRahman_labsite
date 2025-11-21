@@ -120,6 +120,14 @@ const Publications = () => {
                             {pub.conference || pub.bookTitle || pub.applicationNumber}
                           </span>
                         </p>
+
+                        {/* Media coverage */}
+                        {pub.media && (
+                          <p className="inline-flex whitespace-nowrap gap-2 rounded-full bg-cyan-50 text-sm text-cyan-800 mt-6">
+                            <span className="font-semibold">Media Coverage:</span>
+                            <span>{pub.media}</span>
+                          </p>
+                         )}
                       </div>
                     </div>
                   ))}

@@ -80,6 +80,7 @@ export interface JournalArticle {
   conference: string;      // Conference or journal name
   year: number;            // Publication year
   image?: string;
+  media?: string; 
 }
 
 export const journalArticles: JournalArticle[] = [
@@ -99,7 +100,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Saadi, M.A.S.R.; Cui, Y.; Bhakta, S.P.; Hassan, Sakib; Harikrishnan, V.; Siqueira,  I.R.; Pasquali, M.; Bennett, M.; Ajayan, P.M.; Rahman, M.R.*',
     conference: 'Nature Communications',
     year: 2025,
-    image: pub74
+    image: pub74,
+    media: 'Published in Nature Communications and recognized as the top innovation by MSN'
   },
   {
     id: 'pub71',
@@ -108,7 +110,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Thakur, M.S.H.; Nath, M.D.; Paulino, G.H.; Ajayan, P.M.; Rahman, M.M.*',
     conference: 'Advanced Composites and Hybrid Materials',
     year: 2025,
-    image: pub73
+    image: pub73,
+    media: 'Featured on the American Society of Mechanical Engineers (ASME)'
   },
   {
     id: 'pub70',
@@ -153,7 +156,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Thakur, M.S.H.; Shi, C.; Logan, K.; Saadi, M.A.S.R.; Naskar, A.; Ajayan, P.M.; Rahman, M.M.*',
     conference: 'Science Advances',
     year: 2024,
-    image: pub68
+    image: pub68,
+    media: 'Nature and NewScientist featured this innovation in their highlight'
   },
   {
     id: 'pub65',
@@ -162,7 +166,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Zinke, A.; Pottackal, N.; Zahin, F.; Nur, I.; Ahmed, F.; ji, Y.; Mohammed, Z.; Meyer, M.D.; Miller, C.; Bennett, M.; Rangari, V.; Meredith, J.; Ajayan, P.M.; Rahman, M.M.*',
     conference: 'Advanced Functional Materials',
     year: 2024,
-    image: pub67
+    image: pub67,
+    media: 'Rice University featured this work in their media site'
   },
   {
     id: 'pub64',
@@ -180,7 +185,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Saadi, M.A.S.R.; Likhi, F.H.; Zahin, F.; Yuan, Y.; Karim, A.; Ajayan, P.M.; Rahman, M.M.*', 
     conference: 'ACS Nano',
     year: 2024, 
-    image: pub65
+    image: pub65,
+    media: 'Published in ACS Nano'
   },
   {
     id: 'pub62',
@@ -202,9 +208,9 @@ export const journalArticles: JournalArticle[] = [
   },
   {
     id: 'pub60',
-    title: '60. Process optimization, techno-economic analysis, and environmental impact assessment of producing soy protein isolate-cellulose nanocrystal coating solution for increasing fruit’s shelf-life',
+    title: '60. Economic and environmental analysis of producing soy protein-cellulose-based bionanocomposite fruit coating',
     link: 'https://doi.org/10.1016/j.indcrop.2024.118213',
-    authors: 'Naveenkumar, R.; Prakash, N.; Rahman, M.M.; Troy, R',
+    authors: 'Naveenkumar, R.; Troy, R; Richard, D.B.; Prakash, N.; Nithu, T.P.; Rahman, M.M.',
     conference: 'Industrial Crops and Products',
     year: 2024,
     image: pub62
@@ -234,7 +240,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Roy, S.; Philip, F.A.; Oliveira, E.F.; Singh, G.; Joseph, S.; Yadav, R.M.; Adumbumkulath, A.; Hassan, S.; Khater, A.; Vinu, A.; Shimizu, G.; Ajayan, P.M.; Kibria, M.G.; Rahman, M. M.*',
     conference: 'Cell Reports Physical Science',
     year: 2023,
-    image: pub57
+    image: pub57,
+    media: 'New Atlas featured an article on this work'
   },
   {
     id: 'pub56',
@@ -252,7 +259,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Herkal, S.; Rahman, M. M.*; Nagarajah, S.; Harikrishnan, V, Ajayan, P. M.',
     conference: 'Mechanical Systems and Signal Processing',
     year: 2023,
-    image: pub55
+    image: pub55,
+    media: 'Rice University featured this work on 3D printed schwarzites'
   },
   {
     id: 'pub54',
@@ -270,7 +278,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Saadi, M.A.S.R.; Advincula, P.A.; Thakur, M.S.H.; Khater, A.; Saad, S.; Zeraati, A.s.; Nabil, S.K.; Zinke, A.; Roy, S.; Lou, M.; Bheemasetti, S.N.; Bari, M.A.A.; Zheng, Y.; Beckham, J.L.; Gadhamshetty, V.; Vashisth, A.; Kibria, M.G.; Tour, J.M.; Ajayan, P.M.; Rahman, M. M.',
     conference: 'Science Advances',
     year: 2022,
-    image: pub53
+    image: pub53,
+    media: 'Rice university reported this work on graphene production'
   },
   {
     id: 'pub52',
@@ -513,7 +522,8 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Jung, S.; Cui, Y.; Barnes, M.; Satam, C.; Zhang, S.; Chowdhury, R.; Adumbumkulath, A.; Sahin, O.; Miller, C.; Sajadi, S.M.; Sassi, L.; Ji, Y.; Bennett, M.; Yu, M.; Friguglietti, J.; Merchant, F.; Verduzco, R.; Roy, S.; Vajtai, R.; Meredith, J.C.; Youngblood, J.; Koratkar, N.; Rahman, M.M.*; Ajayan, P.M',
     conference: 'Advanced Materials',
     year: 2020,
-    image: pub26
+    image: pub26,
+    media: 'This work got featured in the Daily Star, leading newspaper in Bangladesh and won the first prize at the 2021 Create the Future Design Contest'
   },
   {
     id: 'pub25',
