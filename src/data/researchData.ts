@@ -236,7 +236,7 @@ export const researchAreas: ResearchArea[] = [
             title: 'Carbon Based Composites',
             description: 'For years, carbon nanomaterials such as carbon nanotubes (CNTs) have been recognized for their remarkable strength and thermal conductivity, yet their integration into polymers has been hindered by issues such as agglomeration, voids, and poor interfacial bonding. We address and solve these limitations through the development of CNTs fibers and futuristic CNTF composites that might replace many traditional fiber composites. This advancement enables stronger, more reliable, and thermally efficient carbon-based composites for next-generation structural and functional applications.',
             images: [{
-              src: focusCarbon2, caption: '3D printing of fire-resistant wood structures'
+              src: focusCarbon2, caption: 'CNT fiber alignment with cross-sectional morphology'
             }]
           }
         ]
