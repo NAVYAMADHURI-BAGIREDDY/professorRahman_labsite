@@ -23,7 +23,7 @@ const Footer = () => {
     <Phone size={20} />
     <span>713-743-4500</span>
   </div>
-  <p>&copy; {new Date().getFullYear()} Rahman Lab. All rights reserved.</p>
+  <p>&copy; {new Date().getFullYear()} Circular Materials and Manufacturing Lab. All rights reserved.</p>
 </div>
 
       </div>
