@@ -2,7 +2,6 @@ import maksud from '../../images/People_page/Maksud Rahman portrait.jpg';
 import saadi from '../../images/People_page/saadi.png';
 import shajed from '../../images/People_page/shajed.png';
 import toffal from '../../images/People_page/tofazzal.png';
-import fahad from '../../images/People_page/fahad.png';
 import rifat from '../../images/People_page/rifat.png';
 import mahjabin from '../../images/People_page/mahjabin.png';
 import mia from '../../images/People_page/mia.png';
@@ -44,20 +43,6 @@ export const people: Person[] = [
     category: 'faculty'
   },
   {
-    id: 'Shajedul Hoque',
-    name: 'Shajedul Hoque',
-    title: 'Postdoctoral Fellow',
-    image: shajed,
-    bio: 'Shajedul is a Postdoctoral Fellow in Mechanical Engineering at the University of Houston. His work focuses on advanced manufacturing of wood, drawing inspiration from natural structures to develop sustainable, high-performance materials. He completed his Ph.D. at Rice University, where he pioneered the first-ever 3D printing of wood structures using water-based inks—a breakthrough published in Science Advances and highlighted in Nature. He earned his B.Sc. in Mechanical Engineering from the Bangladesh University of Engineering and Technology (BUET), where he worked on deep learning, molecular dynamics, and nanoscale thermal transport. Driven by bio-inspired design and AI-enhanced material innovation, Shajed aims to advance sustainable manufacturing and next-generation composite materials.',
-    education: [
-      'Ph.D. in Materials Science and NanoEngineering from Rice University, TX, USA',
-      'B.Sc. in Mechanical Engineering from Bangladesh University of Engineering and Technology (BUET), Dhaka, BD'
-    ],
-    linkedin: 'https://www.linkedin.com/in/mdshajedulhoquethakur/',
-    googlescholar:'https://scholar.google.com/citations?user=2PN5lQ8AAAAJ&hl=en&oi=ao',
-    category: 'current'
-  },
-  {
     id: 'Tofazzal',
     name: 'Md Tofazzal Hossain',
     title: 'PhD Student',
@@ -69,20 +54,6 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/mohammad-hossain-822659132/',
     googlescholar:'https://scholar.google.com/citations?user=RJ9mJk0AAAAJ&hl=en',
-    category: 'current'
-  },
-  {
-    id: 'Fahad',
-    name: 'Mir Muhammad Fahad',
-    title: 'PhD student',
-    image: fahad,
-    bio: 'Fahad is a Ph.D. student in the Department of Mechanical and Aerospace Engineering at the University of Houston, where he works on developing protein-based nanocomposite films designed to extend the shelf life of fruits—essentially creating edible, high-performance “protective coatings” for fresh produce. His background in polymer materials began with a B.Sc. in Textile Engineering from the Bangladesh University of Textiles and expanded through an M.S. in Advanced Materials Engineering for Information and Electronics at Kyung Hee University, South Korea. His research experience spans textile chemistry, polymer science, biomedical sensing, and cryopreservation. Outside the lab, Fahad enjoys late-night walks, cooking, swimming, flight simulator games, and dissecting the physics behind sci-fi movies.',
-    education: [
-      'M.Sc. in Advanced Materials Engineering for Information and Electronics from Kyung Hee University, South Korea',
-      'B.Sc. in Textile Engineering from Bangladesh University of Textiles, BD'
-    ],
-    linkedin: 'https://www.linkedin.com/in/mmfahad7430/',
-    googlescholar: 'https://scholar.google.com/citations?user=JNd4HhMAAAAJ&hl=en&oi=ao',
     category: 'current'
   },
   {
@@ -149,6 +120,19 @@ export const people: Person[] = [
       'B.Sc. in Mechanical Engineering at University of Houston, TX, USA'
     ],
     category: 'current'
+  },
+  {
+    id: 'Shajedul Hoque',
+    name: 'Shajedul Hoque',
+    title: 'King Fahd University of Petroleum and Minerals',
+    image: shajed,
+    bio: 'https://sites.google.com/view/mdshajedulhoque',
+    education: [
+      'Ph.D. in Materials Science and NanoEngineering from Rice University, TX, USA'
+    ],
+    linkedin: 'https://www.linkedin.com/in/mdshajedulhoquethakur/',
+    googlescholar:'https://scholar.google.com/citations?user=2PN5lQ8AAAAJ&hl=en&oi=ao',
+    category: 'alumni'
   },
   {
     id: 'Ali',
