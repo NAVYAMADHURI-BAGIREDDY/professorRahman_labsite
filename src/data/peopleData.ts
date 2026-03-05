@@ -6,6 +6,8 @@ import rifat from '../../images/People_page/rifat.png';
 import mahjabin from '../../images/People_page/mahjabin.png';
 import mia from '../../images/People_page/mia.png';
 import chen from '../../images/People_page/chen.png';
+import evan from '../../images/People_page/evan.png';
+import julissa from '../../images/People_page/julissa.png';
 
 import ali from '../../images/People_page/ali.png';
 
@@ -58,7 +60,7 @@ export const people: Person[] = [
   },
   {
     id: 'Rifat',
-    name: 'Md Rifat Hossain ',
+    name: 'Md Rifat Hossain',
     title: 'PhD Student',
     image: rifat,
     bio: 'Rifat is a Ph.D. student in Mechanical Engineering at the University of Houston, where his research focuses on the 3D printing of polyetherimide (PEI), integrating experimental and computational methods to explore its advanced manufacturing potential. He earned his M.Sc. in Mechanical Engineering from Rensselaer Polytechnic Institute (RPI), where he developed multiscale finite-element methodologies to investigate the material behavior of fibrous biological tissues. Rifat’s work reflects a broader interest in advanced materials and manufacturing, combining modeling and experimentation to drive innovation in polymer engineering.',
@@ -112,10 +114,32 @@ export const people: Person[] = [
   },
   {
     id: 'Mia',
-    name: 'Mia Rodriguez ',
+    name: 'Mia Rodriguez',
     title: 'Undergraduate Researcher',
     image: mia,
     bio: 'Mia Rodriguez is a junior majoring in Mechanical Engineering at the University of Houston, with growing interests in bio-inspired design and the intersection of engineering and the natural world. She has experience in CAD, MATLAB, and Arduino systems and is eager to apply her skills to research in advanced materials and sustainable design.',
+    education: [
+      'B.Sc. in Mechanical Engineering at University of Houston, TX, USA'
+    ],
+    category: 'current'
+  },
+  {
+    id: 'Julissa',
+    name: 'Julissa Garcia',
+    title: 'Undergraduate Researcher',
+    image: mia,
+    bio: 'Julissa Garcia is a junior Mechanical Engineering student at the University of Houston’s Cullen College of Engineering. She serves as a Cullen College Student Ambassador and Outreach Officer, representing the college and supporting outreach initiatives. She is also the Servium Officer for the Catholic student organization, coordinating volunteer service efforts for individuals and communities in need. Her contribution to the lab is focused on the development and characterization of sustainable, bio-based composite materials.',
+    education: [
+      'B.Sc. in Mechanical Engineering at University of Houston, TX, USA'
+    ],
+    category: 'current'
+  },
+   {
+    id: 'Evan',
+    name: 'Evan Matthews',
+    title: 'Undergraduate Researcher',
+    image: mia,
+    bio: 'Evan Matthews is currently pursuing a B.S. in Mechanical Engineering at the University of Houston. He focuses on applying engineering analysis to real-world design challenges. His experience includes CAD modeling, MATLAB-based computation, and FDM prototyping, and he is committed to continuously strengthening his technical expertise while contributing to innovative and impactful research.',
     education: [
       'B.Sc. in Mechanical Engineering at University of Houston, TX, USA'
     ],
