@@ -10,7 +10,7 @@ export interface Patent {
 export const patents: Patent[] = [
   {
     id: 'P-008',
-    title: '8. Direct Ink Printing of Multi-material Composite Structures.',
+    title: '8. Direct Ink Printing of Multi-material Composite Structures',
     link: '',
     author: 'Sajadi, S. M.; Boul, P. J.; Tiwary, C.S.; Rahman, M. M.; Ajayan, P. M.; Thaemlitz, C.',
     applicationNumber: '17/575,177',
@@ -18,7 +18,7 @@ export const patents: Patent[] = [
   },
   {
     id: 'P-007',
-    title: '7. Cementing a wellbore using a direct ink printing.',
+    title: '7. Cementing a wellbore using a direct ink printing',
     link: '',
     author: 'Patel, H. A.; Khater, A.; Boul, P. J.; Ajayan, P. M.; Rahman, M. M.',
     applicationNumber: '17/551,051',

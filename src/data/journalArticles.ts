@@ -71,6 +71,7 @@ import pub72 from '../../images/Publications/72.jpeg';
 import pub73 from '../../images/Publications/73.png';
 import pub74 from '../../images/Publications/74.jpg';
 import pub75 from '../../images/Publications/75.png';
+import pub76 from '../../images/Publications/76.png';
 
 export interface JournalArticle {
   id: string;              // Unique identifier (UUID or string)
@@ -84,6 +85,15 @@ export interface JournalArticle {
 }
 
 export const journalArticles: JournalArticle[] = [
+  {
+    id: 'pub74',
+    title: '74. Aligned Bacterial Cellulose through Organohydrogel Transformation',
+    link: 'https://doi.org/10.1021/acs.nanolett.5c04172',
+    authors: 'Saadi, M.A.S.R.; Rahman, M.M.*',
+    conference: 'Nano Letters',
+    year: 2026,
+    image: pub76
+  },
   {
     id: 'pub73',
     title: '73. Polymer Derived and Ni-Single Atom Doped Carbon Nanofibers for CO2 Capture and Electroreduction to CO',

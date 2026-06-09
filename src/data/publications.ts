@@ -36,6 +36,7 @@ export const publications: UnifiedPublication[] = [
   ...bookChapters.map((b) => ({
     id: b.id,
     title: b.title,
+    link: b.link,
     authors: b.authors,
     bookTitle: b.bookTitle,
     year: b.year,

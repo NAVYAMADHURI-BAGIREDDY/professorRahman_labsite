@@ -8,6 +8,7 @@ import mia from '../../images/People_page/mia.png';
 import chen from '../../images/People_page/chen.png';
 import julie from '../../images/People_page/julie.png';
 import evan from '../../images/People_page/evan.png';
+import sif from '../../images/People_page/sif.png';
 
 import ali from '../../images/People_page/ali.png';
 
@@ -110,6 +111,20 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/chen-shi-027810250/',
     googlescholar: '',
+    category: 'current'
+  },
+  {
+    id: 'Sif',
+    name: 'Sif Eddine JABOR TLEMCANI',
+    title: 'MSc Student',
+    image: sif,
+    bio: 'Sif Eddine is an Erasmus master student at TU Darmstadt and INP-UGA Phelma. He is currently completing his MS thesis research at the University of Houston, where his work focuses on the 3D printing of cellulose-based bio-nanocomposites for CO2 capture. His academic and research background spans the U.S., Europe, and Morocco, with a core technical focus on materials science, polymers, cellulose, and sustainable solutions for environmental applications. Previously, Sif Eddine worked as a Research Assistant and R&D Intern at Mohammed VI Polytechnic University in Morocco. There, he specialized in cellulose nanocrystals and sustainable packaging as an alternative to single-use plastics, as well as the formulation of biopolymer materials for direct carbon capture. He is deeply motivated by sustainability, innovation, and entrepreneurship.',
+    education: [
+      'M.Sc. in Erasmus Mundus (Functional Advanced Materials Engineering with Artificial Intelligence for Sustainability), Technical University of Darmstadt, Germany and Grenoble INP-UGA Phelma, France',
+      'M.Sc. in Materials Science and Engineering, Mohammed VI Polytechnic University, Benguerir, Morocco',
+    ],
+    linkedin: 'https://www.linkedin.com/in/sif-eddine-jabor-tlemcani-243a75154/',
+    googlescholar: 'https://scholar.google.com/citations?user=Os-b4ZwAAAAJ&hl=fr',
     category: 'current'
   },
   {
