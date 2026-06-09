@@ -6,9 +6,11 @@ import rifat from '../../images/People_page/rifat.png';
 import mahjabin from '../../images/People_page/mahjabin.png';
 import mia from '../../images/People_page/mia.png';
 import chen from '../../images/People_page/chen.png';
-import julie from '../../images/People_page/julie.png';
-import evan from '../../images/People_page/evan.png';
 import sif from '../../images/People_page/sif.png';
+import julie from '../../images/People_page/julie.png';
+import zahin from '../../images/People_page/zahin.png';
+import evan from '../../images/People_page/evan.png';
+
 
 import ali from '../../images/People_page/ali.png';
 
@@ -147,6 +149,18 @@ export const people: Person[] = [
     education: [
       'B.Sc. in Mechanical Engineering, University of Houston, TX, USA'
     ],
+    category: 'current'
+  },
+  {
+    id: 'Zahin',
+    name: 'Zahin Nanjiba',
+    title: 'Undergraduate Researcher',
+    image: zahin,
+    bio: 'Zahin Nanjiba is a Mechanical Engineering student at the University of Houston. She has experience with CAD and MATLAB through her coursework and is interested in manufacturing, 3D Printing, and how things are designed and made in real world engineering systems.',
+    education: [
+      'B.Sc. in Mechanical Engineering, University of Houston, TX, USA'
+    ],
+    linkedin: 'https://www.linkedin.com/in/zahin-nanjiba-68794527a/',
     category: 'current'
   },
    {
