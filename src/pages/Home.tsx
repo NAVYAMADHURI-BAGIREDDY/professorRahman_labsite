@@ -68,8 +68,12 @@ const Home = () => {
   }, []);
 
   const topFiveNews = [...newsItems]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 5);
+  .sort(
+    (a, b) =>
+      new Date(b.date ?? 0).getTime() -
+      new Date(a.date ?? 0).getTime()
+  )
+  .slice(0, 5);
 
   const total = topFiveNews.length;
 
@@ -81,7 +85,7 @@ const Home = () => {
   };
 
   // Highlighted Publications
-  const highlighted_pub_id: string[] = ['pub72', 'pub66', 'pub53', 'pub49', 'pub36', 'pub26'];
+  const highlighted_pub_id: string[] = ['pub74', 'pub72', 'pub66', 'pub49', 'pub36', 'pub26'];
   type Pub = typeof publications[number];
   const meta = (p: Pub) => p.conference ?? p.bookTitle ?? p.applicationNumber ?? '';
   const byId = new Map(publications.map(p => [p.id, p]));
@@ -236,7 +240,7 @@ const Home = () => {
                     )}
                   </h3>
                   {(pub.authors ?? pub.author) && (() => {
-                    const authorString = pub.authors ?? pub.author;
+                    const authorString = pub.authors ?? pub.author ?? '';
                     const firstAuthor = authorString.split(',')[0];
                     return (
                       <p className="text-sm text-gray-700 text-center italic">
@@ -298,11 +302,13 @@ const Home = () => {
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
                     <span className="text-xs text-gray-500 mb-2 block">
-                      {new Date(news.date).toLocaleDateString('en-US', {
+                      {news.date
+                      ? new Date(news.date).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric',
-                      })}
+                      })
+                      : ''}
                     </span>
                     <h3 className="text-base font-semibold leading-snug mb-2 min-h-[2.75rem]">
                       {news.Link ? (
@@ -346,11 +352,13 @@ const Home = () => {
                     <div className="p-5 flex-1 flex flex-col justify-between">
                       <div>
                         <span className="text-xs text-gray-500 mb-2 block">
-                          {new Date(news.date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                          })}
+                           {news.date
+                      ? new Date(news.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      })
+                      : ''}
                         </span>
                         <h3 className="text-base md:text-xl font-semibold leading-snug mb-2 min-h-[2.75rem]">
                           {news.Link ? (

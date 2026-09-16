@@ -18,6 +18,7 @@ import news18 from '../../images/news_section/news18.png';
 import news19 from '../../images/news_section/news19.png';
 import news20 from '../../images/news_section/news20.png';
 import news21 from '../../images/news_section/news21.png';
+import news22 from '../../images/news_section/news22.png';
 
 
 export interface NewsItem {
@@ -31,7 +32,14 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[]  = [
-  {
+{
+  id: 'news15',
+  title: 'Our work on aligned bacterial cellulose is published in Nano Letters.',
+  Link: 'https://doi-org.ezproxy.lib.uh.edu/10.1021/acs.nanolett.5c04172',
+  date: '2026-04-08',
+  image: news22,
+},
+{
   id: 'news14',
   title: 'MSN listed our work as the top innovation among “10 New Materials Aiming to Replace Plastic.”',
   Link: 'https://www.msn.com/en-us/news/technology/10-new-materials-aiming-to-replace-plastic-researchers-reveal/ar-AA1OIQkl',

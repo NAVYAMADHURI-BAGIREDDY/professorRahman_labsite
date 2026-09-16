@@ -10,7 +10,7 @@ export interface Patent {
 export const patents: Patent[] = [
   {
     id: 'P-008',
-    title: '8. Direct Ink Printing of Multi-material Composite Structures',
+    title: '7. Direct Ink Printing of Multi-material Composite Structures',
     link: '',
     author: 'Sajadi, S. M.; Boul, P. J.; Tiwary, C.S.; Rahman, M. M.; Ajayan, P. M.; Thaemlitz, C.',
     applicationNumber: '17/575,177',
@@ -18,43 +18,35 @@ export const patents: Patent[] = [
   },
   {
     id: 'P-007',
-    title: '7. Cementing a wellbore using a direct ink printing',
-    link: '',
+    title: '6. Cementing a wellbore using a direct ink printing',
+    link: 'https://patents.google.com/patent/US12269944B2/en',
     author: 'Patel, H. A.; Khater, A.; Boul, P. J.; Ajayan, P. M.; Rahman, M. M.',
     applicationNumber: '17/551,051',
     year: 2023
   },
   {
     id: 'P-006',
-    title: '6. Shape-memory behavior of epoxy/sliding-ring polymer composites',
-    link: '',
+    title: '5. Shape-memory behavior of epoxy/sliding-ring polymer composites',
+    link: 'https://patents.google.com/patent/US12269944B2/en',
     author: 'Patel, H. A.; Khater, A.; Boul, P. J.; Ajayan, P. M.; Rahman, M. M.',
     applicationNumber: '17/550,653',
     year: 2023
   },
   {
     id: 'P-005',
-    title: '5. Epoxy compositions containing polyrotaxane additives having improved impact strength',
-    link: '',
+    title: '4. Epoxy compositions containing polyrotaxane additives having improved impact strength',
+    link: 'https://patents.google.com/patent/US12269944B2/en',
     author: 'Patel, H. A.; Khater, A.; Boul, P. J.; Ajayan, P. M.; Rahman, M. M.',
     applicationNumber: '17/550,638',
     year: 2023
   },
   {
     id: 'P-004',
-    title: '4. 3D Printed Polyrotaxane Additives and Compositions.',
-    link: '',
+    title: '3. 3D Printed Polyrotaxane Additives and Compositions.',
+    link: 'https://patents.google.com/patent/US12269944B2/en',
     author: 'Patel, H. A.; Khater, A.; Boul, P. J.; Ajayan, P. M.; Rahman, M. M.',
     applicationNumber: '17/550,631',
     year: 2023
-  },
-  {
-    id: 'P-003',
-    title: '3. Poly-albumen based green coating to enhance shelf life of perishable foods',
-    link: '',
-    author: 'Rahman, M. M.; JUNG, S.; POTTACKAL, N.; Ajayan, P. M.',
-    applicationNumber: 'US20220007692A1',
-    year: 2022
   },
   {
     id: 'P-002',
@@ -67,7 +59,7 @@ export const patents: Patent[] = [
   {
     id: 'P-001',
     title: '1. Cement-based direct ink for 3D-printing of complex architected structures',
-    link: '',
+    link: 'https://patents.google.com/patent/US20210354366A1/en',
     author: 'Rahman, M. M.; Sajadi, S. M.; Kumar, A.; Boul, P. J.; Thaemlitz, C.; Ajayan, P. M.',
     applicationNumber: '16/596,396',
     year: 2020

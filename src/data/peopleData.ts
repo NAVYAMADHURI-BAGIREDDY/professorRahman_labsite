@@ -9,7 +9,7 @@ import chen from '../../images/People_page/chen.png';
 import sif from '../../images/People_page/sif.png';
 import julie from '../../images/People_page/julie.png';
 import zahin from '../../images/People_page/zahin.png';
-import evan from '../../images/People_page/evan.png';
+import aryan from '../../images/People_page/aryan.png';
 
 
 import ali from '../../images/People_page/ali.png';
@@ -46,6 +46,20 @@ export const people: Person[] = [
     linkedin: 'https://www.linkedin.com/in/maksud-rahman-04559883/',
     googlescholar: 'https://scholar.google.com/citations?user=hky0f9UAAAAJ&hl=en',
     category: 'faculty'
+  },
+  {
+    id: 'Saadi',
+    name: 'M.A.S.R. Saadi',
+    title: 'Research Scientist',
+    image: saadi,
+    bio: 'Saadi is a Ph.D. student in Materials Science and NanoEngineering at Rice University, where he works on developing sustainable bionanocomposites for multifunctional applications across the energy, environment, and food nexus. His work focuses on hierarchically assembled 1D and 2D nanosystems integrated into carbohydrate- and protein-based matrices. He completed his B.S. in Materials and Metallurgical Engineering at the Bangladesh University of Engineering and Technology (BUET), studying how multiscale reinforcement particle size influences the mechanical and thermal behavior of polymer composites. He later earned his M.S. in Mechanical and Aerospace Engineering from George Washington University, where he worked on the nanomechanics and electronic structures of organic photovoltaics and 2D materials. In addition to his research, Saadi has a passion for singing Metal, Rock, and Bengali Folk music. He also enjoys playing table tennis, soccer, and FIFA.',
+    education: [
+      'M.Sc. in Mechanical and Aerospace Engineering, George Washington University, DC, USA',
+      'B.Sc. in Materials and Metallurgical Engineering, Bangladesh University of Engineering and Technology (BUET), Dhaka, BD'
+    ],
+    linkedin: 'https://www.linkedin.com/in/m-a-s-r-saadi-b15a691a9/',
+    googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao',
+    category: 'current'
   },
   {
     id: 'Tofazzal',
@@ -89,20 +103,6 @@ export const people: Person[] = [
     category: 'current'
   },
   {
-    id: 'Saadi',
-    name: 'M.A.S.R. Saadi',
-    title: 'PhD Student (Rice University)',
-    image: saadi,
-    bio: 'Saadi is a Ph.D. student in Materials Science and NanoEngineering at Rice University, where he works on developing sustainable bionanocomposites for multifunctional applications across the energy, environment, and food nexus. His work focuses on hierarchically assembled 1D and 2D nanosystems integrated into carbohydrate- and protein-based matrices. He completed his B.S. in Materials and Metallurgical Engineering at the Bangladesh University of Engineering and Technology (BUET), studying how multiscale reinforcement particle size influences the mechanical and thermal behavior of polymer composites. He later earned his M.S. in Mechanical and Aerospace Engineering from George Washington University, where he worked on the nanomechanics and electronic structures of organic photovoltaics and 2D materials. In addition to his research, Saadi has a passion for singing Metal, Rock, and Bengali Folk music. He also enjoys playing table tennis, soccer, and FIFA.',
-    education: [
-      'M.Sc. in Mechanical and Aerospace Engineering, George Washington University, DC, USA',
-      'B.Sc. in Materials and Metallurgical Engineering, Bangladesh University of Engineering and Technology (BUET), Dhaka, BD'
-    ],
-    linkedin: 'https://www.linkedin.com/in/m-a-s-r-saadi-b15a691a9/',
-    googlescholar: 'https://scholar.google.com/citations?user=Emevh2EAAAAJ&hl=en&oi=ao',
-    category: 'current'
-  },
-  {
     id: 'Chen',
     name: 'Chen Shi',
     title: 'PhD Student (Rice University)',
@@ -113,31 +113,6 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/chen-shi-027810250/',
     googlescholar: '',
-    category: 'current'
-  },
-  {
-    id: 'Sif',
-    name: 'Sif Eddine JABOR TLEMCANI',
-    title: 'MSc Student',
-    image: sif,
-    bio: 'Sif Eddine is an Erasmus master student at TU Darmstadt and INP-UGA Phelma. He is currently completing his MS thesis research at the University of Houston, where his work focuses on the 3D printing of cellulose-based bio-nanocomposites for CO2 capture. His academic and research background spans the U.S., Europe, and Morocco, with a core technical focus on materials science, polymers, cellulose, and sustainable solutions for environmental applications. Previously, Sif Eddine worked as a Research Assistant and R&D Intern at Mohammed VI Polytechnic University in Morocco. There, he specialized in cellulose nanocrystals and sustainable packaging as an alternative to single-use plastics, as well as the formulation of biopolymer materials for direct carbon capture. He is deeply motivated by sustainability, innovation, and entrepreneurship.',
-    education: [
-      'M.Sc. in Erasmus Mundus (Functional Advanced Materials Engineering with Artificial Intelligence for Sustainability), Technical University of Darmstadt, Germany and Grenoble INP-UGA Phelma, France',
-      'M.Sc. in Materials Science and Engineering, Mohammed VI Polytechnic University, Benguerir, Morocco',
-    ],
-    linkedin: 'https://www.linkedin.com/in/sif-eddine-jabor-tlemcani-243a75154/',
-    googlescholar: 'https://scholar.google.com/citations?user=Os-b4ZwAAAAJ&hl=fr',
-    category: 'current'
-  },
-  {
-    id: 'Mia',
-    name: 'Mia Rodriguez',
-    title: 'Undergraduate Researcher',
-    image: mia,
-    bio: 'Mia Rodriguez is a junior majoring in Mechanical Engineering at the University of Houston, with growing interests in bio-inspired design and the intersection of engineering and the natural world. She has experience in CAD, MATLAB, and Arduino systems and is eager to apply her skills to research in advanced materials and sustainable design.',
-    education: [
-      'B.Sc. in Mechanical Engineering, University of Houston, TX, USA'
-    ],
     category: 'current'
   },
   {
@@ -163,15 +138,16 @@ export const people: Person[] = [
     linkedin: 'https://www.linkedin.com/in/zahin-nanjiba-68794527a/',
     category: 'current'
   },
-   {
-    id: 'Evan',
-    name: 'Evan Matthews',
+  {
+    id: 'Aryan',
+    name: 'Aryan Tyagi',
     title: 'Undergraduate Researcher',
-    image: evan,
-    bio: 'Evan Matthews is currently pursuing a B.S. in Mechanical Engineering at the University of Houston. He focuses on applying engineering analysis to real-world design challenges. His experience includes CAD modeling, MATLAB-based computation, and FDM prototyping, and he is committed to continuously strengthening his technical expertise while contributing to innovative and impactful research.',
+    image: aryan,
+    bio: 'Aryan Tyagi is a Mechanical Engineering sophomore at the University of Houston (B.S. expected May 2029). His interests include additive manufacturing, materials testing, CAD, and experiment documentation. He is joining Dr. Rahman’s Circular Materials and Manufacturing Lab as an undergraduate researcher.',
     education: [
       'B.Sc. in Mechanical Engineering, University of Houston, TX, USA'
     ],
+    linkedin: 'https://www.linkedin.com/in/zahin-nanjiba-68794527a/',
     category: 'current'
   },
   {
@@ -185,6 +161,31 @@ export const people: Person[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/mdshajedulhoquethakur/',
     googlescholar:'https://scholar.google.com/citations?user=2PN5lQ8AAAAJ&hl=en&oi=ao',
+    category: 'alumni'
+  },
+  {
+    id: 'Sif',
+    name: 'Sif Eddine JABOR TLEMCANI',
+    title: '',
+    image: sif,
+    bio: '',
+    education: [
+      'M.Sc. in Erasmus Mundus (Functional Advanced Materials Engineering with Artificial Intelligence for Sustainability), Technical University of Darmstadt, Germany and Grenoble INP-UGA Phelma, France',
+      'M.Sc. in Materials Science and Engineering, Mohammed VI Polytechnic University, Benguerir, Morocco',
+    ],
+    linkedin: 'https://www.linkedin.com/in/sif-eddine-jabor-tlemcani-243a75154/',
+    googlescholar: 'https://scholar.google.com/citations?user=Os-b4ZwAAAAJ&hl=fr',
+    category: 'alumni'
+  },
+  {
+    id: 'Mia',
+    name: 'Mia Rodriguez',
+    title: 'Undergraduate Researcher',
+    image: mia,
+    bio: '',
+    education: [
+      'B.Sc. in Mechanical Engineering, University of Houston, TX, USA'
+    ],
     category: 'alumni'
   },
   {

@@ -52,8 +52,9 @@ const Publications = () => {
           <div className="flex flex-wrap gap-2 mb-10">
             {[
               { value: 'journal', label: 'Journal Articles' },
-              { value: 'book', label: 'Book Chapters' },
               { value: 'patent', label: 'Patents' },
+               { value: 'conference', label: 'Conference' },
+              { value: 'book', label: 'Book Chapters' },
             ].map((item) => (
               <button
                 key={item.value}

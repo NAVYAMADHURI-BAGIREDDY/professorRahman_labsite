@@ -28,8 +28,12 @@ const Header = () => {
             onError={(e) => console.error('Logo failed to load:', (e.currentTarget as HTMLImageElement).src)}
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-cyan-700">Maksud</span>
-            <span className="text-sm sm:text-base font-raleway font-semibold text-cyan-600 tracking-wide">Innovation Lab</span>
+            <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-cyan-700">
+              maksud
+              </span>
+            <span className="text-sm sm:text-base font-raleway font-semibold text-cyan-600 tracking-wide">
+              Innovation Lab
+              </span>
           </div>
         </Link>
 
