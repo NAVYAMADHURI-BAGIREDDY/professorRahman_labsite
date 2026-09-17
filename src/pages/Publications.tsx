@@ -115,12 +115,25 @@ const Publications = () => {
                             {pub.authors || pub.author}
                           </p>
                         )}
-
-                        <p className="text-sm sm:text-base text-gray-600">
-                          <span className="font-bold text-black text-lg sm:text-xl">
-                            {pub.conference || pub.bookTitle || pub.applicationNumber}
-                          </span>
-                        </p>
+                        
+                        {pub.patentNumber && (
+                          <p className="font-bold text-gray-600 text-sm sm:text-base mb-1">
+                            {pub.patentNumber}
+                          </p>
+                        )}
+                        {pub.bookTitle && (
+                          <p className="font-bold text-gray-600 text-sm sm:text-base mb-1">
+                            {pub.bookTitle}
+                          </p>
+                        )}
+                            
+                        {pub.journal && (
+                          <p className="text-sm sm:text-base text-gray-600">
+                            <span className="font-bold text-black text-lg sm:text-xl">
+                              {pub.journal}
+                            </span>
+                            </p>
+                        )}
 
                         {/* Media coverage */}
                         {pub.media && (

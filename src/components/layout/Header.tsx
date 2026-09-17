@@ -29,10 +29,10 @@ const Header = () => {
           />
           <div className="flex flex-col leading-tight">
             <span className="text-2xl sm:text-3xl font-raleway font-extrabold text-cyan-700">
-              maksud
+              maksudLab
               </span>
             <span className="text-sm sm:text-base font-raleway font-semibold text-cyan-600 tracking-wide">
-              Innovation Lab
+              
               </span>
           </div>
         </Link>

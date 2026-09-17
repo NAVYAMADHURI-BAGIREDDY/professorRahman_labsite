@@ -14,7 +14,7 @@ import { SiGooglescholar } from 'react-icons/si';
 
 import hp1 from "../../images/home_pub/hp1.png";
 import hp2 from "../../images/home_pub/hp2.png";
-import hp3 from "../../images/home_pub/hp3.png";
+import hp7 from "../../images/home_pub/hp7.png";
 import hp4 from "../../images/home_pub/hp4.png";
 import hp5 from "../../images/home_pub/hp5.png";
 import hp6 from "../../images/home_pub/hp6.png";
@@ -27,9 +27,9 @@ import alberta from '../../images/fund_logos/alberta.png';
 import flow from '../../images/fund_logos/flow.png';
 
 const homePubImages: Record<string, string> = {
+  pub74: hp7,
   pub72: hp1,
   pub66: hp2,
-  pub53: hp3,
   pub49: hp4,
   pub36: hp5,
   pub26: hp6,
@@ -87,7 +87,7 @@ const Home = () => {
   // Highlighted Publications
   const highlighted_pub_id: string[] = ['pub74', 'pub72', 'pub66', 'pub49', 'pub36', 'pub26'];
   type Pub = typeof publications[number];
-  const meta = (p: Pub) => p.conference ?? p.bookTitle ?? p.applicationNumber ?? '';
+  const meta = (p: Pub) => p.journal ?? p.patentNumber ?? p.bookTitle ?? '';
   const byId = new Map(publications.map(p => [p.id, p]));
   const highlightedPubs: Pub[] = highlighted_pub_id.length
     ? (highlighted_pub_id.map(id => byId.get(id)).filter(Boolean).slice(0, 6) as Pub[])
@@ -114,13 +114,16 @@ const Home = () => {
             className="mb-6"
           >
             <div className="flex items-center space-x-2">
-              <h1 className="font-bold font-raleway text-2xl sm:text-2xl md:text-2xl lg:text-6xl tracking-widest">
-                Maksud Innovation Lab
+              <h1 className="font-bold font-raleway text-2xl sm:text-2xl md:text-2xl lg:text-3xl tracking-widest">
+                Innovation Laboratory <span 
+                className="italic text-2xl sm:text-xl md:text-2xl lg:text-3xl">
+                  of
+                  </span>
               </h1>
             </div>
             <div>
-              <p className="font-semibold font-raleway text3xl sm:text-3xl md:text-3xl lg:text-3xl tracking-widest">
-                of Circular Materials and Manufacturing
+              <p className="font-semibold font-raleway text3xl sm:text-3xl md:text-3xl lg:text-5xl tracking-widest">
+                Circular Materials and Manufacturing
               </p>
             </div>
           </motion.h1>
@@ -325,11 +328,21 @@ const Home = () => {
                       )}
                     </h3>
                   </div>
+                  <div className="relative w-full h-36 rounded-md overflow-hidden bg-gray-100">
+                    {/* blurred background fills the box */}
                   <img
                     src={news.image}
-                    alt={news.title}
-                    className="w-full h-36 object-cover rounded-md"
+                    alt=""
+                    aria-hidden="true" 
+                    className="absolute inset-0 w-full h-full object-cover blur-md scale-110 opacity-40"
                   />
+                  {/* actual image stays fully visible */}
+                  <img
+                  src={news.image}
+                  alt={news.title}
+                  className="relative z-10 w-full h-full object-contain"
+                  />
+                  </div>
                 </div>
               </div>
             ))}
@@ -375,11 +388,21 @@ const Home = () => {
                           )}
                         </h3>
                       </div>
+                      <div className="relative w-full h-40 rounded-md overflow-hidden bg-gray-100">
+                        {/* blurred background fills the box */}
                       <img
                         src={news.image}
-                        alt={news.title}
-                        className="w-full h-40 object-cover rounded-md"
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 w-full h-full object-cover blur-md scale-110 opacity-40"
                       />
+                      {/* actual image stays fully visible */}
+                      <img
+                      src={news.image}
+                      alt={news.title}
+                      className="relative z-10 w-full h-full object-contain"
+                      />
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -3,19 +3,25 @@ import { bookChapters } from './bookchapter';
 import { patents } from './patent';
 
 // Base type to unify all publication types
-export type Category = 'journal' | 'book' | 'patent';
+export type Category = 'journal' | 'patent' | 'conference' | 'book';
+
 
 export interface UnifiedPublication {
   id: string;
   title: string;
+
   authors?: string;
   author?: string;
+
   link?: string;
-  conference?: string;
+
+  journal?: string;
   bookTitle?: string;
-  applicationNumber?: string;
+  patentNumber?: string;
+
   year: number;
   category: Category;
+
   media?: string;
   image?: string;
 }
@@ -27,11 +33,21 @@ export const publications: UnifiedPublication[] = [
     title: j.title,
     authors: j.authors,
     link: j.link,
-    conference: j.conference,
+    journal: j.journal,
     year: j.year,
     category: 'journal' as const,
     image: j.image,
     media: j.media,         
+  })),
+  ...patents.map((p) => ({
+    id: p.id,
+    title: p.title,
+    author: p.author,
+    link: p.link,
+    patentNumber: p.patentNumber,
+    year: p.year,
+    category: 'patent' as const,
+    image: p.image,
   })),
   ...bookChapters.map((b) => ({
     id: b.id,
@@ -43,14 +59,5 @@ export const publications: UnifiedPublication[] = [
     category: 'book' as const,
     image: b.image,
   })),
-  ...patents.map((p) => ({
-    id: p.id,
-    title: p.title,
-    author: p.author,
-    link: p.link,
-    applicationNumber: p.applicationNumber,
-    year: p.year,
-    category: 'patent' as const,
-    image: p.image,
-  })),
+  
 ];
