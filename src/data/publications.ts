@@ -26,6 +26,7 @@ export interface UnifiedPublication {
   category: Category;
 
   media?: string;
+  mediaLink?: string;
   image?: string;
 }
 
@@ -40,7 +41,8 @@ export const publications: UnifiedPublication[] = [
     year: j.year,
     category: 'journal' as const,
     image: j.image,
-    media: j.media,         
+    media: j.media,   
+    mediaLink: j.mediaLink,       
   })),
 
   ...patents.map((p) => ({

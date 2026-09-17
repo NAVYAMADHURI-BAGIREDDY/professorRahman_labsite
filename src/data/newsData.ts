@@ -35,7 +35,7 @@ export const newsItems: NewsItem[]  = [
 {
   id: 'news15',
   title: 'Our work on aligned bacterial cellulose is published in Nano Letters.',
-  Link: 'https://doi-org.ezproxy.lib.uh.edu/10.1021/acs.nanolett.5c04172',
+  Link: 'https://doi.org/10.1021/acs.nanolett.5c04172',
   date: '2026-04-08',
   image: news22,
 },

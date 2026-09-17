@@ -53,7 +53,7 @@ const Publications = () => {
             {[
               { value: 'journal', label: 'Journal Articles' },
               { value: 'patent', label: 'Patents' },
-               { value: 'conference', label: 'Conference' },
+               { value: 'conference', label: 'Conference Proceedings' },
               { value: 'book', label: 'Book Chapters' },
             ].map((item) => (
               <button
@@ -141,9 +141,19 @@ const Publications = () => {
                         {pub.media && (
                           <p className="inline-flex whitespace-nowrap gap-2 rounded-full bg-cyan-50 text-sm text-cyan-800 mt-6">
                             <span className="font-semibold">Media Coverage:</span>
-                            <span>{pub.media}</span>
-                          </p>
-                         )}
+                             {pub.mediaLink ? (
+                              <a
+                              href={pub.mediaLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline">
+                                {pub.media}
+                              </a>
+                            ) : (
+                           <span>{pub.media}</span>
+                          )}
+                         </p>
+                        )}
                       </div>
                     </div>
                   ))}

@@ -82,6 +82,7 @@ export interface JournalArticle {
   year: number;            // Publication year
   image?: string;
   media?: string; 
+  mediaLink?: string;
 }
 
 export const journalArticles: JournalArticle[] = [
@@ -111,7 +112,8 @@ export const journalArticles: JournalArticle[] = [
     journal: 'Nature Communications',
     year: 2025,
     image: pub74,
-    media: 'Published in Nature Communications and recognized as the top innovation by MSN'
+    media: 'Recognized as the top innovation by MSN',
+    mediaLink: 'https://www.msn.com/en-us/news/technology/10-new-materials-aiming-to-replace-plastic-researchers-reveal/ar-AA1OIQkl'
   },
   {
     id: 'pub71',
@@ -121,7 +123,8 @@ export const journalArticles: JournalArticle[] = [
     journal: 'Advanced Composites and Hybrid Materials',
     year: 2025,
     image: pub73,
-    media: 'Featured on the American Society of Mechanical Engineers (ASME)'
+    media: 'Featured on the American Society of Mechanical Engineers (ASME)',
+    mediaLink: 'https://www.asme.org/topics-resources/content/origami-inspires-bendable-3d-printed-ceramics'
   },
   {
     id: 'pub70',
@@ -167,7 +170,8 @@ export const journalArticles: JournalArticle[] = [
     journal: 'Science Advances',
     year: 2024,
     image: pub68,
-    media: 'Nature and NewScientist featured this innovation in their highlight'
+    media: 'Nature featured this innovation in their highlight',
+    mediaLink: 'https://www.nature.com/articles/d41586-024-00767-5'
   },
   {
     id: 'pub65',
@@ -177,7 +181,8 @@ export const journalArticles: JournalArticle[] = [
     journal: 'Advanced Functional Materials',
     year: 2024,
     image: pub67,
-    media: 'Rice University featured this work in their media site'
+    media: 'Rice University featured this work in their media site',
+    mediaLink: 'https://news.rice.edu/news/2023/protein-based-coating-could-keep-fruits-and-vegetables-fresh-longer'
   },
   {
     id: 'pub64',
@@ -195,8 +200,7 @@ export const journalArticles: JournalArticle[] = [
     authors: 'Saadi, M.A.S.R.; Likhi, F.H.; Zahin, F.; Yuan, Y.; Karim, A.; Ajayan, P.M.; Rahman, M.M.*', 
     journal: 'ACS Nano',
     year: 2024, 
-    image: pub65,
-    media: 'Published in ACS Nano'
+    image: pub65
   },
   {
     id: 'pub62',
@@ -251,7 +255,8 @@ export const journalArticles: JournalArticle[] = [
     journal: 'Cell Reports Physical Science',
     year: 2023,
     image: pub57,
-    media: 'New Atlas featured an article on this work'
+    media: 'New Atlas featured an article on this work',
+    mediaLink:'https://refractor.io/science/engineered-wood-stronger-fights-climate-change-capturing-co2/'
   },
   {
     id: 'pub56',
@@ -270,7 +275,8 @@ export const journalArticles: JournalArticle[] = [
     journal: 'Mechanical Systems and Signal Processing',
     year: 2023,
     image: pub55,
-    media: 'Rice University featured this work on 3D printed schwarzites'
+    media: 'Rice University featured this work on 3D printed schwarzites',
+    mediaLink: 'https://architexturez.net/pst/az-cf-219641-1621745167'
   },
   {
     id: 'pub54',
@@ -289,7 +295,8 @@ export const journalArticles: JournalArticle[] = [
     journal: 'Science Advances',
     year: 2022,
     image: pub53,
-    media: 'Rice university reported this work on graphene production'
+    media: 'Rice university reported this work on graphene production',
+    mediaLink: 'https://news.rice.edu/news/2022/rice-turns-asphaltene-graphene-composites'
   },
   {
     id: 'pub52',
@@ -533,7 +540,8 @@ export const journalArticles: JournalArticle[] = [
     journal: 'Advanced Materials',
     year: 2020,
     image: pub26,
-    media: 'This work got featured in the Daily Star, leading newspaper in Bangladesh and won the first prize at the 2021 Create the Future Design Contest'
+    media: 'This work got featured in the Daily Star, leading newspaper in Bangladesh and won the first prize at the 2021 Create the Future Design Contest',
+    mediaLink: 'https://www.thedailystar.net/news/bangladesh/news/fruits-veggies-last-longer-2930281'  
   },
   {
     id: 'pub25',
