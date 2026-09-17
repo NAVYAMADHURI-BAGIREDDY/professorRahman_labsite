@@ -166,7 +166,7 @@ export const people: Person[] = [
   {
     id: 'Sif',
     name: 'Sif Eddine JABOR TLEMCANI',
-    title: '',
+    title: 'Erasmus FAMEAIS Scholar',
     image: sif,
     bio: '',
     education: [

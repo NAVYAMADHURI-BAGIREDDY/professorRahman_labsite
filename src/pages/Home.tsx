@@ -114,15 +114,15 @@ const Home = () => {
             className="mb-6"
           >
             <div className="flex items-center space-x-2">
-              <h1 className="font-bold font-raleway text-2xl sm:text-2xl md:text-2xl lg:text-3xl tracking-widest">
-                Innovation Laboratory <span 
-                className="italic text-2xl sm:text-xl md:text-2xl lg:text-3xl">
+              <h1 className="font-bold font-raleway text-2xl sm:text-2xl md:text-2xl lg:text-[2.25rem] tracking-widest">
+                Innovation Laboratory{" "}
+                <span className="font-cormorant italic font-medium text-2xl sm:text-xl md:text-2xl lg:text-[2.75rem] tracking-normal">
                   of
-                  </span>
+                </span>
               </h1>
             </div>
-            <div>
-              <p className="font-semibold font-raleway text3xl sm:text-3xl md:text-3xl lg:text-5xl tracking-widest">
+            <div className="mt-2">
+              <p className="font-semibold font-raleway text3xl sm:text-3xl md:text-3xl lg:text-5xl tracking-widest leading-[1.35]">
                 Circular Materials and Manufacturing
               </p>
             </div>
