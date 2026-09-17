@@ -115,18 +115,7 @@ const Publications = () => {
                             {pub.authors || pub.author}
                           </p>
                         )}
-                        
-                        {pub.patentNumber && (
-                          <p className="font-bold text-gray-600 text-sm sm:text-base mb-1">
-                            {pub.patentNumber}
-                          </p>
-                        )}
-                        {pub.bookTitle && (
-                          <p className="font-bold text-gray-600 text-sm sm:text-base mb-1">
-                            {pub.bookTitle}
-                          </p>
-                        )}
-                            
+
                         {pub.journal && (
                           <p className="text-sm sm:text-base text-gray-600">
                             <span className="font-bold text-black text-lg sm:text-xl">
@@ -134,7 +123,20 @@ const Publications = () => {
                             </span>
                             </p>
                         )}
+                        
+                        {pub.patentNumber && (
+                          <p className="font-bold text-gray-600 text-sm sm:text-base mb-1">
+                            {pub.patentNumber}
+                          </p>
+                        )}
 
+                        {(pub.conference || pub.bookTitle) && (
+                          <p className="font-bold text-gray-600 text-sm sm:text-base mb-1">
+                            {pub.conference || pub.bookTitle}
+                          </p>
+                        )}
+                            
+                        
                         {/* Media coverage */}
                         {pub.media && (
                           <p className="inline-flex whitespace-nowrap gap-2 rounded-full bg-cyan-50 text-sm text-cyan-800 mt-6">
