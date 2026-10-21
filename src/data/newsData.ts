@@ -19,6 +19,7 @@ import news19 from '../../images/news_section/news19.png';
 import news20 from '../../images/news_section/news20.png';
 import news21 from '../../images/news_section/news21.png';
 import news22 from '../../images/news_section/news22.png';
+import news23 from '../../images/news_section/news23.jpg';
 
 
 export interface NewsItem {
@@ -32,6 +33,13 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[]  = [
+{
+  id: 'news16',
+  title: 'Our research on high-performance, polymers for aerospace applications is featured in UH News Magazine, Parameter.',
+  Link: 'https://www.egr.uh.edu/parameters/2026-fall/maksud-rahman-team-finding-high-performance-architected-polymers-have',
+  date: '2026-10-20',
+  image: news23,
+},
 {
   id: 'news15',
   title: 'Our work on aligned bacterial cellulose is published in Nano Letters.',

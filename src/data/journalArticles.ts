@@ -72,6 +72,7 @@ import pub73 from '../../images/Publications/73.png';
 import pub74 from '../../images/Publications/74.jpg';
 import pub75 from '../../images/Publications/75.png';
 import pub76 from '../../images/Publications/76.png';
+import pub77 from '../../images/Publications/77.png';
 
 export interface JournalArticle {
   id: string;              // Unique identifier (UUID or string)
@@ -86,6 +87,15 @@ export interface JournalArticle {
 }
 
 export const journalArticles: JournalArticle[] = [
+  {
+    id: 'pub75',
+    title: '75. Additive Manufacturing of High-Performance Polymers for Extreme Environments',
+    link: 'https://doi.org/10.1002/advs.77371',
+    authors: 'Hossain, M.T.; Nur, M.I.; Thakur, M.S.H.; Dey, I.; Maruf, M.M.; Hasan, M.J.; Bose, S.; Rahman, M.M.*',
+    journal: 'Advanced Science',
+    year: 2026,
+    image: pub77
+  },
   {
     id: 'pub74',
     title: '74. Aligned Bacterial Cellulose through Organohydrogel Transformation',
