@@ -35,7 +35,7 @@ export interface NewsItem {
 export const newsItems: NewsItem[]  = [
 {
   id: 'news16',
-  title: 'UH News Magazine "Parameter" feature of the Maksud Lab.',
+  title: 'UH Magazine "Parameter" feature of the Maksud Lab.',
   Link: 'https://www.egr.uh.edu/parameters/2026-fall/maksud-rahman-team-finding-high-performance-architected-polymers-have',
   date: '2026-10-20',
   image: news23,
