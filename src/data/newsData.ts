@@ -2,12 +2,12 @@
 //import news2 from '../../images/news_section/news2.png';
 //import news3 from '../../images/news_section/news3.png';
 //import news4 from '../../images/news_section/news4.png';
-//import news5 from '../../images/news_section/news5.png';
+//import news5 from '../../images/news_section/news5.jpeg';
 import news6 from '../../images/news_section/news6.png';
 import news7 from '../../images/news_section/news7.png';
 import news8 from '../../images/news_section/news8.png';
 import news9 from '../../images/news_section/news9.png';
-//import news10 from '../../images/news_section/news10.png';
+import news10 from '../../images/news_section/news10.jpeg';
 import news11 from '../../images/news_section/news11.png';
 import news12 from '../../images/news_section/news12.png';
 import news13 from '../../images/news_section/news13.png';
@@ -34,11 +34,18 @@ export interface NewsItem {
 
 export const newsItems: NewsItem[]  = [
 {
-  id: 'news16',
+  id: 'news17',
   title: 'UH Magazine "Parameter" feature of the Maksud Lab.',
   Link: 'https://www.egr.uh.edu/parameters/2026-fall/maksud-rahman-team-finding-high-performance-architected-polymers-have',
   date: '2026-10-20',
   image: news23,
+},
+{
+  id: 'news16',
+  title: 'Our lab member Hossain presented our work on 3D-printed conductive cellulose composites at ASC 2026 in Wisconsin.',
+  Link: 'https://conferences.union.wisc.edu/ascmadison2026/detailed-agenda/',
+  date: '2026-09-30',
+  image: news10,
 },
 {
   id: 'news15',
